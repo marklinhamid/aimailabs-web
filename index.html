@@ -1,0 +1,1450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIMAILABS — AI-Powered Inspection Intelligence for Offshore Oil & Gas</title>
+
+    <!-- SEO Meta -->
+    <meta name="description" content="AIMAILABS builds AI inspection intelligence for offshore oil and gas facilities. INSPECTA detects defects on-site, assesses severity against your standards, and generates audit-ready reports — fully offline. Based in Sabah, Malaysia.">
+    <meta name="keywords" content="AI inspection, offshore inspection, oil and gas, asset integrity, defect detection, INSPECTA, structural inspection, offshore platform, AI-powered reports, Malaysia, OTC Asia 2026">
+    <meta name="author" content="AIMAILABS Sdn Bhd">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.aimailabs.com/">
+
+    <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="AIMAILABS — AI-Powered Inspection Intelligence">
+    <meta property="og:description" content="AI that detects defects, assesses severity against your standards, and generates audit-ready reports — before the helicopter lands. Presenting at OTC Asia 2026.">
+    <meta property="og:url" content="https://www.aimailabs.com/">
+    <meta property="og:site_name" content="AIMAILABS">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:image" content="https://www.aimailabs.com/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="AIMAILABS — AI-Powered Inspection Intelligence">
+    <meta name="twitter:description" content="AI that detects defects, assesses severity against your standards, and generates audit-ready reports — fully offline.">
+    <meta name="twitter:image" content="https://www.aimailabs.com/og-image.png">
+
+    <!-- Geo Tags -->
+    <meta name="geo.region" content="MY-12">
+    <meta name="geo.placename" content="Sabah, Malaysia">
+
+    <!-- Structured Data (Organization Schema) -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "AIMAILABS Sdn Bhd",
+        "url": "https://www.aimailabs.com",
+        "logo": "https://www.aimailabs.com/logo.png",
+        "description": "AI-powered inspection intelligence for offshore oil and gas facilities.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressRegion": "Sabah",
+            "addressCountry": "MY"
+        },
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "email": "info@aimailabs.com",
+            "contactType": "sales"
+        },
+        "sameAs": [
+            "https://www.aimailabs.com"
+        ]
+    }
+    </script>
+
+    <!-- Software Product Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "INSPECTA",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Cross-platform",
+        "description": "AI-powered inspection intelligence platform for offshore oil and gas facilities. Detects defects, assesses severity, and generates audit-ready reports.",
+        "offers": {
+            "@type": "Offer",
+            "category": "Enterprise Software"
+        },
+        "creator": {
+            "@type": "Organization",
+            "name": "AIMAILABS Sdn Bhd"
+        }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-deep: #04080f;
+            --bg-surface: #0a1122;
+            --bg-card: #0d1629;
+            --bg-elevated: #111d35;
+            --border: #1a2744;
+            --border-bright: #243656;
+            --text-primary: #e8edf5;
+            --text-secondary: #8a99b4;
+            --text-muted: #576a8a;
+            --accent: #3b82f6;
+            --accent-glow: rgba(59, 130, 246, 0.15);
+            --accent-bright: #60a5fa;
+            --accent-orange: #f59e0b;
+            --accent-green: #10b981;
+            --accent-red: #ef4444;
+            --radius: 14px;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg-deep);
+            color: var(--text-primary);
+            line-height: 1.65;
+            overflow-x: hidden;
+        }
+
+        /* ─── NOISE OVERLAY ─── */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            z-index: 9999;
+            pointer-events: none;
+            opacity: 0.025;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+        }
+
+        /* ─── NAV ─── */
+        nav {
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            z-index: 1000;
+            padding: 0 48px;
+            height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(4, 8, 15, 0.8);
+            backdrop-filter: blur(24px);
+            border-bottom: 1px solid var(--border);
+            transition: background 0.3s;
+        }
+
+        .nav-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.3rem;
+            letter-spacing: -0.02em;
+            color: var(--text-primary);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .nav-logo .logo-mark {
+            width: 32px;
+            height: 32px;
+            background: linear-gradient(135deg, var(--accent), #818cf8);
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: white;
+            letter-spacing: 0;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 36px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-size: 0.88rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--text-primary); }
+
+        .nav-cta {
+            font-size: 0.85rem !important;
+            font-weight: 600 !important;
+            color: white !important;
+            background: var(--accent);
+            padding: 9px 22px;
+            border-radius: 8px;
+            transition: background 0.2s, transform 0.15s !important;
+        }
+
+        .nav-cta:hover {
+            background: #2563eb !important;
+            transform: translateY(-1px);
+        }
+
+        /* ─── HERO ─── */
+        .hero {
+            position: relative;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 48px 80px;
+            overflow: hidden;
+        }
+
+        .hero-grid-bg {
+            position: absolute;
+            inset: 0;
+            background-image:
+                linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+            background-size: 64px 64px;
+            mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
+        }
+
+        .hero-glow {
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 800px;
+            height: 800px;
+            background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 65%);
+            pointer-events: none;
+        }
+
+        .hero-glow-2 {
+            position: absolute;
+            bottom: -30%;
+            left: -15%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(129,140,248,0.05) 0%, transparent 60%);
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 7px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 100px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            animation: fadeSlideUp 0.8s ease both;
+        }
+
+        .hero-badge .dot {
+            width: 7px; height: 7px;
+            background: var(--accent-green);
+            border-radius: 50%;
+            animation: pulse-dot 2s infinite;
+        }
+
+        @keyframes pulse-dot {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .hero h1 {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(2.8rem, 6vw, 4.8rem);
+            font-weight: 800;
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+            margin-bottom: 28px;
+            animation: fadeSlideUp 0.8s 0.1s ease both;
+        }
+
+        .hero h1 .gradient-text {
+            background: linear-gradient(135deg, var(--accent-bright) 0%, #a78bfa 50%, var(--accent-bright) 100%);
+            background-size: 200% auto;
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: shimmer 6s ease infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-desc {
+            font-size: 1.15rem;
+            color: var(--text-secondary);
+            max-width: 600px;
+            line-height: 1.7;
+            margin-bottom: 44px;
+            animation: fadeSlideUp 0.8s 0.2s ease both;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            animation: fadeSlideUp 0.8s 0.3s ease both;
+        }
+
+        .btn-primary {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: var(--accent);
+            color: white;
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: #2563eb;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(59,130,246,0.3);
+        }
+
+        .btn-ghost {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 14px 32px;
+            background: transparent;
+            color: var(--text-secondary);
+            font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem;
+            font-weight: 500;
+            border: 1px solid var(--border-bright);
+            border-radius: 10px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .btn-ghost:hover {
+            color: var(--text-primary);
+            border-color: var(--text-muted);
+            background: var(--bg-card);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 56px;
+            margin-top: 72px;
+            animation: fadeSlideUp 0.8s 0.4s ease both;
+        }
+
+        .hero-stat .value {
+            font-family: 'Outfit', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            color: var(--text-primary);
+        }
+
+        .hero-stat .label {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        @keyframes fadeSlideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ─── SECTIONS ─── */
+        section {
+            padding: 100px 48px;
+            position: relative;
+        }
+
+        .section-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            font-weight: 500;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 14px;
+        }
+
+        .section-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.15;
+            margin-bottom: 16px;
+        }
+
+        .section-desc {
+            font-size: 1.05rem;
+            color: var(--text-secondary);
+            max-width: 620px;
+            margin-bottom: 56px;
+        }
+
+        /* ─── ABOUT / WHAT WE DO ─── */
+        #about {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 64px;
+            align-items: center;
+        }
+
+        .about-visual {
+            position: relative;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 40px;
+            min-height: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .about-visual::before {
+            content: '';
+            position: absolute;
+            top: -1px; left: -1px; right: -1px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), #818cf8, var(--accent));
+            border-radius: var(--radius) var(--radius) 0 0;
+        }
+
+        .pipeline-step {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            padding: 14px 0;
+        }
+
+        .pipeline-step + .pipeline-step {
+            border-top: 1px solid var(--border);
+        }
+
+        .pipeline-icon {
+            width: 40px; height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .pipeline-step:nth-child(1) .pipeline-icon { background: rgba(59,130,246,0.12); color: var(--accent-bright); }
+        .pipeline-step:nth-child(2) .pipeline-icon { background: rgba(245,158,11,0.12); color: var(--accent-orange); }
+        .pipeline-step:nth-child(3) .pipeline-icon { background: rgba(129,140,248,0.12); color: #a78bfa; }
+        .pipeline-step:nth-child(4) .pipeline-icon { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+
+        .pipeline-text .pipe-title {
+            font-weight: 600;
+            font-size: 0.92rem;
+            color: var(--text-primary);
+        }
+
+        .pipeline-text .pipe-desc {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-top: 2px;
+        }
+
+        .pipeline-arrow {
+            font-family: 'JetBrains Mono', monospace;
+            color: var(--text-muted);
+            font-size: 0.75rem;
+            padding-left: 56px;
+            height: 0;
+            overflow: visible;
+            position: relative;
+            top: -4px;
+        }
+
+        /* ─── PRODUCTS ─── */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 36px;
+            transition: all 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card:hover {
+            border-color: var(--border-bright);
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
+        }
+
+        .product-card.featured {
+            border-color: var(--accent);
+            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59,130,246,0.04) 100%);
+        }
+
+        .product-card.featured::before {
+            content: 'MOST POPULAR';
+            position: absolute;
+            top: 16px; right: 16px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.6rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            color: var(--accent-bright);
+            background: var(--accent-glow);
+            border: 1px solid rgba(59,130,246,0.25);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .product-icon {
+            width: 48px; height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+        }
+
+        .product-card:nth-child(1) .product-icon { background: rgba(59,130,246,0.12); }
+        .product-card:nth-child(2) .product-icon { background: rgba(16,185,129,0.12); }
+        .product-card:nth-child(3) .product-icon { background: rgba(245,158,11,0.12); }
+        .product-card:nth-child(4) .product-icon { background: rgba(129,140,248,0.12); }
+
+        .product-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.25rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 4px;
+        }
+
+        .product-tagline {
+            font-size: 0.85rem;
+            font-weight: 500;
+            color: var(--accent-bright);
+            margin-bottom: 14px;
+        }
+
+        .product-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .product-features {
+            list-style: none;
+        }
+
+        .product-features li {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            padding: 5px 0;
+            padding-left: 18px;
+            position: relative;
+        }
+
+        .product-features li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+        }
+
+        /* ─── DIFFERENTIATORS ─── */
+        #why {
+            background: var(--bg-surface);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .diff-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .diff-card {
+            padding: 32px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            transition: border-color 0.3s;
+        }
+
+        .diff-card:hover { border-color: var(--border-bright); }
+
+        .diff-icon {
+            font-size: 1.6rem;
+            margin-bottom: 18px;
+        }
+
+        .diff-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 600;
+            font-size: 1.05rem;
+            margin-bottom: 10px;
+        }
+
+        .diff-text {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ─── OTC BANNER ─── */
+        .otc-banner {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 48px;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-top: 80px;
+        }
+
+        .otc-icon {
+            width: 72px; height: 72px;
+            background: linear-gradient(135deg, var(--accent-glow), rgba(129,140,248,0.08));
+            border: 1px solid var(--border-bright);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .otc-text h3 {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            margin-bottom: 6px;
+        }
+
+        .otc-text p {
+            font-size: 0.92rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+        }
+
+        .otc-text .otc-tag {
+            display: inline-block;
+            margin-top: 12px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem;
+            color: var(--text-muted);
+            background: var(--bg-deep);
+            border: 1px solid var(--border);
+            padding: 4px 12px;
+            border-radius: 6px;
+        }
+
+        /* ─── WORKFLOW ─── */
+        .workflow-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            counter-reset: step;
+        }
+
+        .workflow-step {
+            position: relative;
+            padding: 36px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            counter-increment: step;
+        }
+
+        .workflow-step::before {
+            content: counter(step, decimal-leading-zero);
+            font-family: 'Outfit', sans-serif;
+            font-size: 3rem;
+            font-weight: 800;
+            color: rgba(59,130,246,0.1);
+            position: absolute;
+            top: 16px; right: 24px;
+        }
+
+        .step-title {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .step-time {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--accent-bright);
+            background: var(--accent-glow);
+            padding: 3px 10px;
+            border-radius: 6px;
+            display: inline-block;
+            margin-bottom: 14px;
+        }
+
+        .step-desc {
+            font-size: 0.88rem;
+            color: var(--text-secondary);
+            line-height: 1.65;
+        }
+
+        /* ─── CTA ─── */
+        .cta-section {
+            text-align: center;
+            padding: 120px 48px;
+        }
+
+        .cta-section .section-title {
+            max-width: 650px;
+            margin: 0 auto 16px;
+        }
+
+        .cta-section .section-desc {
+            max-width: 520px;
+            margin: 0 auto 40px;
+            text-align: center;
+        }
+
+        /* ─── FOOTER ─── */
+        footer {
+            border-top: 1px solid var(--border);
+            padding: 48px 48px 40px;
+            background: var(--bg-surface);
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+
+        .footer-brand .footer-logo {
+            font-family: 'Outfit', sans-serif;
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: var(--text-primary);
+            margin-bottom: 8px;
+        }
+
+        .footer-brand p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            max-width: 300px;
+            line-height: 1.6;
+        }
+
+        .footer-col h4 {
+            font-size: 0.78rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            color: var(--text-secondary);
+            margin-bottom: 14px;
+        }
+
+        .footer-col a {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            padding: 4px 0;
+            transition: color 0.2s;
+        }
+
+        .footer-col a:hover { color: var(--text-primary); }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 36px auto 0;
+            padding-top: 24px;
+            border-top: 1px solid var(--border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.78rem;
+            color: var(--text-muted);
+        }
+
+        .footer-bottom a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .footer-bottom a:hover { color: var(--text-secondary); }
+
+        /* ─── MOBILE ─── */
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--text-secondary);
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+
+        @media (max-width: 900px) {
+            nav { padding: 0 24px; }
+            .nav-links { display: none; }
+            .mobile-menu-btn { display: block; }
+            .hero { padding: 120px 24px 80px; }
+            section { padding: 72px 24px; }
+            .hero-stats { gap: 32px; flex-wrap: wrap; }
+            .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .products-grid { grid-template-columns: 1fr; }
+            .diff-grid { grid-template-columns: 1fr; }
+            .workflow-steps { grid-template-columns: 1fr; }
+            .otc-banner { flex-direction: column; padding: 32px; gap: 24px; }
+            .footer-inner { flex-direction: column; }
+            .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
+            .cta-section { padding: 80px 24px; }
+        }
+
+        /* ─── SCROLL ANIMATIONS ─── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(24px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+
+<!-- ─── NAV ─── -->
+<nav>
+    <a href="#" class="nav-logo">
+        <span class="logo-mark">AI</span>
+        AIMAILABS
+    </a>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#products">Products</a></li>
+        <li><a href="#why">Why Us</a></li>
+        <li><a href="#start">Get Started</a></li>
+        <li><a href="#contact" class="nav-cta">Request Demo</a></li>
+    </ul>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">☰</button>
+</nav>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+    <div class="hero-grid-bg"></div>
+    <div class="hero-glow"></div>
+    <div class="hero-glow-2"></div>
+    <div class="hero-content">
+        <div class="hero-badge">
+            <span class="dot"></span>
+            Presenting at OTC Asia 2026
+        </div>
+        <h1>
+            Your Standards. Your Judgment.<br>
+            <span class="gradient-text">AI Speed.</span>
+        </h1>
+        <p class="hero-desc">
+            AIMAILABS builds AI inspection intelligence for offshore oil &amp; gas.
+            We detect defects on-site, assess severity against your standards,
+            and generate audit-ready reports — before the helicopter lands.
+        </p>
+        <div class="hero-actions">
+            <a href="#contact" class="btn-primary">Request a Demo ↗</a>
+            <a href="#products" class="btn-ghost">Explore Products</a>
+        </div>
+
+        <div class="hero-stats">
+            <div class="hero-stat">
+                <div class="value">40–80%</div>
+                <div class="label">Faster Reporting</div>
+            </div>
+            <div class="hero-stat">
+                <div class="value">100%</div>
+                <div class="label">Offline Operation</div>
+            </div>
+            <div class="hero-stat">
+                <div class="value">Zero</div>
+                <div class="label">Subjectivity in Severity</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── ABOUT ─── -->
+<section id="about">
+    <div class="section-inner">
+        <div class="about-grid">
+            <div class="reveal">
+                <div class="section-label">What We Do</div>
+                <h2 class="section-title">AI-Powered Inspection<br>Intelligence Platform</h2>
+                <p class="section-desc" style="margin-bottom:24px">
+                    INSPECTA puts AI directly in your inspector's hands — detecting defects,
+                    assessing severity against your standards, and generating
+                    structured reports entirely on-device.
+                </p>
+                <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.7;">
+                    The AI sees the defect. The system explains why.
+                    The engineer decides what to do. Every output is traceable,
+                    every decision is auditable, and the engineer is always in control.
+                </p>
+            </div>
+            <div class="about-visual reveal">
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">👁</div>
+                    <div class="pipeline-text">
+                        <div class="pipe-title">Detect</div>
+                        <div class="pipe-desc">AI identifies visible defects from inspection photos</div>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">📐</div>
+                    <div class="pipeline-text">
+                        <div class="pipe-title">Assess</div>
+                        <div class="pipe-desc">Severity classified against your inspection criteria</div>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">📝</div>
+                    <div class="pipeline-text">
+                        <div class="pipe-title">Report</div>
+                        <div class="pipe-desc">Structured inspection narrative generated automatically</div>
+                    </div>
+                </div>
+                <div class="pipeline-step">
+                    <div class="pipeline-icon">✓</div>
+                    <div class="pipeline-text">
+                        <div class="pipe-title">Validate</div>
+                        <div class="pipe-desc">Engineer reviews, overrides if needed, and approves</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── PRODUCTS ─── -->
+<section id="products">
+    <div class="section-inner">
+        <div class="section-label reveal">The INSPECTA Suite</div>
+        <h2 class="section-title reveal">Four Products. One AI Engine.</h2>
+        <p class="section-desc reveal">Start with what fits your operation. Scale when you're ready.</p>
+
+        <div class="products-grid">
+            <div class="product-card featured reveal">
+                <div class="product-icon">📱</div>
+                <div class="product-name">INSPECTA Edge</div>
+                <div class="product-tagline">AI In Your Inspector's Hands</div>
+                <p class="product-desc">
+                    Fully offline mobile app on an Ex-rated device. Photograph a defect — AI detects it,
+                    assesses severity against your standards, and generates a PDF report before you climb down.
+                </p>
+
+            </div>
+
+            <div class="product-card reveal">
+                <div class="product-icon">☁</div>
+                <div class="product-name">INSPECTA Cloud</div>
+                <div class="product-tagline">Real-Time Command Centre</div>
+                <p class="product-desc">
+                    Web dashboard where findings from every inspector and camera flow in real-time.
+                    KPI cards, severity breakdowns, and approval workflows — all in one screen.
+                </p>
+
+            </div>
+
+            <div class="product-card reveal">
+                <div class="product-icon">📷</div>
+                <div class="product-name">INSPECTA Vision</div>
+                <div class="product-tagline">AI Eyes That Never Blink</div>
+                <p class="product-desc">
+                    Camera systems detecting structural defects in real-time — from portable
+                    campaign kits, to permanent installations, to autonomous robotic platforms.
+                </p>
+
+            </div>
+
+            <div class="product-card reveal">
+                <div class="product-icon">🔧</div>
+                <div class="product-name">INSPECTA Scoper</div>
+                <div class="product-tagline">From Finding to Work Order</div>
+                <p class="product-desc">
+                    Digital field workscoping that turns inspection findings into costed repair scopes
+                    with full traceability from photo to procurement.
+                </p>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── WHY ─── -->
+<section id="why">
+    <div class="section-inner">
+        <div class="section-label reveal">Why INSPECTA</div>
+        <h2 class="section-title reveal">Built for Offshore. Built for Engineers.</h2>
+        <p class="section-desc reveal">
+            INSPECTA goes beyond data collection — it interprets inspection findings
+            and provides engineers with actionable, standards-based assessments.
+        </p>
+
+        <div class="diff-grid">
+            <div class="diff-card reveal">
+                <div class="diff-icon">🔒</div>
+                <div class="diff-title">100% Offline-First</div>
+                <p class="diff-text">No cloud dependency, no satellite bandwidth required. AI runs entirely on-device. Your inspection data never leaves the platform.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">🔍</div>
+                <div class="diff-title">Explainable AI</div>
+                <p class="diff-text">Every severity rating traces to a specific criteria clause. The engineer sees exactly why — and can override with documented justification.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">📋</div>
+                <div class="diff-title">Standards-Based Assessment</div>
+                <p class="diff-text">Inspection criteria applied consistently every time — as written in your standards. No guesswork, no subjective interpretation.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">⚡</div>
+                <div class="diff-title">Photo to Report in Seconds</div>
+                <p class="diff-text">AI detects and assesses while the inspector is still on-site. Audit-ready reports generated instantly, not days later in the office.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">👤</div>
+                <div class="diff-title">Engineer Stays in Control</div>
+                <p class="diff-text">AI recommends. Engineer decides. Full audit trail of every assessment and override. Designed for regulatory compliance.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">🔄</div>
+                <div class="diff-title">One Platform, All Deployments</div>
+                <p class="diff-text">From mobile device to web dashboard to camera systems — one unified inspection intelligence platform across your entire operation.</p>
+            </div>
+        </div>
+
+        <!-- OTC Banner -->
+        <div class="otc-banner reveal">
+            <div class="otc-icon">📄</div>
+            <div class="otc-text">
+                <h3>Presenting at OTC Asia 2026</h3>
+                <p>
+                    Our AI-powered inspection methodology will be peer-reviewed and presented
+                    at the Offshore Technology Conference, validating our approach to
+                    safety-critical inspection workflows with human-in-the-loop control.
+                </p>
+                <span class="otc-tag">OTC Asia 2026 · Offshore Inspection Intelligence</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── GET STARTED ─── -->
+<section id="start">
+    <div class="section-inner">
+        <div class="section-label reveal">Get Started</div>
+        <h2 class="section-title reveal">AI-Powered Inspection in Weeks, Not Months</h2>
+        <p class="section-desc reveal">Three steps from first conversation to field-validated deployment.</p>
+
+        <div class="workflow-steps">
+            <div class="workflow-step reveal">
+                <div class="step-title">Discovery &amp; Scoping</div>
+                <span class="step-time">1–2 weeks</span>
+                <p class="step-desc">
+                    We meet your team, understand your platforms, standards, and pain points.
+                    Identify the highest-value starting point where reporting delays cost you most.
+                </p>
+            </div>
+            <div class="workflow-step reveal">
+                <div class="step-title">Pilot Deployment</div>
+                <span class="step-time">2–4 weeks</span>
+                <p class="step-desc">
+                    Deploy INSPECTA for one real campaign. Real defects, real standards, real reports.
+                    Your engineers validate AI assessments against their own judgment.
+                </p>
+            </div>
+            <div class="workflow-step reveal">
+                <div class="step-title">Scale Across Your Fleet</div>
+                <span class="step-time">Ongoing</span>
+                <p class="step-desc">
+                    Expand from one platform to your entire portfolio. Add Cloud, Vision, and Scoper
+                    as you grow. Per-asset licensing scales with your deployment.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── CTA ─── -->
+<section class="cta-section" id="contact">
+    <div class="section-inner">
+        <div class="section-label reveal">Let's Talk</div>
+        <h2 class="section-title reveal">See INSPECTA on Your Inspection Photos</h2>
+        <p class="section-desc reveal">
+            We'll run a live demo on your defects, your standards, your report format.
+            No obligation. No data leaves your premises.
+        </p>
+        <div class="reveal">
+            <a href="mailto:info@aimailabs.com" class="btn-primary" style="margin-right:12px;">
+                Request a Demo ↗
+            </a>
+            <a href="https://wa.me/60134553120?text=Hi%20AIMAILABS%2C%20I%27d%20like%20to%20know%20more%20about%20INSPECTA." class="btn-ghost" target="_blank" rel="noopener" style="border-color:#25d366; color:#25d366;">
+                WhatsApp Us
+            </a>
+        </div>
+        <p style="margin-top:32px; font-size:0.85rem; color:var(--text-muted);" class="reveal">
+            info@aimailabs.com &nbsp;·&nbsp; Sabah, Malaysia
+        </p>
+    </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer>
+    <div class="footer-inner">
+        <div class="footer-brand">
+            <div class="footer-logo">AIMAILABS SDN BHD</div>
+            <p>Asset Integrity Management by AI Labs. Building AI inspection intelligence for offshore oil &amp; gas.</p>
+        </div>
+        <div class="footer-col">
+            <h4>Product</h4>
+            <a href="#products">INSPECTA Edge</a>
+            <a href="#products">INSPECTA Cloud</a>
+            <a href="#products">INSPECTA Vision</a>
+            <a href="#products">INSPECTA Scoper</a>
+        </div>
+        <div class="footer-col">
+            <h4>Company</h4>
+            <a href="#about">About</a>
+            <a href="#why">Why Us</a>
+            <a href="#start">Get Started</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+            <h4>Connect</h4>
+            <a href="mailto:info@aimailabs.com">info@aimailabs.com</a>
+            <a href="https://wa.me/60134553120">WhatsApp</a>
+            <a href="https://www.aimailabs.com" target="_blank">www.aimailabs.com</a>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <span>© 2026 AIMAILABS Sdn Bhd. All rights reserved.</span>
+        <span>Sabah, Malaysia</span>
+    </div>
+</footer>
+
+<!-- ─── WHATSAPP CHAT WIDGET ─── -->
+<div class="wa-widget" id="waWidget">
+    <button class="wa-toggle" id="waToggle" aria-label="Chat on WhatsApp">
+        <svg class="wa-icon-chat" viewBox="0 0 32 32" width="26" height="26" fill="white"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.738 3.052 9.372L1.056 31.2l6.012-1.97A15.908 15.908 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.314 22.598c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.944.324-5.652-1.214-4.746-1.968-7.8-6.79-8.034-7.104-.226-.314-1.9-2.532-1.9-4.83s1.2-3.426 1.628-3.894c.39-.426.924-.616 1.234-.616.15 0 .284.008.406.014.428.018.642.042.924.716.354.84 1.218 2.97 1.324 3.186.108.218.216.514.066.814-.142.306-.268.442-.486.694-.218.252-.424.446-.642.718-.2.236-.424.49-.178.942.246.446 1.094 1.8 2.348 2.916 1.616 1.438 2.978 1.886 3.402 2.094.314.156.69.126.944-.142.322-.34.72-.904 1.124-1.46.288-.396.65-.446.994-.298.35.142 2.216 1.046 2.596 1.236.38.19.634.286.728.446.09.16.09.924-.3 2.024z"/></svg>
+        <svg class="wa-icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+
+    <div class="wa-panel" id="waPanel">
+        <div class="wa-header">
+            <div class="wa-header-info">
+                <div class="wa-avatar"><span>AI</span><span class="wa-online"></span></div>
+                <div>
+                    <div class="wa-header-name">AIMAILABS</div>
+                    <div class="wa-header-status">Typically replies within minutes</div>
+                </div>
+            </div>
+            <button class="wa-close-btn" id="waClose" aria-label="Close chat">
+                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </button>
+        </div>
+
+        <div class="wa-body" id="waBody">
+            <div class="wa-date-divider"><span>Today</span></div>
+            <div class="wa-msg wa-msg-in wa-msg-anim" style="animation-delay:0.3s">
+                <div class="wa-msg-bubble">
+                    <p><strong>Assalamualaikum!</strong> &#128075;</p>
+                    <p>Welcome to AIMAILABS. How can we help you today?</p>
+                    <span class="wa-msg-time">AIMAILABS Team</span>
+                </div>
+            </div>
+            <div class="wa-quick-replies" id="waQuickReplies">
+                <button class="wa-quick-btn" data-msg="I'd like a demo of INSPECTA">&#127919; Request a Demo</button>
+                <button class="wa-quick-btn" data-msg="I'd like to know about INSPECTA pricing">&#128176; Pricing Info</button>
+                <button class="wa-quick-btn" data-msg="I have a technical question about INSPECTA">&#128295; Technical Question</button>
+                <button class="wa-quick-btn" data-msg="I'd like to discuss a partnership opportunity">&#129309; Partnership</button>
+            </div>
+        </div>
+
+        <div class="wa-footer">
+            <div class="wa-input-wrap">
+                <input type="text" class="wa-input" id="waInput" placeholder="Type a message..." maxlength="500" autocomplete="off">
+                <button class="wa-send-btn" id="waSend" aria-label="Send via WhatsApp">
+                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+                </button>
+            </div>
+            <div class="wa-footer-note">
+                <svg viewBox="0 0 32 32" width="12" height="12" fill="#25d366"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.738 3.052 9.372L1.056 31.2l6.012-1.97A15.908 15.908 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.314 22.598c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.944.324-5.652-1.214-4.746-1.968-7.8-6.79-8.034-7.104-.226-.314-1.9-2.532-1.9-4.83s1.2-3.426 1.628-3.894c.39-.426.924-.616 1.234-.616.15 0 .284.008.406.014.428.018.642.042.924.716.354.84 1.218 2.97 1.324 3.186.108.218.216.514.066.814-.142.306-.268.442-.486.694-.218.252-.424.446-.642.718-.2.236-.424.49-.178.942.246.446 1.094 1.8 2.348 2.916 1.616 1.438 2.978 1.886 3.402 2.094.314.156.69.126.944-.142.322-.34.72-.904 1.124-1.46.288-.396.65-.446.994-.298.35.142 2.216 1.046 2.596 1.236.38.19.634.286.728.446.09.16.09.924-.3 2.024z"/></svg>
+                Continues on WhatsApp
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    .wa-widget { position:fixed; bottom:28px; right:28px; z-index:9000; font-family:'DM Sans',sans-serif; }
+
+    .wa-toggle {
+        width:60px; height:60px; border-radius:50%; background:#25d366; border:none; cursor:pointer;
+        display:flex; align-items:center; justify-content:center; position:relative; z-index:2;
+        box-shadow:0 4px 20px rgba(37,211,102,0.35),0 2px 8px rgba(0,0,0,0.3);
+        transition:transform 0.25s,box-shadow 0.25s,background 0.25s;
+        animation:wa-entrance 0.6s 1s ease both;
+    }
+    .wa-toggle:hover { transform:scale(1.08); box-shadow:0 6px 28px rgba(37,211,102,0.5),0 4px 12px rgba(0,0,0,0.3); }
+    .wa-toggle.active { background:#1a1f36; }
+    .wa-icon-close { display:none; }
+    .wa-toggle.active .wa-icon-chat { display:none; }
+    .wa-toggle.active .wa-icon-close { display:block; }
+
+    .wa-toggle::before {
+        content:''; position:absolute; inset:-4px; border-radius:50%;
+        border:2px solid rgba(37,211,102,0.4); animation:wa-pulse 2.5s ease-in-out infinite;
+    }
+    .wa-toggle.active::before { animation:none; opacity:0; }
+
+    .wa-toggle::after {
+        content:'1'; position:absolute; top:-2px; right:-2px; width:20px; height:20px;
+        background:#ef4444; color:white; font-size:0.65rem; font-weight:700; border-radius:50%;
+        display:flex; align-items:center; justify-content:center; border:2px solid var(--bg-deep);
+        transition:opacity 0.2s,transform 0.2s;
+    }
+    .wa-toggle.active::after, .wa-toggle.seen::after { opacity:0; transform:scale(0); }
+
+    @keyframes wa-pulse { 0%,100%{transform:scale(1);opacity:0.6} 50%{transform:scale(1.18);opacity:0} }
+    @keyframes wa-entrance { from{opacity:0;transform:scale(0.5) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
+
+    .wa-panel {
+        position:absolute; bottom:76px; right:0; width:370px; max-height:520px;
+        background:#0b1220; border:1px solid var(--border); border-radius:16px;
+        overflow:hidden; display:flex; flex-direction:column;
+        box-shadow:0 16px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.03);
+        opacity:0; transform:translateY(16px) scale(0.95); pointer-events:none;
+        transition:opacity 0.3s ease,transform 0.3s ease;
+    }
+    .wa-panel.open { opacity:1; transform:translateY(0) scale(1); pointer-events:all; }
+
+    .wa-header {
+        background:linear-gradient(135deg,#075e54 0%,#128c7e 100%);
+        padding:18px 20px; display:flex; align-items:center; justify-content:space-between;
+    }
+    .wa-header-info { display:flex; align-items:center; gap:12px; }
+    .wa-avatar {
+        width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#818cf8);
+        display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:800;
+        color:white; position:relative; flex-shrink:0;
+    }
+    .wa-online {
+        position:absolute; bottom:0; right:0; width:11px; height:11px;
+        background:#25d366; border-radius:50%; border:2px solid #075e54;
+    }
+    .wa-header-name { font-weight:600; font-size:0.95rem; color:white; }
+    .wa-header-status { font-size:0.72rem; color:rgba(255,255,255,0.7); margin-top:1px; }
+    .wa-close-btn {
+        background:none; border:none; color:rgba(255,255,255,0.7); cursor:pointer;
+        padding:4px; border-radius:6px; transition:color 0.2s,background 0.2s;
+    }
+    .wa-close-btn:hover { color:white; background:rgba(255,255,255,0.1); }
+
+    .wa-body {
+        flex:1; padding:20px 16px; overflow-y:auto; min-height:260px;
+        background-color:#06090f;
+        background-image:radial-gradient(circle at 20% 50%,rgba(59,130,246,0.03) 0%,transparent 50%),
+        radial-gradient(circle at 80% 20%,rgba(129,140,248,0.02) 0%,transparent 50%);
+    }
+    .wa-date-divider { text-align:center; margin-bottom:16px; }
+    .wa-date-divider span {
+        font-size:0.68rem; color:var(--text-muted); background:rgba(255,255,255,0.04);
+        padding:3px 14px; border-radius:8px;
+    }
+
+    .wa-msg { display:flex; margin-bottom:10px; }
+    .wa-msg-in { justify-content:flex-start; }
+    .wa-msg-out { justify-content:flex-end; }
+    .wa-msg-bubble { max-width:82%; padding:10px 14px; border-radius:12px; font-size:0.86rem; line-height:1.5; }
+    .wa-msg-in .wa-msg-bubble {
+        background:var(--bg-card); border:1px solid var(--border);
+        border-top-left-radius:4px; color:var(--text-primary);
+    }
+    .wa-msg-out .wa-msg-bubble { background:#005c4b; border-top-right-radius:4px; color:#e8f5e9; }
+    .wa-msg-bubble p { margin:0 0 4px; }
+    .wa-msg-bubble p:last-of-type { margin-bottom:2px; }
+    .wa-msg-bubble strong { color:white; }
+    .wa-msg-time { display:block; font-size:0.62rem; color:rgba(255,255,255,0.35); margin-top:4px; text-align:right; }
+    .wa-msg-anim { animation:wa-msg-in 0.4s ease both; }
+    @keyframes wa-msg-in { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
+
+    .wa-quick-replies { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
+    .wa-quick-btn {
+        background:var(--bg-card); border:1px solid var(--border-bright); color:var(--text-primary);
+        font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500;
+        padding:8px 14px; border-radius:20px; cursor:pointer; transition:all 0.2s; white-space:nowrap;
+    }
+    .wa-quick-btn:hover { background:var(--bg-elevated); border-color:var(--accent); color:var(--accent-bright); }
+
+    .wa-footer { padding:12px 14px 10px; background:#0b1220; border-top:1px solid var(--border); }
+    .wa-input-wrap {
+        display:flex; align-items:center; gap:8px; background:var(--bg-card);
+        border:1px solid var(--border); border-radius:24px; padding:4px 6px 4px 18px;
+        transition:border-color 0.2s;
+    }
+    .wa-input-wrap:focus-within { border-color:var(--border-bright); }
+    .wa-input {
+        flex:1; background:none; border:none; outline:none; color:var(--text-primary);
+        font-family:'DM Sans',sans-serif; font-size:0.88rem; padding:10px 0;
+    }
+    .wa-input::placeholder { color:var(--text-muted); }
+    .wa-send-btn {
+        width:38px; height:38px; border-radius:50%; background:#25d366; border:none;
+        color:white; cursor:pointer; display:flex; align-items:center; justify-content:center;
+        flex-shrink:0; transition:background 0.2s,transform 0.15s;
+    }
+    .wa-send-btn:hover { background:#22c35e; transform:scale(1.06); }
+    .wa-footer-note {
+        display:flex; align-items:center; justify-content:center; gap:5px;
+        font-size:0.65rem; color:var(--text-muted); margin-top:8px; padding-bottom:2px;
+    }
+
+    @media (max-width:900px) {
+        .wa-widget { bottom:16px; right:16px; }
+        .wa-toggle { width:54px; height:54px; }
+        .wa-panel { width:calc(100vw - 32px); right:-8px; bottom:68px; max-height:70vh; }
+    }
+</style>
+
+<script>
+// ─── WHATSAPP CHAT WIDGET ───
+(function(){
+    var WA='60134553120',tgl=document.getElementById('waToggle'),pnl=document.getElementById('waPanel'),
+        cls=document.getElementById('waClose'),inp=document.getElementById('waInput'),
+        snd=document.getElementById('waSend'),bdy=document.getElementById('waBody'),
+        qr=document.getElementById('waQuickReplies'),open=false;
+
+    function show(){open=true;pnl.classList.add('open');tgl.classList.add('active','seen');setTimeout(function(){inp.focus()},350)}
+    function hide(){open=false;pnl.classList.remove('open');tgl.classList.remove('active')}
+
+    function send(msg){
+        var m=document.createElement('div');m.className='wa-msg wa-msg-out wa-msg-anim';
+        m.innerHTML='<div class="wa-msg-bubble"><p>'+msg+'</p><span class="wa-msg-time">Sending via WhatsApp...</span></div>';
+        qr.style.display='none';bdy.appendChild(m);bdy.scrollTop=bdy.scrollHeight;
+        setTimeout(function(){
+            var r=document.createElement('div');r.className='wa-msg wa-msg-in wa-msg-anim';
+            r.innerHTML='<div class="wa-msg-bubble"><p>Opening WhatsApp... &#128172;</p><span class="wa-msg-time">You\'ll continue the conversation there</span></div>';
+            bdy.appendChild(r);bdy.scrollTop=bdy.scrollHeight;
+        },500);
+        setTimeout(function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank')},1000);
+    }
+
+    tgl.addEventListener('click',function(){open?hide():show()});
+    cls.addEventListener('click',hide);
+    snd.addEventListener('click',function(){var v=inp.value.trim();if(v){send(v);inp.value=''}});
+    inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var v=inp.value.trim();if(v){send(v);inp.value=''}}});
+    qr.querySelectorAll('.wa-quick-btn').forEach(function(b){b.addEventListener('click',function(){send(b.dataset.msg)})});
+    document.addEventListener('click',function(e){if(open&&!document.getElementById('waWidget').contains(e.target))hide()});
+})();
+
+// ─── SCROLL REVEAL ───
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+        }
+    });
+}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// ─── NAV SHRINK ───
+let lastScroll = 0;
+window.addEventListener('scroll', () => {
+    const nav = document.querySelector('nav');
+    if (window.scrollY > 80) {
+        nav.style.background = 'rgba(4, 8, 15, 0.95)';
+    } else {
+        nav.style.background = 'rgba(4, 8, 15, 0.8)';
+    }
+});
+
+// ─── SMOOTH SCROLL ───
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+    a.addEventListener('click', e => {
+        e.preventDefault();
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // Close mobile menu if open
+            document.querySelector('.nav-links').classList.remove('show');
+        }
+    });
+});
+</script>
+
+</body>
+</html>
