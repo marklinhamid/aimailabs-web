@@ -6,8 +6,8 @@
     <title>AIMAILABS — AI Engineering Reasoning Labs for Oil &amp; Gas</title>
 
     <!-- SEO Meta -->
-    <meta name="description" content="AIMAILABS is an AI engineering reasoning lab for the oil and gas sector. We combine proven AI technologies into purpose-built solutions designed around each client's unique operational needs. Based in Sabah, Malaysia.">
-    <meta name="keywords" content="AI inspection, offshore inspection, oil and gas, asset integrity, defect detection, INSPECTA, structural inspection, offshore platform, AI-powered reports, Malaysia, OTC Asia 2026">
+    <meta name="description" content="AIMAILABS is an AI engineering reasoning lab for the oil and gas sector. We combine proven AI technologies into purpose-built solutions designed around each client's unique operational needs. Based in Malaysia, serving Southeast Asia.">
+    <meta name="keywords" content="AI inspection, offshore inspection, oil and gas, asset integrity, defect detection, INSPECTA, structural inspection, offshore platform, AI-powered reports, Malaysia, Southeast Asia, OTC Asia 2026, AI engineering reasoning, PETRONAS, offshore oil gas Malaysia, inspection technology Asia">
     <meta name="author" content="AIMAILABS Sdn Bhd">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.aimailabs.com/">
@@ -30,8 +30,13 @@
     <meta name="twitter:image" content="https://www.aimailabs.com/og-image.png">
 
     <!-- Geo Tags -->
-    <meta name="geo.region" content="MY-12">
-    <meta name="geo.placename" content="Sabah, Malaysia">
+    <meta name="geo.region" content="MY">
+    <meta name="geo.placename" content="Malaysia">
+    <meta name="geo.position" content="4.2105;101.9758">
+    <meta name="ICBM" content="4.2105, 101.9758">
+    <meta name="language" content="en">
+    <meta name="market" content="MY, SG, TH, ID, BN, VN, PH">
+    <meta name="coverage" content="Southeast Asia">
 
     <!-- Structured Data (Organization Schema) -->
     <script type="application/ld+json">
@@ -44,12 +49,16 @@
         "description": "AI engineering reasoning lab for the oil and gas sector. Purpose-built solutions designed around each client's unique operational needs.",
         "address": {
             "@type": "PostalAddress",
-            "addressRegion": "Sabah",
-            "addressCountry": "MY"
+            "addressCountry": "MY",
+            "addressRegion": "Malaysia"
+        },
+        "areaServed": {
+            "@type": "GeoShape",
+            "name": "Southeast Asia"
         },
         "contactPoint": {
             "@type": "ContactPoint",
-            "email": "info@aimailabs.com",
+            "email": "marklinhamid@aimailabs.com",
             "contactType": "sales"
         },
         "sameAs": [
@@ -76,6 +85,58 @@
             "name": "AIMAILABS Sdn Bhd"
         }
     }
+    </script>
+
+    <!-- Job Postings Schema -->
+    <script type="application/ld+json">
+    [{
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": "Junior AI Software Engineer",
+        "description": "Help develop computer vision models for structural inspection. Prepare datasets, train detection models, build AI pipelines, and collaborate directly with the founder on AI architecture.",
+        "datePosted": "2026-03-06",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": "AIMAILABS Sdn Bhd",
+            "sameAs": "https://www.aimailabs.com"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kota Kinabalu",
+                "addressRegion": "Sabah",
+                "addressCountry": "MY"
+            }
+        },
+        "applicantLocationRequirements": { "@type": "Country", "name": "Malaysia" },
+        "jobLocationType": "TELECOMMUTE"
+    },
+    {
+        "@context": "https://schema.org",
+        "@type": "JobPosting",
+        "title": "Junior Full Stack Developer",
+        "description": "Build the application layer connecting AI models with real-world users. Develop interfaces, backend APIs, and mobile/desktop apps for our AI inspection platform.",
+        "datePosted": "2026-03-06",
+        "employmentType": "FULL_TIME",
+        "hiringOrganization": {
+            "@type": "Organization",
+            "name": "AIMAILABS Sdn Bhd",
+            "sameAs": "https://www.aimailabs.com"
+        },
+        "jobLocation": {
+            "@type": "Place",
+            "address": {
+                "@type": "PostalAddress",
+                "addressLocality": "Kota Kinabalu",
+                "addressRegion": "Sabah",
+                "addressCountry": "MY"
+            }
+        },
+        "applicantLocationRequirements": { "@type": "Country", "name": "Malaysia" },
+        "jobLocationType": "TELECOMMUTE"
+    }]
     </script>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -749,6 +810,129 @@
             line-height: 1.65;
         }
 
+        /* ─── CAREERS ─── */
+        .careers-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+
+        .career-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            padding: 36px;
+            position: relative;
+            transition: border-color 0.3s;
+        }
+
+        .career-card:hover { border-color: var(--border-bright); }
+
+        .career-badge {
+            display: inline-block;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.62rem;
+            font-weight: 500;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--accent-green);
+            background: rgba(16,185,129,0.1);
+            border: 1px solid rgba(16,185,129,0.2);
+            padding: 4px 10px;
+            border-radius: 6px;
+            margin-bottom: 16px;
+        }
+
+        .career-title {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 6px;
+        }
+
+        .career-location {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            margin-bottom: 16px;
+        }
+
+        .career-desc {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .career-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 24px;
+        }
+
+        .career-tag {
+            font-size: 0.72rem;
+            font-weight: 500;
+            color: var(--accent-bright);
+            background: var(--accent-glow);
+            border: 1px solid rgba(59,130,246,0.15);
+            padding: 4px 10px;
+            border-radius: 6px;
+        }
+
+        .career-details {
+            border-top: 1px solid var(--border);
+            padding-top: 20px;
+            margin-bottom: 24px;
+        }
+
+        .career-detail-section {
+            margin-bottom: 16px;
+        }
+
+        .career-detail-section:last-child { margin-bottom: 0; }
+
+        .career-detail-section h4 {
+            font-family: 'Outfit', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin-bottom: 6px;
+        }
+
+        .career-detail-section p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.6;
+        }
+
+        .career-footer {
+            display: flex;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+        }
+
+        .career-salary {
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.05rem;
+            font-weight: 600;
+            color: var(--text-primary);
+        }
+
+        .career-note {
+            text-align: center;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            margin-top: 40px;
+            line-height: 1.7;
+        }
+
+        @media (max-width: 900px) {
+            .careers-grid { grid-template-columns: 1fr; }
+        }
+
         /* ─── CTA ─── */
         .cta-section {
             text-align: center;
@@ -889,6 +1073,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#products">Products</a></li>
         <li><a href="#why">Why Us</a></li>
+        <li><a href="#careers">Careers</a></li>
         <li><a href="#start">Get Started</a></li>
         <li><a href="#contact" class="nav-cta">Request Demo</a></li>
     </ul>
@@ -1138,6 +1323,104 @@
     </div>
 </section>
 
+<!-- ─── CAREERS ─── -->
+<section id="careers">
+    <div class="section-inner">
+        <div class="section-label reveal">Join Us</div>
+        <h2 class="section-title reveal">Build Real AI Systems</h2>
+        <p class="section-desc reveal">
+            We're an early-stage AI startup looking for developers who want hands-on experience
+            building real-world AI for industrial infrastructure. Direct mentorship, real impact.
+        </p>
+
+        <div class="careers-grid">
+            <div class="career-card reveal">
+                <div class="career-badge">Open Role</div>
+                <h3 class="career-title">Junior AI Software Engineer</h3>
+                <p class="career-location">Kota Kinabalu, Sabah · Remote / Hybrid</p>
+                <p class="career-desc">
+                    Help develop computer vision models for structural inspection. Prepare datasets,
+                    train detection models, build AI pipelines, and collaborate directly with the founder
+                    on AI architecture and experimentation.
+                </p>
+                <div class="career-tags">
+                    <span class="career-tag">Python</span>
+                    <span class="career-tag">Computer Vision</span>
+                    <span class="career-tag">PyTorch / TensorFlow</span>
+                    <span class="career-tag">Object Detection</span>
+                </div>
+                <div class="career-details">
+                    <div class="career-detail-section">
+                        <h4>What you'll do</h4>
+                        <p>Develop CV models for inspection, manage image datasets and annotations,
+                           support model training and evaluation, build Python scripts for AI pipelines,
+                           and integrate AI models into the platform.</p>
+                    </div>
+                    <div class="career-detail-section">
+                        <h4>What we're looking for</h4>
+                        <p>Degree in CS, AI, Data Science or related field. Strong interest in AI and
+                           computer vision. Python experience. Familiarity with ML frameworks is a plus.
+                           Comfortable with AI coding tools.</p>
+                    </div>
+                    <div class="career-detail-section">
+                        <h4>What you'll gain</h4>
+                        <p>Hands-on experience building real AI systems for offshore infrastructure.
+                           Exposure to AI architecture, computer vision, and knowledge-based reasoning.
+                           Direct mentorship from an industry engineer and AI founder.</p>
+                    </div>
+                </div>
+                <div class="career-footer">
+                    <a href="mailto:marklinhamid@aimailabs.com?subject=Junior%20AI%20Software%20Engineer%20Application" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                </div>
+            </div>
+
+            <div class="career-card reveal">
+                <div class="career-badge">Open Role</div>
+                <h3 class="career-title">Junior Full Stack Developer</h3>
+                <p class="career-location">Kota Kinabalu, Sabah · Remote / Hybrid</p>
+                <p class="career-desc">
+                    Build the application layer that connects AI models with real-world users.
+                    Develop interfaces, backend APIs, and mobile/desktop apps for our inspection platform.
+                </p>
+                <div class="career-tags">
+                    <span class="career-tag">Python / JavaScript</span>
+                    <span class="career-tag">REST APIs</span>
+                    <span class="career-tag">React / Flutter</span>
+                    <span class="career-tag">FastAPI / Node.js</span>
+                </div>
+                <div class="career-details">
+                    <div class="career-detail-section">
+                        <h4>What you'll do</h4>
+                        <p>Build and maintain the inspection application interface, develop backend APIs
+                           to integrate AI models and reporting, build mobile/desktop apps, implement
+                           AI-generated inspection reports, and improve application performance.</p>
+                    </div>
+                    <div class="career-detail-section">
+                        <h4>What we're looking for</h4>
+                        <p>Degree in CS, Software Engineering or related field. Experience with Python
+                           or JavaScript. Familiarity with REST APIs, frontend development, databases,
+                           and backend services. Docker experience is a plus.</p>
+                    </div>
+                    <div class="career-detail-section">
+                        <h4>What you'll gain</h4>
+                        <p>Experience building AI-enabled applications in a high-impact startup.
+                           Exposure to computer vision systems and AI infrastructure.
+                           Direct collaboration with AI engineers and industry experts.</p>
+                    </div>
+                </div>
+                <div class="career-footer">
+                    <a href="mailto:marklinhamid@aimailabs.com?subject=Junior%20Full%20Stack%20Developer%20Application" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                </div>
+            </div>
+        </div>
+
+        <p class="career-note reveal">
+            Ideal for developers interested in AI startups and building real-world AI systems.<br>
+            Send your CV and GitHub (if available) to <a href="mailto:marklinhamid@aimailabs.com" style="color:var(--accent-bright); text-decoration:none;">marklinhamid@aimailabs.com</a>
+        </p>
+    </div>
+</section>
+
 <!-- ─── CTA ─── -->
 <section class="cta-section" id="contact">
     <div class="section-inner">
@@ -1148,7 +1431,7 @@
             No obligation. No data leaves your premises.
         </p>
         <div class="reveal">
-            <a href="mailto:info@aimailabs.com" class="btn-primary" style="margin-right:12px;">
+            <a href="mailto:marklinhamid@aimailabs.com" class="btn-primary" style="margin-right:12px;">
                 Request a Demo ↗
             </a>
             <a href="https://wa.me/60134553120?text=Hi%20AIMAILABS%2C%20I%27d%20like%20to%20know%20more%20about%20INSPECTA." class="btn-ghost" target="_blank" rel="noopener" style="border-color:#25d366; color:#25d366;">
@@ -1156,7 +1439,7 @@
             </a>
         </div>
         <p style="margin-top:32px; font-size:0.85rem; color:var(--text-muted);" class="reveal">
-            info@aimailabs.com &nbsp;·&nbsp; Sabah, Malaysia
+            marklinhamid@aimailabs.com &nbsp;·&nbsp; Malaysia &nbsp;·&nbsp; Southeast Asia
         </p>
     </div>
 </section>
@@ -1179,19 +1462,20 @@
             <h4>Company</h4>
             <a href="#about">About</a>
             <a href="#why">Why Us</a>
+            <a href="#careers">Careers</a>
             <a href="#start">Get Started</a>
             <a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
             <h4>Connect</h4>
-            <a href="mailto:info@aimailabs.com">info@aimailabs.com</a>
+            <a href="mailto:marklinhamid@aimailabs.com">marklinhamid@aimailabs.com</a>
             <a href="https://wa.me/60134553120">WhatsApp</a>
             <a href="https://www.aimailabs.com" target="_blank">www.aimailabs.com</a>
         </div>
     </div>
     <div class="footer-bottom">
         <span>© 2026 AIMAILABS Sdn Bhd. All rights reserved.</span>
-        <span>Sabah, Malaysia</span>
+        <span>Malaysia · Southeast Asia</span>
     </div>
 </footer>
 
