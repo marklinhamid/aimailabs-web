@@ -1,25 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Azure Application Insights -->
-<script type="text/javascript">
-!function(T,l,y){var S=T.location,k="script",D="instrumentationKey",C="ingestionendpoint",I="disableExceptionTracking",E="ai.device.",b="toLowerCase",w="crossOriginIsolated",N="PageView",g="onerror",H=null,r=0,h=0,t=null,u=null;var O={config:{instrumentationKey:"eb678443-bbc6-40f2-9432-9dffc85095f0",connectionString:"InstrumentationKey=eb678443-bbc6-40f2-9432-9dffc85095f0;IngestionEndpoint=https://eastasia-0.in.applicationinsights.azure.com/",enableAutoRouteTracking:true}};var e=T.appInsights||function(a){var i=function(e){return function(t){var n=[].slice.call(arguments);n.unshift(e);a.queue&&a.queue.push(n);return a}},n=function(t,n){if(a[t])return a[t];var e=function(){};return a[t]=e,e},c=function(t,n){return function(e){a.queue&&a.queue.push([t,arguments])}},s=function(t,n){return a[t]=n},u={initialize:!0,queue:[],sv:"5",version:2,config:a.config||{}};function o(e,t){var n=t.name;if(n){var i=t.iKey?t.iKey:a.config.instrumentationKey;if(i){var c=n.replace(/ /g,"")+"."+i;u.queue.push(function(){try{a[n]=i}catch(e){}});return c}}}return u}(O);T.appInsights=e;e.queue&&0===e.queue.length&&(e.trackPageView=function(){e.queue.push(["trackPageView",arguments])});!function(n){var t="script",o=document,i=o.createElement(t),e=o.getElementsByTagName(t)[0];i.async=1;i.src="https://js.monitor.azure.com/scripts/b/ai.2.min.js";e.parentNode.insertBefore(i,e)}()}(window,document,[]);
-</script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIMAILABS — AI Engineering Reasoning Labs for Oil &amp; Gas</title>
+    <title>AIMAILABS — AI Infrastructure for Offshore Asset Integrity Management</title>
 
     <!-- SEO Meta -->
-    <meta name="description" content="AIMAILABS is an AI engineering reasoning lab for the oil and gas sector. We combine proven AI technologies into purpose-built solutions designed around each client's unique operational needs. Based in Malaysia, serving Southeast Asia.">
-    <meta name="keywords" content="AI inspection, offshore inspection, oil and gas, asset integrity, defect detection, INSPECTA, structural inspection, offshore platform, AI-powered reports, Malaysia, Southeast Asia, OTC Asia 2026, AI engineering reasoning, PETRONAS, offshore oil gas Malaysia, inspection technology Asia">
+    <meta name="description" content="AIMAILABS builds AI infrastructure for offshore asset integrity management. Purpose-built systems for inspection, engineering assessment, and maintenance planning — covering the full structural lifecycle. Based in Malaysia, serving Southeast Asia.">
+    <meta name="keywords" content="AI infrastructure, offshore asset integrity, oil and gas inspection, structural integrity management, defect detection, INSPECTA, COREVA, MAINTENA, offshore platform, AI inspection reports, Malaysia, Southeast Asia, OTC Asia 2026, PETRONAS, inspection technology Asia, asset integrity management">
     <meta name="author" content="AIMAILABS Sdn Bhd">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.aimailabs.com/">
 
     <!-- Open Graph (Facebook, LinkedIn, WhatsApp) -->
     <meta property="og:type" content="website">
-    <meta property="og:title" content="AIMAILABS — AI-Powered Inspection Intelligence">
-    <meta property="og:description" content="AI engineering reasoning solutions for oil and gas. We combine proven AI technologies into purpose-built tools designed around your operation. Presenting at OTC Asia 2026.">
+    <meta property="og:title" content="AIMAILABS — AI Infrastructure for Offshore Asset Integrity">
+    <meta property="og:description" content="Purpose-built AI systems for the full offshore structural integrity lifecycle — from field inspection to engineering assessment to maintenance planning. Presenting at OTC Asia 2026.">
     <meta property="og:url" content="https://www.aimailabs.com/">
     <meta property="og:site_name" content="AIMAILABS">
     <meta property="og:locale" content="en_US">
@@ -29,8 +25,8 @@
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="AIMAILABS — AI-Powered Inspection Intelligence">
-    <meta name="twitter:description" content="AI engineering reasoning solutions for oil and gas. Purpose-built tools designed around your operation.">
+    <meta name="twitter:title" content="AIMAILABS — AI Infrastructure for Offshore Asset Integrity">
+    <meta name="twitter:description" content="Purpose-built AI systems for the full offshore structural integrity lifecycle. From field inspection to engineering assessment to maintenance planning.">
     <meta name="twitter:image" content="https://www.aimailabs.com/og-image.png">
 
     <!-- Geo Tags -->
@@ -50,7 +46,7 @@
         "name": "AIMAILABS Sdn Bhd",
         "url": "https://www.aimailabs.com",
         "logo": "https://www.aimailabs.com/logo.png",
-        "description": "AI engineering reasoning lab for the oil and gas sector. Purpose-built solutions designed around each client's unique operational needs.",
+        "description": "AI infrastructure company for offshore asset integrity management. Purpose-built systems for inspection, engineering assessment, and maintenance planning across the full structural lifecycle.",
         "address": {
             "@type": "PostalAddress",
             "addressCountry": "MY",
@@ -79,7 +75,7 @@
         "name": "INSPECTA",
         "applicationCategory": "BusinessApplication",
         "operatingSystem": "Cross-platform",
-        "description": "AI-powered inspection intelligence platform for offshore oil and gas facilities. Detects defects, assesses severity, and generates audit-ready reports.",
+        "description": "AI infrastructure platform for offshore structural integrity — inspection, defect detection, severity assessment, and audit-ready reporting across mobile, web, and camera deployments.",
         "offers": {
             "@type": "Offer",
             "category": "Enterprise Software"
@@ -166,7 +162,6 @@
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -177,7 +172,6 @@
             overflow-x: hidden;
         }
 
-        /* ─── NOISE OVERLAY ─── */
         body::before {
             content: '';
             position: fixed;
@@ -188,852 +182,253 @@
             background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
         }
 
-        /* ─── NAV ─── */
         nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            padding: 0 48px;
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-            background: rgba(4, 8, 15, 0.8);
-            backdrop-filter: blur(24px);
-            border-bottom: 1px solid var(--border);
-            transition: background 0.3s;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 48px; height: 72px; display: flex; align-items: center;
+            justify-content: space-between; background: rgba(4, 8, 15, 0.8);
+            backdrop-filter: blur(24px); border-bottom: 1px solid var(--border); transition: background 0.3s;
         }
-
         .nav-logo {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.3rem;
+            letter-spacing: -0.02em; color: var(--text-primary); text-decoration: none;
+            display: flex; align-items: center; gap: 10px;
         }
-
         .nav-logo .logo-mark {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--accent), #818cf8);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: white;
-            letter-spacing: 0;
+            width: 32px; height: 32px; background: linear-gradient(135deg, var(--accent), #818cf8);
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; font-weight: 800; color: white; letter-spacing: 0;
         }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
+        .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+        .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
         .nav-links a:hover { color: var(--text-primary); }
-
         .nav-cta {
-            font-size: 0.85rem !important;
-            font-weight: 600 !important;
-            color: white !important;
-            background: var(--accent);
-            padding: 9px 22px;
-            border-radius: 8px;
+            font-size: 0.85rem !important; font-weight: 600 !important; color: white !important;
+            background: var(--accent); padding: 9px 22px; border-radius: 8px;
             transition: background 0.2s, transform 0.15s !important;
         }
+        .nav-cta:hover { background: #2563eb !important; transform: translateY(-1px); }
 
-        .nav-cta:hover {
-            background: #2563eb !important;
-            transform: translateY(-1px);
-        }
-
-        /* ─── HERO ─── */
         .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 48px 80px;
-            overflow: hidden;
+            position: relative; min-height: 100vh; display: flex; align-items: center;
+            padding: 120px 48px 80px; overflow: hidden;
         }
-
         .hero-grid-bg {
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
             background-size: 64px 64px;
             mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
         }
-
         .hero-glow {
-            position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 65%);
-            pointer-events: none;
+            position: absolute; top: -20%; right: -10%; width: 800px; height: 800px;
+            background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 65%); pointer-events: none;
         }
-
         .hero-glow-2 {
-            position: absolute;
-            bottom: -30%;
-            left: -15%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(129,140,248,0.05) 0%, transparent 60%);
-            pointer-events: none;
+            position: absolute; bottom: -30%; left: -15%; width: 600px; height: 600px;
+            background: radial-gradient(circle, rgba(129,140,248,0.05) 0%, transparent 60%); pointer-events: none;
         }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
-
+        .hero-content { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 16px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            animation: fadeSlideUp 0.8s ease both;
+            display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px;
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px;
+            font-size: 0.8rem; font-weight: 500; color: var(--text-secondary);
+            margin-bottom: 32px; animation: fadeSlideUp 0.8s ease both;
         }
-
-        .hero-badge .dot {
-            width: 7px; height: 7px;
-            background: var(--accent-green);
-            border-radius: 50%;
-            animation: pulse-dot 2s infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-
+        .hero-badge .dot { width: 7px; height: 7px; background: var(--accent-green); border-radius: 50%; animation: pulse-dot 2s infinite; }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
         .hero h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(2.8rem, 6vw, 4.8rem);
-            font-weight: 800;
-            line-height: 1.08;
-            letter-spacing: -0.035em;
-            margin-bottom: 28px;
-            animation: fadeSlideUp 0.8s 0.1s ease both;
+            font-family: 'Outfit', sans-serif; font-size: clamp(2.8rem, 6vw, 4.8rem);
+            font-weight: 800; line-height: 1.08; letter-spacing: -0.035em;
+            margin-bottom: 28px; animation: fadeSlideUp 0.8s 0.1s ease both;
         }
-
         .hero h1 .gradient-text {
             background: linear-gradient(135deg, var(--accent-bright) 0%, #a78bfa 50%, var(--accent-bright) 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 6s ease infinite;
+            background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent; animation: shimmer 6s ease infinite;
         }
-
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
+        @keyframes shimmer { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
         .hero-desc {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            line-height: 1.7;
-            margin-bottom: 44px;
-            animation: fadeSlideUp 0.8s 0.2s ease both;
+            font-size: 1.15rem; color: var(--text-secondary); max-width: 600px;
+            line-height: 1.7; margin-bottom: 44px; animation: fadeSlideUp 0.8s 0.2s ease both;
         }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            animation: fadeSlideUp 0.8s 0.3s ease both;
-        }
-
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; animation: fadeSlideUp 0.8s 0.3s ease both; }
         .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: var(--accent);
-            color: white;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px;
+            background: var(--accent); color: white; font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem; font-weight: 600; border: none; border-radius: 10px;
+            cursor: pointer; text-decoration: none; transition: all 0.2s;
         }
-
-        .btn-primary:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(59,130,246,0.3);
-        }
-
+        .btn-primary:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,0.3); }
         .btn-ghost {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: transparent;
-            color: var(--text-secondary);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border: 1px solid var(--border-bright);
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px;
+            background: transparent; color: var(--text-secondary); font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem; font-weight: 500; border: 1px solid var(--border-bright);
+            border-radius: 10px; cursor: pointer; text-decoration: none; transition: all 0.2s;
         }
+        .btn-ghost:hover { color: var(--text-primary); border-color: var(--text-muted); background: var(--bg-card); }
+        .hero-stats { display: flex; gap: 56px; margin-top: 72px; animation: fadeSlideUp 0.8s 0.4s ease both; }
+        .hero-stat .value { font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; color: var(--text-primary); }
+        .hero-stat .label { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
+        @keyframes fadeSlideUp { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
 
-        .btn-ghost:hover {
-            color: var(--text-primary);
-            border-color: var(--text-muted);
-            background: var(--bg-card);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 56px;
-            margin-top: 72px;
-            animation: fadeSlideUp 0.8s 0.4s ease both;
-        }
-
-        .hero-stat .value {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            color: var(--text-primary);
-        }
-
-        .hero-stat .label {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        @keyframes fadeSlideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* ─── SECTIONS ─── */
-        section {
-            padding: 100px 48px;
-            position: relative;
-        }
-
-        .section-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
+        section { padding: 100px 48px; position: relative; }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
         .section-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 14px;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 500;
+            letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
         }
-
         .section-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            margin-bottom: 16px;
+            font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+            font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px;
         }
+        .section-desc { font-size: 1.05rem; color: var(--text-secondary); max-width: 620px; margin-bottom: 56px; }
 
-        .section-desc {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 620px;
-            margin-bottom: 56px;
-        }
-
-        /* ─── ABOUT / WHAT WE DO ─── */
-        #about {
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
+        #about { background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
         .about-visual {
-            position: relative;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 40px;
-            min-height: 380px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
+            position: relative; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 40px; min-height: 380px;
+            display: flex; flex-direction: column; justify-content: center; overflow: hidden;
         }
-
         .about-visual::before {
-            content: '';
-            position: absolute;
-            top: -1px; left: -1px; right: -1px;
-            height: 3px;
+            content: ''; position: absolute; top: -1px; left: -1px; right: -1px; height: 3px;
             background: linear-gradient(90deg, var(--accent), #818cf8, var(--accent));
             border-radius: var(--radius) var(--radius) 0 0;
         }
-
-        .pipeline-step {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 14px 0;
-        }
-
-        .pipeline-step + .pipeline-step {
-            border-top: 1px solid var(--border);
-        }
-
+        .pipeline-step { display: flex; align-items: center; gap: 16px; padding: 14px 0; }
+        .pipeline-step + .pipeline-step { border-top: 1px solid var(--border); }
         .pipeline-icon {
-            width: 40px; height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            flex-shrink: 0;
+            width: 40px; height: 40px; border-radius: 10px; display: flex;
+            align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0;
         }
-
         .pipeline-step:nth-child(1) .pipeline-icon { background: rgba(59,130,246,0.12); color: var(--accent-bright); }
         .pipeline-step:nth-child(2) .pipeline-icon { background: rgba(245,158,11,0.12); color: var(--accent-orange); }
         .pipeline-step:nth-child(3) .pipeline-icon { background: rgba(129,140,248,0.12); color: #a78bfa; }
         .pipeline-step:nth-child(4) .pipeline-icon { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+        .pipeline-text .pipe-title { font-weight: 600; font-size: 0.92rem; color: var(--text-primary); }
+        .pipeline-text .pipe-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
-        .pipeline-text .pipe-title {
-            font-weight: 600;
-            font-size: 0.92rem;
-            color: var(--text-primary);
-        }
-
-        .pipeline-text .pipe-desc {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        .pipeline-arrow {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            padding-left: 56px;
-            height: 0;
-            overflow: visible;
-            position: relative;
-            top: -4px;
-        }
-
-        /* ─── PRODUCTS ─── */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
-
+        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
         .product-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 36px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 36px; transition: all 0.3s; position: relative; overflow: hidden;
         }
-
-        .product-card:hover {
-            border-color: var(--border-bright);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-        }
-
-        .product-card.featured {
-            border-color: var(--accent);
-            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59,130,246,0.04) 100%);
-        }
-
+        .product-card:hover { border-color: var(--border-bright); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+        .product-card.featured { border-color: var(--accent); background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59,130,246,0.04) 100%); }
         .product-card.featured::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: 16px; right: 16px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.6rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            color: var(--accent-bright);
-            background: var(--accent-glow);
-            border: 1px solid rgba(59,130,246,0.25);
-            padding: 4px 10px;
-            border-radius: 6px;
+            content: 'MOST POPULAR'; position: absolute; top: 16px; right: 16px;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 500;
+            letter-spacing: 0.1em; color: var(--accent-bright); background: var(--accent-glow);
+            border: 1px solid rgba(59,130,246,0.25); padding: 4px 10px; border-radius: 6px;
         }
-
         .product-icon {
-            width: 48px; height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
+            width: 48px; height: 48px; border-radius: 12px; display: flex;
+            align-items: center; justify-content: center; font-size: 1.3rem; margin-bottom: 20px;
         }
-
         .product-card:nth-child(1) .product-icon { background: rgba(59,130,246,0.12); }
         .product-card:nth-child(2) .product-icon { background: rgba(16,185,129,0.12); }
         .product-card:nth-child(3) .product-icon { background: rgba(245,158,11,0.12); }
         .product-card:nth-child(4) .product-icon { background: rgba(129,140,248,0.12); }
+        .product-name { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
+        .product-tagline { font-size: 0.85rem; font-weight: 500; color: var(--accent-bright); margin-bottom: 14px; }
+        .product-desc { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 20px; line-height: 1.6; }
 
-        .product-name {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 4px;
-        }
-
-        .product-tagline {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--accent-bright);
-            margin-bottom: 14px;
-        }
-
-        .product-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .product-features {
-            list-style: none;
-        }
-
-        .product-features li {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            padding: 5px 0;
-            padding-left: 18px;
-            position: relative;
-        }
-
-        .product-features li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-        }
-
-        /* ─── DIFFERENTIATORS ─── */
-        #why {
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .diff-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .diff-card {
-            padding: 32px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            transition: border-color 0.3s;
-        }
-
+        #why { background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .diff-card { padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color 0.3s; }
         .diff-card:hover { border-color: var(--border-bright); }
+        .diff-icon { font-size: 1.6rem; margin-bottom: 18px; }
+        .diff-title { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.05rem; margin-bottom: 10px; }
+        .diff-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
 
-        .diff-icon {
-            font-size: 1.6rem;
-            margin-bottom: 18px;
-        }
-
-        .diff-title {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-bottom: 10px;
-        }
-
-        .diff-text {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
-
-        /* ─── OTC BANNER ─── */
         .otc-banner {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 48px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-top: 80px;
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 48px; display: flex; align-items: center; gap: 40px; margin-top: 80px;
         }
-
         .otc-icon {
-            width: 72px; height: 72px;
-            background: linear-gradient(135deg, var(--accent-glow), rgba(129,140,248,0.08));
-            border: 1px solid var(--border-bright);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
+            width: 72px; height: 72px; background: linear-gradient(135deg, var(--accent-glow), rgba(129,140,248,0.08));
+            border: 1px solid var(--border-bright); border-radius: 16px; display: flex;
+            align-items: center; justify-content: center; font-size: 1.8rem; flex-shrink: 0;
         }
-
-        .otc-text h3 {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 6px;
-        }
-
-        .otc-text p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
+        .otc-text h3 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.2rem; margin-bottom: 6px; }
+        .otc-text p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; }
         .otc-text .otc-tag {
-            display: inline-block;
-            margin-top: 12px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            background: var(--bg-deep);
-            border: 1px solid var(--border);
-            padding: 4px 12px;
-            border-radius: 6px;
+            display: inline-block; margin-top: 12px; font-family: 'JetBrains Mono', monospace;
+            font-size: 0.72rem; color: var(--text-muted); background: var(--bg-deep);
+            border: 1px solid var(--border); padding: 4px 12px; border-radius: 6px;
         }
 
-        /* ─── WORKFLOW ─── */
-        .workflow-steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            counter-reset: step;
-        }
-
+        .workflow-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
         .workflow-step {
-            position: relative;
-            padding: 36px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            counter-increment: step;
+            position: relative; padding: 36px; background: var(--bg-card);
+            border: 1px solid var(--border); border-radius: var(--radius); counter-increment: step;
         }
-
         .workflow-step::before {
-            content: counter(step, decimal-leading-zero);
-            font-family: 'Outfit', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: rgba(59,130,246,0.1);
-            position: absolute;
-            top: 16px; right: 24px;
+            content: counter(step, decimal-leading-zero); font-family: 'Outfit', sans-serif;
+            font-size: 3rem; font-weight: 800; color: rgba(59,130,246,0.1);
+            position: absolute; top: 16px; right: 24px;
         }
-
-        .step-title {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
+        .step-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
         .step-time {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--accent-bright);
-            background: var(--accent-glow);
-            padding: 3px 10px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-bottom: 14px;
+            font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent-bright);
+            background: var(--accent-glow); padding: 3px 10px; border-radius: 6px;
+            display: inline-block; margin-bottom: 14px;
         }
+        .step-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
 
-        .step-desc {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
-
-        /* ─── CAREERS ─── */
-        .careers-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
+        .careers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
         .career-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 36px;
-            position: relative;
-            transition: border-color 0.3s;
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius);
+            padding: 36px; position: relative; transition: border-color 0.3s;
         }
-
         .career-card:hover { border-color: var(--border-bright); }
-
         .career-badge {
-            display: inline-block;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.62rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--accent-green);
-            background: rgba(16,185,129,0.1);
-            border: 1px solid rgba(16,185,129,0.2);
-            padding: 4px 10px;
-            border-radius: 6px;
-            margin-bottom: 16px;
+            display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem;
+            font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+            color: var(--accent-green); background: rgba(16,185,129,0.1);
+            border: 1px solid rgba(16,185,129,0.2); padding: 4px 10px; border-radius: 6px; margin-bottom: 16px;
         }
-
-        .career-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 6px;
-        }
-
-        .career-location {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .career-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 18px;
-        }
-
-        .career-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 24px;
-        }
-
+        .career-title { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+        .career-location { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px; }
+        .career-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px; }
+        .career-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
         .career-tag {
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: var(--accent-bright);
-            background: var(--accent-glow);
-            border: 1px solid rgba(59,130,246,0.15);
-            padding: 4px 10px;
-            border-radius: 6px;
+            font-size: 0.72rem; font-weight: 500; color: var(--accent-bright);
+            background: var(--accent-glow); border: 1px solid rgba(59,130,246,0.15);
+            padding: 4px 10px; border-radius: 6px;
         }
-
-        .career-details {
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            margin-bottom: 24px;
-        }
-
-        .career-detail-section {
-            margin-bottom: 16px;
-        }
-
+        .career-details { border-top: 1px solid var(--border); padding-top: 20px; margin-bottom: 24px; }
+        .career-detail-section { margin-bottom: 16px; }
         .career-detail-section:last-child { margin-bottom: 0; }
+        .career-detail-section h4 { font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+        .career-detail-section p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+        .career-footer { display: flex; align-items: center; padding-top: 20px; border-top: 1px solid var(--border); }
+        .career-note { text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: 40px; line-height: 1.7; }
+        @media (max-width: 900px) { .careers-grid { grid-template-columns: 1fr; } }
 
-        .career-detail-section h4 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 6px;
-        }
+        .cta-section { text-align: center; padding: 120px 48px; }
+        .cta-section .section-title { max-width: 650px; margin: 0 auto 16px; }
+        .cta-section .section-desc { max-width: 520px; margin: 0 auto 40px; text-align: center; }
 
-        .career-detail-section p {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .career-footer {
-            display: flex;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .career-salary {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .career-note {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-top: 40px;
-            line-height: 1.7;
-        }
-
-        @media (max-width: 900px) {
-            .careers-grid { grid-template-columns: 1fr; }
-        }
-
-        /* ─── CTA ─── */
-        .cta-section {
-            text-align: center;
-            padding: 120px 48px;
-        }
-
-        .cta-section .section-title {
-            max-width: 650px;
-            margin: 0 auto 16px;
-        }
-
-        .cta-section .section-desc {
-            max-width: 520px;
-            margin: 0 auto 40px;
-            text-align: center;
-        }
-
-        /* ─── FOOTER ─── */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 48px 48px 40px;
-            background: var(--bg-surface);
-        }
-
+        footer { border-top: 1px solid var(--border); padding: 48px 48px 40px; background: var(--bg-surface); }
         .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
-            flex-wrap: wrap;
+            max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between;
+            align-items: flex-start; gap: 40px; flex-wrap: wrap;
         }
-
-        .footer-brand .footer-logo {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .footer-brand p {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            max-width: 300px;
-            line-height: 1.6;
-        }
-
-        .footer-col h4 {
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-secondary);
-            margin-bottom: 14px;
-        }
-
-        .footer-col a {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            padding: 4px 0;
-            transition: color 0.2s;
-        }
-
+        .footer-brand .footer-logo { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 8px; }
+        .footer-brand p { font-size: 0.82rem; color: var(--text-muted); max-width: 300px; line-height: 1.6; }
+        .footer-col h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 14px; }
+        .footer-col a { display: block; font-size: 0.85rem; color: var(--text-muted); text-decoration: none; padding: 4px 0; transition: color 0.2s; }
         .footer-col a:hover { color: var(--text-primary); }
-
         .footer-bottom {
-            max-width: 1200px;
-            margin: 36px auto 0;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.78rem;
-            color: var(--text-muted);
+            max-width: 1200px; margin: 36px auto 0; padding-top: 24px;
+            border-top: 1px solid var(--border); display: flex; justify-content: space-between;
+            align-items: center; font-size: 0.78rem; color: var(--text-muted);
         }
-
-        .footer-bottom a {
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-
+        .footer-bottom a { color: var(--text-muted); text-decoration: none; }
         .footer-bottom a:hover { color: var(--text-secondary); }
 
-        /* ─── MOBILE ─── */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-secondary); font-size: 1.5rem; cursor: pointer; }
 
         @media (max-width: 900px) {
             nav { padding: 0 24px; }
@@ -1052,34 +447,21 @@
             .cta-section { padding: 80px 24px; }
         }
 
-        /* ─── SCROLL ANIMATIONS ─── */
-        .reveal {
-            opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
-        }
-
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.7s ease, transform 0.7s ease; }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
 <nav>
-    <a href="#" class="nav-logo">
-        <span class="logo-mark">AI</span>
-        AIMAILABS
-    </a>
+    <a href="#" class="nav-logo"><span class="logo-mark">AI</span> AIMAILABS</a>
     <ul class="nav-links">
         <li><a href="#about">About</a></li>
-        <li><a href="#products">Products</a></li>
+        <li><a href="#products">Infrastructure</a></li>
         <li><a href="#why">Why Us</a></li>
         <li><a href="#careers">Careers</a></li>
         <li><a href="#start">Get Started</a></li>
-        <li><a href="#contact" class="nav-cta">Request Demo</a></li>
+        <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
     </ul>
     <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">☰</button>
 </nav>
@@ -1095,19 +477,18 @@
             Presenting at OTC Asia 2026
         </div>
         <h1>
-            Your Standards. Your Judgment.<br>
-            <span class="gradient-text">AI Speed.</span>
+            AI Infrastructure for<br>
+            <span class="gradient-text">Offshore Asset Integrity.</span>
         </h1>
         <p class="hero-desc">
-            AIMAILABS builds AI engineering reasoning solutions for oil and gas.
-            We combine proven AI technologies into purpose-built tools designed
-            around your operation — not the other way around.
+            AIMAILABS builds the AI systems that offshore operators run their
+            asset integrity programs on — from field inspection to engineering
+            assessment to maintenance planning. Purpose-built for the structural lifecycle.
         </p>
         <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Request a Demo ↗</a>
-            <a href="#products" class="btn-ghost">Explore Products</a>
+            <a href="#contact" class="btn-primary">Let's Connect ↗</a>
+            <a href="#products" class="btn-ghost">Explore the Stack</a>
         </div>
-
         <div class="hero-stats">
             <div class="hero-stat">
                 <div class="value">40–80%</div>
@@ -1130,17 +511,17 @@
     <div class="section-inner">
         <div class="about-grid">
             <div class="reveal">
-                <div class="section-label">What We Do</div>
-                <h2 class="section-title">AI-Powered Inspection<br>Intelligence Platform</h2>
+                <div class="section-label">What We Build</div>
+                <h2 class="section-title">The AI Infrastructure Stack<br>for Structural Integrity</h2>
                 <p class="section-desc" style="margin-bottom:24px">
-                    INSPECTA puts AI directly in your inspector's hands — detecting defects,
-                    assessing severity against your standards, and generating
-                    structured reports entirely on-device.
+                    AIMAILABS builds purpose-built AI infrastructure for the full asset integrity
+                    lifecycle in oil &amp; gas — from inspection in the field, to engineering
+                    assessment in the office, to maintenance planning on the desk.
                 </p>
                 <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.7;">
-                    The AI sees the defect. The system explains why.
-                    The engineer decides what to do. Every output is traceable,
-                    every decision is auditable, and the engineer is always in control.
+                    Three systems. One shared intelligence backbone. Each targets a different
+                    team, a different workflow, and a different problem — but all grounded in
+                    the same principle: AI recommends, engineers decide, every output is auditable.
                 </p>
             </div>
             <div class="about-visual reveal">
@@ -1155,21 +536,21 @@
                     <div class="pipeline-icon">📐</div>
                     <div class="pipeline-text">
                         <div class="pipe-title">Assess</div>
-                        <div class="pipe-desc">Severity classified against your inspection criteria</div>
+                        <div class="pipe-desc">Engineering analysis, trending and predictive assessment</div>
                     </div>
                 </div>
                 <div class="pipeline-step">
-                    <div class="pipeline-icon">📝</div>
+                    <div class="pipeline-icon">📋</div>
                     <div class="pipeline-text">
-                        <div class="pipe-title">Report</div>
-                        <div class="pipe-desc">Structured inspection narrative generated automatically</div>
+                        <div class="pipe-title">Scope</div>
+                        <div class="pipe-desc">AI-generated work scope, repair methods and resource plan</div>
                     </div>
                 </div>
                 <div class="pipeline-step">
                     <div class="pipeline-icon">✓</div>
                     <div class="pipeline-text">
-                        <div class="pipe-title">Validate</div>
-                        <div class="pipe-desc">Engineer reviews, overrides if needed, and approves</div>
+                        <div class="pipe-title">Execute</div>
+                        <div class="pipe-desc">SAP Work Order created, engineer validated, fully traceable</div>
                     </div>
                 </div>
             </div>
@@ -1180,53 +561,130 @@
 <!-- ─── PRODUCTS ─── -->
 <section id="products">
     <div class="section-inner">
-        <div class="section-label reveal">The INSPECTA Suite</div>
-        <h2 class="section-title reveal">Four Products. One AI Engine.</h2>
-        <p class="section-desc reveal">Start with what fits your operation. Scale when you're ready.</p>
+        <div class="section-label reveal">Our Infrastructure</div>
+        <h2 class="section-title reveal">Three Systems. One Lifecycle.</h2>
+        <p class="section-desc reveal">Inspect it. Assess it. Fix it. — Three purpose-built systems covering every stage of the offshore structural integrity lifecycle.</p>
 
-        <div class="products-grid">
-            <div class="product-card featured reveal">
-                <div class="product-icon">📱</div>
-                <div class="product-name">INSPECTA Edge</div>
-                <div class="product-tagline">AI In Your Inspector's Hands</div>
-                <p class="product-desc">
-                    Fully offline mobile app on an Ex-rated device. Photograph a defect — AI detects it,
-                    assesses severity against your standards, and generates a PDF report before you climb down.
-                </p>
-
+        <!-- INSPECTA -->
+        <div style="margin-bottom: 56px;">
+            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px;" class="reveal">
+                <div style="background: rgba(59,130,246,0.12); border:1px solid rgba(59,130,246,0.25); border-radius:10px; padding:10px 18px; font-family:'Outfit',sans-serif; font-weight:700; font-size:1.1rem; color:#60a5fa; letter-spacing:0.04em;">INSPECTA</div>
+                <div style="color:var(--text-secondary); font-size:0.9rem;">"Find It" — AI Inspection Infrastructure for Offshore Structural Integrity</div>
             </div>
-
-            <div class="product-card reveal">
-                <div class="product-icon">☁</div>
-                <div class="product-name">INSPECTA Cloud</div>
-                <div class="product-tagline">Real-Time Command Centre</div>
-                <p class="product-desc">
-                    Web dashboard where findings from every inspector and camera flow in real-time.
-                    KPI cards, severity breakdowns, and approval workflows — all in one screen.
-                </p>
-
+            <div class="products-grid">
+                <div class="product-card featured reveal">
+                    <div class="product-icon">📱</div>
+                    <div class="product-name">INSPECTA Edge</div>
+                    <div class="product-tagline">AI In Your Inspector's Hands</div>
+                    <p class="product-desc">
+                        Fully offline mobile app on an Ex-rated device. Photograph a defect — AI detects it,
+                        assesses severity against your standards, and generates a PDF report before you climb down.
+                    </p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">☁️</div>
+                    <div class="product-name">INSPECTA Cloud</div>
+                    <div class="product-tagline">Real-Time Command Centre</div>
+                    <p class="product-desc">
+                        Web dashboard where findings from every inspector and camera flow in real-time.
+                        KPI cards, severity breakdowns, and approval workflows — all in one screen.
+                    </p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">📷</div>
+                    <div class="product-name">INSPECTA Vision</div>
+                    <div class="product-tagline">AI Eyes That Never Blink</div>
+                    <p class="product-desc">
+                        Camera systems detecting structural defects in real-time — from portable
+                        campaign kits, to permanent installations, to autonomous robotic platforms.
+                    </p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">🖥️</div>
+                    <div class="product-name">INSPECTA Core</div>
+                    <div class="product-tagline">The Engineering Desktop Hub</div>
+                    <p class="product-desc">
+                        Desktop engineering workstation. Knowledge Graph assessment engine,
+                        inspection workspace, planning workspace, and SAP Work Order integration
+                        — built for the lead structural engineer.
+                    </p>
+                </div>
             </div>
+        </div>
 
-            <div class="product-card reveal">
-                <div class="product-icon">📷</div>
-                <div class="product-name">INSPECTA Vision</div>
-                <div class="product-tagline">AI Eyes That Never Blink</div>
-                <p class="product-desc">
-                    Camera systems detecting structural defects in real-time — from portable
-                    campaign kits, to permanent installations, to autonomous robotic platforms.
-                </p>
-
+        <!-- COREVA -->
+        <div style="margin-bottom: 56px;">
+            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px;" class="reveal">
+                <div style="background: rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.25); border-radius:10px; padding:10px 18px; font-family:'Outfit',sans-serif; font-weight:700; font-size:1.1rem; color:#34d399; letter-spacing:0.04em;">COREVA</div>
+                <div style="color:var(--text-secondary); font-size:0.9rem;">"Assess It" — AI Engineering Assessment &amp; Predictive Analytics</div>
             </div>
+            <div class="products-grid">
+                <div class="product-card featured reveal">
+                    <div class="product-icon">📊</div>
+                    <div class="product-name">COREVA Reports</div>
+                    <div class="product-tagline">AI-Generated Analysis Reports</div>
+                    <p class="product-desc">
+                        Structured engineering analysis reports generated from inspection findings.
+                        Standards-referenced, audit-ready, and traceable from defect photo to conclusion.
+                    </p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">⚡</div>
+                    <div class="product-name">COREVA Anode</div>
+                    <div class="product-tagline">Anode Depletion Trending</div>
+                    <p class="product-desc">
+                        Track cathodic protection anode consumption across your asset portfolio.
+                        AI-driven depletion curves, remaining life estimates, and replacement scheduling.
+                    </p>
+                </div>
+                <div class="product-card reveal">
+                    <div class="product-icon">🔮</div>
+                    <div class="product-name">COREVA Predict</div>
+                    <div class="product-tagline">Predictive Integrity Analytics</div>
+                    <p class="product-desc">
+                        Risk-based inspection planning powered by degradation trending and
+                        historical findings data. Predict where the next critical defect appears
+                        before it becomes a hazard.
+                    </p>
+                </div>
+            </div>
+        </div>
 
-            <div class="product-card reveal">
-                <div class="product-icon">🔧</div>
-                <div class="product-name">INSPECTA Scoper</div>
-                <div class="product-tagline">From Finding to Work Order</div>
-                <p class="product-desc">
-                    Digital field workscoping that turns inspection findings into costed repair scopes
-                    with full traceability from photo to procurement.
-                </p>
-
+        <!-- MAINTENA -->
+        <div>
+            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px;" class="reveal">
+                <div style="background: rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.25); border-radius:10px; padding:10px 18px; font-family:'Outfit',sans-serif; font-weight:700; font-size:1.1rem; color:#fbbf24; letter-spacing:0.04em;">MAINTENA</div>
+                <div style="color:var(--text-secondary); font-size:0.9rem;">"Fix It" — AI Maintenance Planning for Offshore Structural Repair</div>
+            </div>
+            <div class="products-grid">
+                <div class="product-card featured reveal">
+                    <div class="product-icon">🔧</div>
+                    <div class="product-name">MAINTENA Scoper</div>
+                    <div class="product-tagline">From Finding to Work Scope</div>
+                    <p class="product-desc">
+                        AI-powered work scope generator. Turns approved inspection findings into
+                        a consolidated, prioritised scope of work — complete with repair methods,
+                        resource plan, man-hours, and critical path sequence.
+                    </p>
+                </div>
+                <div class="product-card reveal" style="opacity:0.6;">
+                    <div class="product-icon">📅</div>
+                    <div class="product-name">MAINTENA Planner</div>
+                    <div class="product-tagline">Coming Soon</div>
+                    <p class="product-desc">
+                        Maintenance scheduling and work order lifecycle management.
+                        From scope approval to execution tracking — integrated with SAP PM.
+                    </p>
+                </div>
+                <div class="product-card reveal" style="opacity:0.6;">
+                    <div class="product-icon">💰</div>
+                    <div class="product-name">MAINTENA Cost</div>
+                    <div class="product-tagline">Coming Soon</div>
+                    <p class="product-desc">
+                        Cost estimation and budget planning for structural repair campaigns.
+                        Resource-based costing with contract-confidential unit price management.
+                    </p>
+                </div>
             </div>
         </div>
     </div>
@@ -1235,13 +693,13 @@
 <!-- ─── WHY ─── -->
 <section id="why">
     <div class="section-inner">
-        <div class="section-label reveal">Why INSPECTA</div>
-        <h2 class="section-title reveal">Built for Offshore. Built for Engineers.</h2>
+        <div class="section-label reveal">Why AIMAILABS</div>
+        <h2 class="section-title reveal">Infrastructure-Grade AI. Built for Offshore.</h2>
         <p class="section-desc reveal">
-            INSPECTA goes beyond data collection — it interprets inspection findings
-            and provides engineers with actionable, standards-based assessments.
+            Not another dashboard. Not another data layer. AIMAILABS infrastructure reasons
+            through findings, assesses against your standards, and gives engineers actionable,
+            traceable outputs across the full asset integrity lifecycle.
         </p>
-
         <div class="diff-grid">
             <div class="diff-card reveal">
                 <div class="diff-icon">🔒</div>
@@ -1270,12 +728,10 @@
             </div>
             <div class="diff-card reveal">
                 <div class="diff-icon">🔄</div>
-                <div class="diff-title">One Platform, All Deployments</div>
-                <p class="diff-text">From mobile device to web dashboard to camera systems — one unified inspection intelligence platform across your entire operation.</p>
+                <div class="diff-title">One Stack, Every Deployment</div>
+                <p class="diff-text">From mobile device to web dashboard to camera systems — one unified AI infrastructure layer across your entire operation.</p>
             </div>
         </div>
-
-        <!-- OTC Banner -->
         <div class="otc-banner reveal">
             <div class="otc-icon">📄</div>
             <div class="otc-text">
@@ -1295,9 +751,8 @@
 <section id="start">
     <div class="section-inner">
         <div class="section-label reveal">Get Started</div>
-        <h2 class="section-title reveal">AI-Powered Inspection in Weeks, Not Months</h2>
-        <p class="section-desc reveal">Three steps from first conversation to field-validated deployment.</p>
-
+        <h2 class="section-title reveal">From First Conversation to Live Infrastructure</h2>
+        <p class="section-desc reveal">Three steps from discovery to field-validated deployment.</p>
         <div class="workflow-steps">
             <div class="workflow-step reveal">
                 <div class="step-title">Discovery &amp; Scoping</div>
@@ -1319,7 +774,7 @@
                 <div class="step-title">Scale Across Your Fleet</div>
                 <span class="step-time">Ongoing</span>
                 <p class="step-desc">
-                    Expand from one platform to your entire portfolio. Add Cloud, Vision, and Scoper
+                    Expand from one platform to your entire portfolio. Add COREVA, MAINTENA, and Vision
                     as you grow. Per-asset licensing scales with your deployment.
                 </p>
             </div>
@@ -1331,12 +786,12 @@
 <section id="careers">
     <div class="section-inner">
         <div class="section-label reveal">Join Us</div>
-        <h2 class="section-title reveal">Build Real AI Systems</h2>
+        <h2 class="section-title reveal">Build Real AI Infrastructure</h2>
         <p class="section-desc reveal">
-            We're an early-stage AI startup looking for developers who want hands-on experience
-            building real-world AI for industrial infrastructure. Direct mentorship, real impact.
+            We're an early-stage company building AI infrastructure for offshore operators.
+            Looking for developers who want hands-on experience shipping production AI systems.
+            Direct mentorship, real impact.
         </p>
-
         <div class="careers-grid">
             <div class="career-card reveal">
                 <div class="career-badge">Open Role</div>
@@ -1368,16 +823,15 @@
                     </div>
                     <div class="career-detail-section">
                         <h4>What you'll gain</h4>
-                        <p>Hands-on experience building real AI systems for offshore infrastructure.
+                        <p>Hands-on experience building production AI infrastructure for offshore operations.
                            Exposure to AI architecture, computer vision, and knowledge-based reasoning.
                            Direct mentorship from an industry engineer and AI founder.</p>
                     </div>
                 </div>
                 <div class="career-footer">
-                    <a href="mailto:careers@aimailabs.com?subject=Junior%20AI%20Software%20Engineer%20Application" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                    <a href="/cdn-cgi/l/email-protection#e487859681819697a4858d89858d88858697ca878b89db9791868e818790d9a59494888d8785908d8b8ac1d6d4066477c1d6d4ae918a8d8b96c1d6d4a5adc1d6d4b78b829093859681c1d6d4a18a838d8a818196c2868b809dd9ac8dc1d6d4a5ada9a5ada8a5a6b7c1d6a7c1d4a5c1d4a5adc389c1d6d48d8a9081968197908180c1d6d48d8ac1d6d4908c81c1d6d4ae918a8d8b96c1d6d4a5adc1d6d4b78b829093859681c1d6d4a18a838d8a818196c1d6d4968b8881cac1d4a5c1d4a5bfa5909085878cc1d6d49d8b9196c1d6d4a7b2c1d6d4858a80c1d6d4a38d90ac9186c1d6d4888d8a8fb9" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
                 </div>
             </div>
-
             <div class="career-card reveal">
                 <div class="career-badge">Open Role</div>
                 <h3 class="career-title">Junior Full Stack Developer</h3>
@@ -1407,20 +861,19 @@
                     </div>
                     <div class="career-detail-section">
                         <h4>What you'll gain</h4>
-                        <p>Experience building AI-enabled applications in a high-impact startup.
-                           Exposure to computer vision systems and AI infrastructure.
+                        <p>Experience building AI-powered infrastructure in a high-impact startup.
+                           Exposure to computer vision systems and production AI deployments.
                            Direct collaboration with AI engineers and industry experts.</p>
                     </div>
                 </div>
                 <div class="career-footer">
-                    <a href="mailto:careers@aimailabs.com?subject=Junior%20Full%20Stack%20Developer%20Application" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                    <a href="/cdn-cgi/l/email-protection#f192908394948382b190989c90989d909382df929e9cce8284939b949285ccb081819d98929085989e9fd4c3c1137162d4c3c1bb849f989e83d4c3c1b7849d9dd4c3c1a28590929ad4c3c1b59487949d9e819483d7939e9588ccb998d4c3c1b0b8bcb0b8bdb0b3a2d4c3b2d4c1b0d4c1b0b8d69cd4c3c1989f8594839482859495d4c3c1989fd4c3c1859994d4c3c1bb849f989e83d4c3c1b7849d9dd4c3c1a28590929ad4c3c1b59487949d9e819483d4c3c1839e9d94dfd4c1b0d4c1b0aab08585909299d4c3c1889e8483d4c3c1b2a7d4c3c1909f95d4c3c1b69885b98493d4c3c19d989f9aac" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
                 </div>
             </div>
         </div>
-
         <p class="career-note reveal">
-            Ideal for developers interested in AI startups and building real-world AI systems.<br>
-            Send your CV and GitHub (if available) to <a href="mailto:careers@aimailabs.com" style="color:var(--accent-bright); text-decoration:none;">careers@aimailabs.com</a>
+            Ideal for developers interested in AI startups and building production AI infrastructure.<br>
+            Send your CV and GitHub (if available) to <a href="/cdn-cgi/l/email-protection#4a292b382f2f38390a2b23272b23262b283964292527" style="color:var(--accent-bright); text-decoration:none;"><span class="__cf_email__" data-cfemail="fd9e9c8f98988f8ebd9c94909c94919c9f8ed39e9290">[email&#160;protected]</span></a>
         </p>
     </div>
 </section>
@@ -1429,21 +882,21 @@
 <section class="cta-section" id="contact">
     <div class="section-inner">
         <div class="section-label reveal">Let's Talk</div>
-        <h2 class="section-title reveal">See INSPECTA on Your Inspection Photos</h2>
+        <h2 class="section-title reveal">See the Infrastructure in Action</h2>
         <p class="section-desc reveal">
             We'll run a live demo on your defects, your standards, your report format.
             No obligation. No data leaves your premises.
         </p>
         <div class="reveal">
-            <a href="mailto:sales@aimailabs.com" class="btn-primary" style="margin-right:12px;">
-                Request a Demo ↗
+            <a href="/cdn-cgi/l/email-protection#e794868b8294a7868e8a868e8b868594c984888ad89492858d828493daa3828a88c2d5d7b5829692829493c2d5d7056774c2d5d7a6aeaaa6aeaba6a5b4c18588839edaaf8ec2d5d7a6aeaaa6aeaba6a5b4c2d5a4c2d7a6c2d7a6aec083c2d5d78b8e8c82c2d5d79388c2d5d794848f8283928b82c2d5d786c2d5d783828a88c9c2d7a6c2d7a6a4888a9786899ec2d4a6c2d5d7c2d7a6b5888b82c2d4a6c2d5d7c2d7a6ae899382958294938283c2d5d78e89c2d4a6c2d5d7" class="btn-primary" style="margin-right:12px;">
+                Let's Connect ↗
             </a>
-            <a href="https://wa.me/60134553120?text=Hi%20AIMAILABS%2C%20I%27d%20like%20to%20know%20more%20about%20INSPECTA." class="btn-ghost" target="_blank" rel="noopener" style="border-color:#25d366; color:#25d366;">
+            <a href="https://wa.me/60134553120?text=Hi%20AIMAILABS%2C%20I%27d%20like%20to%20know%20more%20about%20your%20AI%20infrastructure%20for%20asset%20integrity." class="btn-ghost" target="_blank" rel="noopener" style="border-color:#25d366; color:#25d366;">
                 WhatsApp Us
             </a>
         </div>
         <p style="margin-top:32px; font-size:0.85rem; color:var(--text-muted);" class="reveal">
-            general@aimailabs.com &nbsp;·&nbsp; Malaysia &nbsp;·&nbsp; Southeast Asia
+            <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="1d7a7873786f7c715d7c74707c74717c7f6e337e7270">[email&#160;protected]</a> &nbsp;·&nbsp; Malaysia &nbsp;·&nbsp; Southeast Asia
         </p>
     </div>
 </section>
@@ -1453,14 +906,21 @@
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-logo">AIMAILABS SDN BHD</div>
-            <p>AI Engineering Reasoning Labs for Oil &amp; Gas. We combine proven AI technologies into purpose-built solutions designed around your operation.</p>
+            <p>AI infrastructure for offshore asset integrity management. Purpose-built systems for the full structural lifecycle.</p>
         </div>
         <div class="footer-col">
-            <h4>Product</h4>
+            <h4>INSPECTA</h4>
             <a href="#products">INSPECTA Edge</a>
             <a href="#products">INSPECTA Cloud</a>
             <a href="#products">INSPECTA Vision</a>
-            <a href="#products">INSPECTA Scoper</a>
+            <a href="#products">INSPECTA Core</a>
+        </div>
+        <div class="footer-col">
+            <h4>COREVA · MAINTENA</h4>
+            <a href="#products">COREVA Reports</a>
+            <a href="#products">COREVA Anode</a>
+            <a href="#products">COREVA Predict</a>
+            <a href="#products">MAINTENA Scoper</a>
         </div>
         <div class="footer-col">
             <h4>Company</h4>
@@ -1472,7 +932,7 @@
         </div>
         <div class="footer-col">
             <h4>Connect</h4>
-            <a href="mailto:general@aimailabs.com">general@aimailabs.com</a>
+            <a href="/cdn-cgi/l/email-protection#ccaba9a2a9beada08cada5a1ada5a0adaebfe2afa3a1"><span class="__cf_email__" data-cfemail="99fefcf7fcebf8f5d9f8f0f4f8f0f5f8fbeab7faf6f4">[email&#160;protected]</span></a>
             <a href="https://wa.me/60134553120">WhatsApp</a>
             <a href="https://www.aimailabs.com" target="_blank">www.aimailabs.com</a>
         </div>
@@ -1489,7 +949,6 @@
         <svg class="wa-icon-chat" viewBox="0 0 32 32" width="26" height="26" fill="white"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.738 3.052 9.372L1.056 31.2l6.012-1.97A15.908 15.908 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.314 22.598c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.944.324-5.652-1.214-4.746-1.968-7.8-6.79-8.034-7.104-.226-.314-1.9-2.532-1.9-4.83s1.2-3.426 1.628-3.894c.39-.426.924-.616 1.234-.616.15 0 .284.008.406.014.428.018.642.042.924.716.354.84 1.218 2.97 1.324 3.186.108.218.216.514.066.814-.142.306-.268.442-.486.694-.218.252-.424.446-.642.718-.2.236-.424.49-.178.942.246.446 1.094 1.8 2.348 2.916 1.616 1.438 2.978 1.886 3.402 2.094.314.156.69.126.944-.142.322-.34.72-.904 1.124-1.46.288-.396.65-.446.994-.298.35.142 2.216 1.046 2.596 1.236.38.19.634.286.728.446.09.16.09.924-.3 2.024z"/></svg>
         <svg class="wa-icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-
     <div class="wa-panel" id="waPanel">
         <div class="wa-header">
             <div class="wa-header-info">
@@ -1503,7 +962,6 @@
                 <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
             </button>
         </div>
-
         <div class="wa-body" id="waBody">
             <div class="wa-date-divider"><span>Today</span></div>
             <div class="wa-msg wa-msg-in wa-msg-anim" style="animation-delay:0.3s">
@@ -1514,13 +972,12 @@
                 </div>
             </div>
             <div class="wa-quick-replies" id="waQuickReplies">
-                <button class="wa-quick-btn" data-msg="I'd like a demo of INSPECTA">&#127919; Request a Demo</button>
+                <button class="wa-quick-btn" data-msg="I'd like a demo of INSPECTA">&#127919; Let's Connect</button>
                 <button class="wa-quick-btn" data-msg="I'd like to know about INSPECTA pricing">&#128176; Pricing Info</button>
                 <button class="wa-quick-btn" data-msg="I have a technical question about INSPECTA">&#128295; Technical Question</button>
                 <button class="wa-quick-btn" data-msg="I'd like to discuss a partnership opportunity">&#129309; Partnership</button>
             </div>
         </div>
-
         <div class="wa-footer">
             <div class="wa-input-wrap">
                 <input type="text" class="wa-input" id="waInput" placeholder="Type a message..." maxlength="500" autocomplete="off">
@@ -1538,7 +995,6 @@
 
 <style>
     .wa-widget { position:fixed; bottom:28px; right:28px; z-index:9000; font-family:'DM Sans',sans-serif; }
-
     .wa-toggle {
         width:60px; height:60px; border-radius:50%; background:#25d366; border:none; cursor:pointer;
         display:flex; align-items:center; justify-content:center; position:relative; z-index:2;
@@ -1551,13 +1007,11 @@
     .wa-icon-close { display:none; }
     .wa-toggle.active .wa-icon-chat { display:none; }
     .wa-toggle.active .wa-icon-close { display:block; }
-
     .wa-toggle::before {
         content:''; position:absolute; inset:-4px; border-radius:50%;
         border:2px solid rgba(37,211,102,0.4); animation:wa-pulse 2.5s ease-in-out infinite;
     }
     .wa-toggle.active::before { animation:none; opacity:0; }
-
     .wa-toggle::after {
         content:'1'; position:absolute; top:-2px; right:-2px; width:20px; height:20px;
         background:#ef4444; color:white; font-size:0.65rem; font-weight:700; border-radius:50%;
@@ -1565,10 +1019,8 @@
         transition:opacity 0.2s,transform 0.2s;
     }
     .wa-toggle.active::after, .wa-toggle.seen::after { opacity:0; transform:scale(0); }
-
     @keyframes wa-pulse { 0%,100%{transform:scale(1);opacity:0.6} 50%{transform:scale(1.18);opacity:0} }
     @keyframes wa-entrance { from{opacity:0;transform:scale(0.5) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
-
     .wa-panel {
         position:absolute; bottom:76px; right:0; width:370px; max-height:520px;
         background:#0b1220; border:1px solid var(--border); border-radius:16px;
@@ -1578,7 +1030,6 @@
         transition:opacity 0.3s ease,transform 0.3s ease;
     }
     .wa-panel.open { opacity:1; transform:translateY(0) scale(1); pointer-events:all; }
-
     .wa-header {
         background:linear-gradient(135deg,#075e54 0%,#128c7e 100%);
         padding:18px 20px; display:flex; align-items:center; justify-content:space-between;
@@ -1589,38 +1040,23 @@
         display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:800;
         color:white; position:relative; flex-shrink:0;
     }
-    .wa-online {
-        position:absolute; bottom:0; right:0; width:11px; height:11px;
-        background:#25d366; border-radius:50%; border:2px solid #075e54;
-    }
+    .wa-online { position:absolute; bottom:0; right:0; width:11px; height:11px; background:#25d366; border-radius:50%; border:2px solid #075e54; }
     .wa-header-name { font-weight:600; font-size:0.95rem; color:white; }
     .wa-header-status { font-size:0.72rem; color:rgba(255,255,255,0.7); margin-top:1px; }
-    .wa-close-btn {
-        background:none; border:none; color:rgba(255,255,255,0.7); cursor:pointer;
-        padding:4px; border-radius:6px; transition:color 0.2s,background 0.2s;
-    }
+    .wa-close-btn { background:none; border:none; color:rgba(255,255,255,0.7); cursor:pointer; padding:4px; border-radius:6px; transition:color 0.2s,background 0.2s; }
     .wa-close-btn:hover { color:white; background:rgba(255,255,255,0.1); }
-
     .wa-body {
-        flex:1; padding:20px 16px; overflow-y:auto; min-height:260px;
-        background-color:#06090f;
+        flex:1; padding:20px 16px; overflow-y:auto; min-height:260px; background-color:#06090f;
         background-image:radial-gradient(circle at 20% 50%,rgba(59,130,246,0.03) 0%,transparent 50%),
         radial-gradient(circle at 80% 20%,rgba(129,140,248,0.02) 0%,transparent 50%);
     }
     .wa-date-divider { text-align:center; margin-bottom:16px; }
-    .wa-date-divider span {
-        font-size:0.68rem; color:var(--text-muted); background:rgba(255,255,255,0.04);
-        padding:3px 14px; border-radius:8px;
-    }
-
+    .wa-date-divider span { font-size:0.68rem; color:var(--text-muted); background:rgba(255,255,255,0.04); padding:3px 14px; border-radius:8px; }
     .wa-msg { display:flex; margin-bottom:10px; }
     .wa-msg-in { justify-content:flex-start; }
     .wa-msg-out { justify-content:flex-end; }
     .wa-msg-bubble { max-width:82%; padding:10px 14px; border-radius:12px; font-size:0.86rem; line-height:1.5; }
-    .wa-msg-in .wa-msg-bubble {
-        background:var(--bg-card); border:1px solid var(--border);
-        border-top-left-radius:4px; color:var(--text-primary);
-    }
+    .wa-msg-in .wa-msg-bubble { background:var(--bg-card); border:1px solid var(--border); border-top-left-radius:4px; color:var(--text-primary); }
     .wa-msg-out .wa-msg-bubble { background:#005c4b; border-top-right-radius:4px; color:#e8f5e9; }
     .wa-msg-bubble p { margin:0 0 4px; }
     .wa-msg-bubble p:last-of-type { margin-bottom:2px; }
@@ -1628,7 +1064,6 @@
     .wa-msg-time { display:block; font-size:0.62rem; color:rgba(255,255,255,0.35); margin-top:4px; text-align:right; }
     .wa-msg-anim { animation:wa-msg-in 0.4s ease both; }
     @keyframes wa-msg-in { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
-
     .wa-quick-replies { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
     .wa-quick-btn {
         background:var(--bg-card); border:1px solid var(--border-bright); color:var(--text-primary);
@@ -1636,18 +1071,13 @@
         padding:8px 14px; border-radius:20px; cursor:pointer; transition:all 0.2s; white-space:nowrap;
     }
     .wa-quick-btn:hover { background:var(--bg-elevated); border-color:var(--accent); color:var(--accent-bright); }
-
     .wa-footer { padding:12px 14px 10px; background:#0b1220; border-top:1px solid var(--border); }
     .wa-input-wrap {
         display:flex; align-items:center; gap:8px; background:var(--bg-card);
-        border:1px solid var(--border); border-radius:24px; padding:4px 6px 4px 18px;
-        transition:border-color 0.2s;
+        border:1px solid var(--border); border-radius:24px; padding:4px 6px 4px 18px; transition:border-color 0.2s;
     }
     .wa-input-wrap:focus-within { border-color:var(--border-bright); }
-    .wa-input {
-        flex:1; background:none; border:none; outline:none; color:var(--text-primary);
-        font-family:'DM Sans',sans-serif; font-size:0.88rem; padding:10px 0;
-    }
+    .wa-input { flex:1; background:none; border:none; outline:none; color:var(--text-primary); font-family:'DM Sans',sans-serif; font-size:0.88rem; padding:10px 0; }
     .wa-input::placeholder { color:var(--text-muted); }
     .wa-send-btn {
         width:38px; height:38px; border-radius:50%; background:#25d366; border:none;
@@ -1655,11 +1085,7 @@
         flex-shrink:0; transition:background 0.2s,transform 0.15s;
     }
     .wa-send-btn:hover { background:#22c35e; transform:scale(1.06); }
-    .wa-footer-note {
-        display:flex; align-items:center; justify-content:center; gap:5px;
-        font-size:0.65rem; color:var(--text-muted); margin-top:8px; padding-bottom:2px;
-    }
-
+    .wa-footer-note { display:flex; align-items:center; justify-content:center; gap:5px; font-size:0.65rem; color:var(--text-muted); margin-top:8px; padding-bottom:2px; }
     @media (max-width:900px) {
         .wa-widget { bottom:16px; right:16px; }
         .wa-toggle { width:54px; height:54px; }
@@ -1667,17 +1093,14 @@
     }
 </style>
 
-<script>
-// ─── WHATSAPP CHAT WIDGET ───
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
 (function(){
     var WA='60134553120',tgl=document.getElementById('waToggle'),pnl=document.getElementById('waPanel'),
         cls=document.getElementById('waClose'),inp=document.getElementById('waInput'),
         snd=document.getElementById('waSend'),bdy=document.getElementById('waBody'),
         qr=document.getElementById('waQuickReplies'),open=false;
-
     function show(){open=true;pnl.classList.add('open');tgl.classList.add('active','seen');setTimeout(function(){inp.focus()},350)}
     function hide(){open=false;pnl.classList.remove('open');tgl.classList.remove('active')}
-
     function send(msg){
         var m=document.createElement('div');m.className='wa-msg wa-msg-out wa-msg-anim';
         m.innerHTML='<div class="wa-msg-bubble"><p>'+msg+'</p><span class="wa-msg-time">Sending via WhatsApp...</span></div>';
@@ -1687,52 +1110,4 @@
             r.innerHTML='<div class="wa-msg-bubble"><p>Opening WhatsApp... &#128172;</p><span class="wa-msg-time">You\'ll continue the conversation there</span></div>';
             bdy.appendChild(r);bdy.scrollTop=bdy.scrollHeight;
         },500);
-        setTimeout(function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank')},1000);
-    }
-
-    tgl.addEventListener('click',function(){open?hide():show()});
-    cls.addEventListener('click',hide);
-    snd.addEventListener('click',function(){var v=inp.value.trim();if(v){send(v);inp.value=''}});
-    inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var v=inp.value.trim();if(v){send(v);inp.value=''}}});
-    qr.querySelectorAll('.wa-quick-btn').forEach(function(b){b.addEventListener('click',function(){send(b.dataset.msg)})});
-    document.addEventListener('click',function(e){if(open&&!document.getElementById('waWidget').contains(e.target))hide()});
-})();
-
-// ─── SCROLL REVEAL ───
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-// ─── NAV SHRINK ───
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    if (window.scrollY > 80) {
-        nav.style.background = 'rgba(4, 8, 15, 0.95)';
-    } else {
-        nav.style.background = 'rgba(4, 8, 15, 0.8)';
-    }
-});
-
-// ─── SMOOTH SCROLL ───
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-        e.preventDefault();
-        const target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            // Close mobile menu if open
-            document.querySelector('.nav-links').classList.remove('show');
-        }
-    });
-});
-</script>
-
-</body>
-</html>
+        setTimeout(function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blan
