@@ -1741,7 +1741,27 @@
     .wa-toggle::after {
         content:'1'; position:absolute; top:-2px; right:-2px; width:20px; height:20px;
         background:#ef4444; color:white; font-size:0.65rem; font-weight:700; border-radius:50%;
-        display:flex; align-items:cex; display:flex; align-items:center; justify-content:space-between;
+        display:flex; align-items:center; justify-content:center; border:2px solid var(--bg-deep);
+        transition:opacity 0.2s,transform 0.2s;
+    }
+    .wa-toggle.active::after, .wa-toggle.seen::after { opacity:0; transform:scale(0); }
+
+    @keyframes wa-pulse { 0%,100%{transform:scale(1);opacity:0.6} 50%{transform:scale(1.18);opacity:0} }
+    @keyframes wa-entrance { from{opacity:0;transform:scale(0.5) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
+
+    .wa-panel {
+        position:absolute; bottom:76px; right:0; width:370px; max-height:520px;
+        background:#0b1220; border:1px solid var(--border); border-radius:16px;
+        overflow:hidden; display:flex; flex-direction:column;
+        box-shadow:0 16px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.03);
+        opacity:0; transform:translateY(16px) scale(0.95); pointer-events:none;
+        transition:opacity 0.3s ease,transform 0.3s ease;
+    }
+    .wa-panel.open { opacity:1; transform:translateY(0) scale(1); pointer-events:all; }
+
+    .wa-header {
+        background:linear-gradient(135deg,#075e54 0%,#128c7e 100%);
+        padding:18px 20px; display:flex; align-items:center; justify-content:space-between;
     }
     .wa-header-info { display:flex; align-items:center; gap:12px; }
     .wa-avatar {
