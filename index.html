@@ -141,6 +141,10 @@
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,300&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- GSAP + ScrollTrigger -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12/dist/ScrollTrigger.min.js" defer></script>
     <style>
         :root {
             --bg-deep: #04080f;
@@ -318,7 +322,8 @@
             font-weight: 500;
             color: var(--text-secondary);
             margin-bottom: 32px;
-            animation: fadeSlideUp 0.8s ease both;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .hero-badge .dot {
@@ -340,7 +345,8 @@
             line-height: 1.08;
             letter-spacing: -0.035em;
             margin-bottom: 28px;
-            animation: fadeSlideUp 0.8s 0.1s ease both;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .hero h1 .gradient-text {
@@ -364,14 +370,16 @@
             max-width: 600px;
             line-height: 1.7;
             margin-bottom: 44px;
-            animation: fadeSlideUp 0.8s 0.2s ease both;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .hero-actions {
             display: flex;
             gap: 16px;
             flex-wrap: wrap;
-            animation: fadeSlideUp 0.8s 0.3s ease both;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .btn-primary {
@@ -424,7 +432,8 @@
             display: flex;
             gap: 56px;
             margin-top: 72px;
-            animation: fadeSlideUp 0.8s 0.4s ease both;
+            opacity: 0;
+            transform: translateY(20px);
         }
 
         .hero-stat .value {
@@ -1052,11 +1061,10 @@
             .cta-section { padding: 80px 24px; }
         }
 
-        /* ─── SCROLL ANIMATIONS ─── */
+        /* ─── GSAP SCROLL ANIMATIONS ─── */
         .reveal {
             opacity: 0;
-            transform: translateY(24px);
-            transition: opacity 0.7s ease, transform 0.7s ease;
+            transform: translateY(30px);
         }
 
         .reveal.visible {
@@ -1534,7 +1542,7 @@
                     </div>
                 </div>
                 <div class="career-footer">
-                    <a href="mailto:careers@aimailabs.com?subject=Application%20–%20Junior%20AI%20Software%20Engineer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20interested%20in%20the%20Junior%20AI%20Software%20Engineer%20role.%0A%0A[Attach%20your%20CV%20and%20GitHub%20link]" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                    <a href="mailto:careers@aimailabs.com?subject=Application%20–%20Junior%20AI%20Software%20Engineer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20interested%20in%20the%20Junior%20AI%20Software%20Engineer%20role." class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
                 </div>
             </div>
 
@@ -1573,7 +1581,7 @@
                     </div>
                 </div>
                 <div class="career-footer">
-                    <a href="mailto:careers@aimailabs.com?subject=Application%20–%20Junior%20Full%20Stack%20Developer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20interested%20in%20the%20Junior%20Full%20Stack%20Developer%20role.%0A%0A[Attach%20your%20CV%20and%20GitHub%20link]" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                    <a href="mailto:careers@aimailabs.com?subject=Application%20–%20Junior%20Full%20Stack%20Developer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20interested%20in%20the%20Junior%20Full%20Stack%20Developer%20role." class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
                 </div>
             </div>
         </div>
@@ -1595,7 +1603,7 @@
             No obligation. No data leaves your premises.
         </p>
         <div class="reveal">
-            <a href="mailto:sales@aimailabs.com?subject=Let's%20Connect%20–%20AIMAILABS&body=Hi%20AIMAILABS%2C%0A%0AI'd%20like%20to%20connect.%0A%0ACompany%3A%20%0ARole%3A%20%0AInterested%20in%3A%20" class="btn-primary" style="margin-right:12px;">
+            <a href="mailto:sales@aimailabs.com?subject=Let's%20Connect%20–%20AIMAILABS" class="btn-primary" style="margin-right:12px;">
                 Let's Connect ↗
             </a>
             <a href="https://wa.me/60134553120?text=Hi%20AIMAILABS%2C%20I%27d%20like%20to%20know%20more%20about%20your%20AI%20infrastructure%20for%20asset%20integrity." class="btn-ghost" target="_blank" rel="noopener" style="border-color:#25d366; color:#25d366;">
@@ -1878,28 +1886,231 @@
     document.addEventListener('click',function(e){if(isOpen&&!document.getElementById('waWidget').contains(e.target))hide()});
 })();
 
-// ─── SCROLL REVEAL ───
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('visible');
-        }
-    });
-}, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-
-document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
 // ─── NAV SHRINK ───
 let lastScroll = 0;
 window.addEventListener('scroll', () => {
     const nav = document.querySelector('nav');
     const current = window.scrollY;
-    if (current > 80) {
-        nav.style.background = 'rgba(4, 8, 15, 0.97)';
-    } else {
-        nav.style.background = 'rgba(4, 8, 15, 0.8)';
-    }
+    nav.style.background = current > 80 ? 'rgba(4, 8, 15, 0.97)' : 'rgba(4, 8, 15, 0.8)';
     lastScroll = current;
+});
+</script>
+
+<!-- ─── GSAP ANIMATIONS ─── -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Wait for GSAP to load
+    if (typeof gsap === 'undefined') {
+        // Fallback: basic IntersectionObserver if GSAP fails to load
+        const obs = new IntersectionObserver((entries) => {
+            entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; e.target.style.transition='opacity 0.6s ease, transform 0.6s ease'; }});
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal,.hero-badge,.hero h1,.hero-desc,.hero-actions,.hero-stats').forEach(el => obs.observe(el));
+        return;
+    }
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    // ─── HERO ENTRANCE ───
+    // Staggered reveal on page load
+    const heroTL = gsap.timeline({ defaults: { ease: 'power3.out' }});
+    heroTL
+        .to('.hero-badge', { opacity: 1, y: 0, duration: 0.7 })
+        .to('.hero h1', { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
+        .to('.hero-desc', { opacity: 1, y: 0, duration: 0.7 }, '-=0.5')
+        .to('.hero-actions', { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
+        .to('.hero-stats', { opacity: 1, y: 0, duration: 0.7 }, '-=0.3');
+
+    // ─── ANIMATED STAT COUNTERS ───
+    document.querySelectorAll('.hero-stat .value').forEach(function(el) {
+        var text = el.textContent.trim();
+        // Parse "40–80%" style
+        if (text.indexOf('–') !== -1) {
+            var parts = text.split('–');
+            var end = parseInt(parts[1]);
+            var start = parseInt(parts[0]);
+            var suffix = parts[1].replace(/[0-9]/g, '');
+            var counter = { lo: 0, hi: 0 };
+            gsap.to(counter, {
+                lo: start, hi: end, duration: 2, delay: 1, ease: 'power2.out',
+                onUpdate: function() {
+                    el.textContent = Math.round(counter.lo) + '–' + Math.round(counter.hi) + suffix;
+                }
+            });
+        } else if (text.indexOf('%') !== -1) {
+            var num = parseInt(text);
+            var obj = { val: 0 };
+            gsap.to(obj, {
+                val: num, duration: 1.8, delay: 1, ease: 'power2.out',
+                onUpdate: function() { el.textContent = Math.round(obj.val) + '%'; }
+            });
+        }
+        // "Zero" stays as-is
+    });
+
+    // ─── SECTION REVEALS ───
+    // Batch all .reveal elements with stagger per section
+    ScrollTrigger.batch('.reveal', {
+        onEnter: function(batch) {
+            gsap.to(batch, {
+                opacity: 1, y: 0,
+                duration: 0.7,
+                ease: 'power2.out',
+                stagger: 0.12,
+                overwrite: true
+            });
+        },
+        start: 'top 88%'
+    });
+
+    // ─── PIPELINE STEPS ───
+    gsap.utils.toArray('.pipeline-step').forEach(function(step, i) {
+        gsap.from(step, {
+            scrollTrigger: {
+                trigger: step,
+                start: 'top 85%'
+            },
+            opacity: 0,
+            x: -30,
+            duration: 0.6,
+            delay: i * 0.15,
+            ease: 'power2.out'
+        });
+    });
+
+    // ─── PRODUCT CARDS ───
+    document.querySelectorAll('.products-grid').forEach(function(grid) {
+        gsap.utils.toArray(grid.querySelectorAll('.product-card')).forEach(function(card, i) {
+            gsap.from(card, {
+                scrollTrigger: {
+                    trigger: card,
+                    start: 'top 90%'
+                },
+                opacity: 0,
+                y: 40,
+                scale: 0.97,
+                duration: 0.6,
+                delay: i * 0.08,
+                ease: 'power2.out'
+            });
+        });
+    });
+
+    // ─── DIFF CARDS ───
+    gsap.utils.toArray('.diff-card').forEach(function(card, i) {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 88%'
+            },
+            opacity: 0,
+            y: 30,
+            duration: 0.6,
+            delay: i * 0.1,
+            ease: 'power2.out'
+        });
+    });
+
+    // ─── WORKFLOW STEPS ───
+    gsap.utils.toArray('.workflow-step').forEach(function(step, i) {
+        gsap.from(step, {
+            scrollTrigger: {
+                trigger: step,
+                start: 'top 85%'
+            },
+            opacity: 0,
+            y: 40,
+            scale: 0.95,
+            duration: 0.7,
+            delay: i * 0.2,
+            ease: 'back.out(1.2)'
+        });
+    });
+
+    // ─── OTC BANNER ───
+    gsap.from('.otc-banner', {
+        scrollTrigger: {
+            trigger: '.otc-banner',
+            start: 'top 85%'
+        },
+        opacity: 0,
+        y: 30,
+        scale: 0.98,
+        duration: 0.8,
+        ease: 'power2.out'
+    });
+
+    // ─── CAREER CARDS ───
+    gsap.utils.toArray('.career-card').forEach(function(card, i) {
+        gsap.from(card, {
+            scrollTrigger: {
+                trigger: card,
+                start: 'top 85%'
+            },
+            opacity: 0,
+            y: 40,
+            duration: 0.7,
+            delay: i * 0.15,
+            ease: 'power2.out'
+        });
+    });
+
+    // ─── CTA SECTION ───
+    gsap.from('.cta-section .section-label', {
+        scrollTrigger: { trigger: '.cta-section', start: 'top 80%' },
+        opacity: 0, y: 20, duration: 0.6
+    });
+    gsap.from('.cta-section .section-title', {
+        scrollTrigger: { trigger: '.cta-section', start: 'top 80%' },
+        opacity: 0, y: 30, duration: 0.7, delay: 0.1
+    });
+    gsap.from('.cta-section .section-desc', {
+        scrollTrigger: { trigger: '.cta-section', start: 'top 80%' },
+        opacity: 0, y: 20, duration: 0.6, delay: 0.2
+    });
+
+    // ─── SECTION HEADING PARALLAX ───
+    gsap.utils.toArray('section:not(.hero):not(.cta-section)').forEach(function(section) {
+        var title = section.querySelector('.section-title');
+        if (title) {
+            gsap.from(title, {
+                scrollTrigger: {
+                    trigger: section,
+                    start: 'top 80%',
+                    end: 'top 20%',
+                    scrub: 0.5
+                },
+                y: 15,
+                opacity: 0.7
+            });
+        }
+    });
+
+    // ─── HERO PARALLAX ON SCROLL ───
+    gsap.to('.hero-content', {
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        },
+        y: -80,
+        opacity: 0.3,
+        ease: 'none'
+    });
+
+    // ─── GRID BACKGROUND PARALLAX ───
+    gsap.to('.hero-grid-bg', {
+        scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true
+        },
+        y: 60,
+        ease: 'none'
+    });
+
 });
 </script>
 </body>
