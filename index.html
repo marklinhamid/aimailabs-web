@@ -1833,10 +1833,10 @@
     var WA='60134553120',tgl=document.getElementById('waToggle'),pnl=document.getElementById('waPanel'),
         cls=document.getElementById('waClose'),inp=document.getElementById('waInput'),
         snd=document.getElementById('waSend'),bdy=document.getElementById('waBody'),
-        qr=document.getElementById('waQuickReplies'),open=false;
+        qr=document.getElementById('waQuickReplies'),isOpen=false;
 
-    function show(){open=true;pnl.classList.add('open');tgl.classList.add('active','seen');setTimeout(function(){inp.focus()},350)}
-    function hide(){open=false;pnl.classList.remove('open');tgl.classList.remove('active')}
+    function show(){isOpen=true;pnl.classList.add('open');tgl.classList.add('active','seen');setTimeout(function(){inp.focus()},350)}
+    function hide(){isOpen=false;pnl.classList.remove('open');tgl.classList.remove('active')}
 
     function send(msg){
         var m=document.createElement('div');m.className='wa-msg wa-msg-out wa-msg-anim';
@@ -1850,12 +1850,12 @@
         setTimeout(function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank')},1000);
     }
 
-    tgl.addEventListener('click',function(){open?hide():show()});
+    tgl.addEventListener('click',function(){isOpen?hide():show()});
     cls.addEventListener('click',hide);
-      snd.addEventListener('click',function(){var v=inp.value.trim();if(v){send(v);inp.value=''}});
+    snd.addEventListener('click',function(){var v=inp.value.trim();if(v){send(v);inp.value=''}});
     inp.addEventListener('keydown',function(e){if(e.key==='Enter'){var v=inp.value.trim();if(v){send(v);inp.value=''}}});
     qr.querySelectorAll('.wa-quick-btn').forEach(function(b){b.addEventListener('click',function(){send(b.dataset.msg)})});
-    document.addEventListener('click',function(e){if(open&&!document.getElementById('waWidget').contains(e.target))hide()});
+    document.addEventListener('click',function(e){if(isOpen&&!document.getElementById('waWidget').contains(e.target))hide()});
 })();
 
 // ─── SCROLL REVEAL ───
