@@ -162,11 +162,11 @@
             --accent-orange: #f59e0b;
             --accent-green: #10b981;
             --accent-red: #ef4444;
+            --accent-violet: #818cf8;
             --radius: 14px;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-
         html { scroll-behavior: smooth; }
 
         body {
@@ -177,7 +177,6 @@
             overflow-x: hidden;
         }
 
-        /* ─── NOISE OVERLAY ─── */
         body::before {
             content: '';
             position: fixed;
@@ -190,860 +189,241 @@
 
         /* ─── NAV ─── */
         nav {
-            position: fixed;
-            top: 0; left: 0; right: 0;
-            z-index: 1000;
-            padding: 0 48px;
-            height: 72px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
+            position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+            padding: 0 48px; height: 72px;
+            display: flex; align-items: center; justify-content: space-between;
             background: rgba(4, 8, 15, 0.8);
             backdrop-filter: blur(24px);
             border-bottom: 1px solid var(--border);
             transition: background 0.3s;
         }
-
         .nav-logo {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.3rem;
-            letter-spacing: -0.02em;
-            color: var(--text-primary);
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.3rem;
+            letter-spacing: -0.02em; color: var(--text-primary); text-decoration: none;
+            display: flex; align-items: center; gap: 10px;
         }
-
         .nav-logo .logo-mark {
-            width: 32px;
-            height: 32px;
-            background: linear-gradient(135deg, var(--accent), #818cf8);
-            border-radius: 8px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: 800;
-            color: white;
-            letter-spacing: 0;
+            width: 32px; height: 32px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-violet));
+            border-radius: 8px; display: flex; align-items: center; justify-content: center;
+            font-size: 0.75rem; font-weight: 800; color: white; letter-spacing: 0;
         }
-
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 36px;
-            list-style: none;
-        }
-
-        .nav-links a {
-            font-size: 0.88rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-
+        .nav-links { display: flex; align-items: center; gap: 36px; list-style: none; }
+        .nav-links a { font-size: 0.88rem; font-weight: 500; color: var(--text-secondary); text-decoration: none; transition: color 0.2s; }
         .nav-links a:hover { color: var(--text-primary); }
-
         .nav-cta {
-            font-size: 0.85rem !important;
-            font-weight: 600 !important;
-            color: white !important;
-            background: var(--accent);
-            padding: 9px 22px;
-            border-radius: 8px;
+            font-size: 0.85rem !important; font-weight: 600 !important; color: white !important;
+            background: var(--accent); padding: 9px 22px; border-radius: 8px;
             transition: background 0.2s, transform 0.15s !important;
         }
-
-        .nav-cta:hover {
-            background: #2563eb !important;
-            transform: translateY(-1px);
-        }
+        .nav-cta:hover { background: #2563eb !important; transform: translateY(-1px); }
 
         /* ─── HERO ─── */
         .hero {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            padding: 120px 48px 80px;
-            overflow: hidden;
+            position: relative; min-height: 100vh; display: flex; align-items: center;
+            padding: 120px 48px 80px; overflow: hidden;
         }
-
         .hero-grid-bg {
-            position: absolute;
-            inset: 0;
-            background-image:
-                linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
+            position: absolute; inset: 0;
+            background-image: linear-gradient(rgba(59,130,246,0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(59,130,246,0.04) 1px, transparent 1px);
             background-size: 64px 64px;
             mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, black, transparent);
         }
-
-        .hero-glow {
-            position: absolute;
-            top: -20%;
-            right: -10%;
-            width: 800px;
-            height: 800px;
-            background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 65%);
-            pointer-events: none;
-        }
-
-        .hero-glow-2 {
-            position: absolute;
-            bottom: -30%;
-            left: -15%;
-            width: 600px;
-            height: 600px;
-            background: radial-gradient(circle, rgba(129,140,248,0.05) 0%, transparent 60%);
-            pointer-events: none;
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            width: 100%;
-            position: relative;
-            z-index: 1;
-        }
-
+        .hero-glow { position: absolute; top: -20%; right: -10%; width: 800px; height: 800px; background: radial-gradient(circle, rgba(59,130,246,0.08) 0%, transparent 65%); pointer-events: none; }
+        .hero-glow-2 { position: absolute; bottom: -30%; left: -15%; width: 600px; height: 600px; background: radial-gradient(circle, rgba(129,140,248,0.05) 0%, transparent 60%); pointer-events: none; }
+        .hero-content { max-width: 1200px; margin: 0 auto; width: 100%; position: relative; z-index: 1; }
         .hero-badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 7px 16px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 100px;
-            font-size: 0.8rem;
-            font-weight: 500;
-            color: var(--text-secondary);
-            margin-bottom: 32px;
-            opacity: 0;
-            transform: translateY(20px);
+            display: inline-flex; align-items: center; gap: 8px; padding: 7px 16px;
+            background: var(--bg-card); border: 1px solid var(--border); border-radius: 100px;
+            font-size: 0.8rem; font-weight: 500; color: var(--text-secondary);
+            margin-bottom: 32px; opacity: 0; transform: translateY(20px);
         }
-
-        .hero-badge .dot {
-            width: 7px; height: 7px;
-            background: var(--accent-green);
-            border-radius: 50%;
-            animation: pulse-dot 2s infinite;
-        }
-
-        @keyframes pulse-dot {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0.4; }
-        }
-
+        .hero-badge .dot { width: 7px; height: 7px; background: var(--accent-green); border-radius: 50%; animation: pulse-dot 2s infinite; }
+        @keyframes pulse-dot { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
         .hero h1 {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(2.8rem, 6vw, 4.8rem);
-            font-weight: 800;
-            line-height: 1.08;
-            letter-spacing: -0.035em;
-            margin-bottom: 28px;
-            opacity: 0;
-            transform: translateY(20px);
+            font-family: 'Outfit', sans-serif; font-size: clamp(2.8rem, 6vw, 4.8rem);
+            font-weight: 800; line-height: 1.08; letter-spacing: -0.035em;
+            margin-bottom: 28px; opacity: 0; transform: translateY(20px);
         }
-
         .hero h1 .gradient-text {
             background: linear-gradient(135deg, var(--accent-bright) 0%, #a78bfa 50%, var(--accent-bright) 100%);
-            background-size: 200% auto;
-            -webkit-background-clip: text;
-            background-clip: text;
-            -webkit-text-fill-color: transparent;
-            animation: shimmer 6s ease infinite;
+            background-size: 200% auto; -webkit-background-clip: text; background-clip: text;
+            -webkit-text-fill-color: transparent; animation: shimmer 6s ease infinite;
         }
-
-        @keyframes shimmer {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        .hero-desc {
-            font-size: 1.15rem;
-            color: var(--text-secondary);
-            max-width: 600px;
-            line-height: 1.7;
-            margin-bottom: 44px;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .hero-actions {
-            display: flex;
-            gap: 16px;
-            flex-wrap: wrap;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
+        @keyframes shimmer { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+        .hero-desc { font-size: 1.15rem; color: var(--text-secondary); max-width: 640px; line-height: 1.7; margin-bottom: 44px; opacity: 0; transform: translateY(20px); }
+        .hero-actions { display: flex; gap: 16px; flex-wrap: wrap; opacity: 0; transform: translateY(20px); }
         .btn-primary {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: var(--accent);
-            color: white;
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 600;
-            border: none;
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px;
+            background: var(--accent); color: white; font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem; font-weight: 600; border: none; border-radius: 10px;
+            cursor: pointer; text-decoration: none; transition: all 0.2s;
         }
-
-        .btn-primary:hover {
-            background: #2563eb;
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px rgba(59,130,246,0.3);
-        }
-
+        .btn-primary:hover { background: #2563eb; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(59,130,246,0.3); }
         .btn-ghost {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            padding: 14px 32px;
-            background: transparent;
-            color: var(--text-secondary);
-            font-family: 'DM Sans', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
-            border: 1px solid var(--border-bright);
-            border-radius: 10px;
-            cursor: pointer;
-            text-decoration: none;
-            transition: all 0.2s;
+            display: inline-flex; align-items: center; gap: 8px; padding: 14px 32px;
+            background: transparent; color: var(--text-secondary); font-family: 'DM Sans', sans-serif;
+            font-size: 0.95rem; font-weight: 500; border: 1px solid var(--border-bright);
+            border-radius: 10px; cursor: pointer; text-decoration: none; transition: all 0.2s;
         }
-
-        .btn-ghost:hover {
-            color: var(--text-primary);
-            border-color: var(--text-muted);
-            background: var(--bg-card);
-        }
-
-        .hero-stats {
-            display: flex;
-            gap: 56px;
-            margin-top: 72px;
-            opacity: 0;
-            transform: translateY(20px);
-        }
-
-        .hero-stat .value {
-            font-family: 'Outfit', sans-serif;
-            font-size: 2.2rem;
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            color: var(--text-primary);
-        }
-
-        .hero-stat .label {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        @keyframes fadeSlideUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
+        .btn-ghost:hover { color: var(--text-primary); border-color: var(--text-muted); background: var(--bg-card); }
+        .hero-stats { display: flex; gap: 56px; margin-top: 72px; opacity: 0; transform: translateY(20px); }
+        .hero-stat .value { font-family: 'Outfit', sans-serif; font-size: 2.2rem; font-weight: 700; letter-spacing: -0.03em; color: var(--text-primary); }
+        .hero-stat .label { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
         /* ─── SECTIONS ─── */
-        section {
-            padding: 100px 48px;
-            position: relative;
-        }
+        section { padding: 100px 48px; position: relative; }
+        .section-inner { max-width: 1200px; margin: 0 auto; }
+        .section-label { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.15em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px; }
+        .section-title { font-family: 'Outfit', sans-serif; font-size: clamp(1.8rem, 3.5vw, 2.6rem); font-weight: 700; letter-spacing: -0.03em; line-height: 1.15; margin-bottom: 16px; }
+        .section-desc { font-size: 1.05rem; color: var(--text-secondary); max-width: 620px; margin-bottom: 56px; line-height: 1.7; }
 
-        .section-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+        /* ─── PROBLEM ─── */
+        #problem { background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .problem-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+        .problem-card { padding: 28px 0; }
+        .problem-card + .problem-card { border-top: 1px solid var(--border); }
+        .problem-number { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent); letter-spacing: 0.1em; margin-bottom: 10px; }
+        .problem-heading { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.05rem; margin-bottom: 8px; }
+        .problem-text { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
 
-        .section-label {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            font-weight: 500;
-            letter-spacing: 0.15em;
-            text-transform: uppercase;
-            color: var(--accent);
-            margin-bottom: 14px;
-        }
-
-        .section-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: clamp(1.8rem, 3.5vw, 2.6rem);
-            font-weight: 700;
-            letter-spacing: -0.03em;
-            line-height: 1.15;
-            margin-bottom: 16px;
-        }
-
-        .section-desc {
-            font-size: 1.05rem;
-            color: var(--text-secondary);
-            max-width: 620px;
-            margin-bottom: 56px;
-        }
-
-        /* ─── ABOUT / WHAT WE DO ─── */
-        #about {
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .about-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 64px;
-            align-items: center;
-        }
-
+        /* ─── ABOUT ─── */
+        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: center; }
         .about-visual {
-            position: relative;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 40px;
-            min-height: 380px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            overflow: hidden;
+            position: relative; background: var(--bg-card); border: 1px solid var(--border);
+            border-radius: var(--radius); padding: 40px; min-height: 380px;
+            display: flex; flex-direction: column; justify-content: center; overflow: hidden;
         }
-
-        .about-visual::before {
-            content: '';
-            position: absolute;
-            top: -1px; left: -1px; right: -1px;
-            height: 3px;
-            background: linear-gradient(90deg, var(--accent), #818cf8, var(--accent));
-            border-radius: var(--radius) var(--radius) 0 0;
-        }
-
-        .pipeline-step {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            padding: 14px 0;
-        }
-
-        .pipeline-step + .pipeline-step {
-            border-top: 1px solid var(--border);
-        }
-
-        .pipeline-icon {
-            width: 40px; height: 40px;
-            border-radius: 10px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1rem;
-            flex-shrink: 0;
-        }
-
+        .about-visual::before { content: ''; position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; background: linear-gradient(90deg, var(--accent), var(--accent-violet), var(--accent)); border-radius: var(--radius) var(--radius) 0 0; }
+        .pipeline-step { display: flex; align-items: center; gap: 16px; padding: 14px 0; }
+        .pipeline-step + .pipeline-step { border-top: 1px solid var(--border); }
+        .pipeline-icon { width: 40px; height: 40px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-size: 0.7rem; font-family: 'JetBrains Mono', monospace; font-weight: 500; flex-shrink: 0; letter-spacing: 0.05em; }
         .pipeline-step:nth-child(1) .pipeline-icon { background: rgba(59,130,246,0.12); color: var(--accent-bright); }
-        .pipeline-step:nth-child(2) .pipeline-icon { background: rgba(245,158,11,0.12); color: var(--accent-orange); }
-        .pipeline-step:nth-child(3) .pipeline-icon { background: rgba(129,140,248,0.12); color: #a78bfa; }
-        .pipeline-step:nth-child(4) .pipeline-icon { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+        .pipeline-step:nth-child(2) .pipeline-icon { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+        .pipeline-step:nth-child(3) .pipeline-icon { background: rgba(245,158,11,0.12); color: var(--accent-orange); }
+        .pipeline-step:nth-child(4) .pipeline-icon { background: rgba(129,140,248,0.12); color: #a78bfa; }
+        .pipeline-text .pipe-title { font-weight: 600; font-size: 0.92rem; color: var(--text-primary); }
+        .pipeline-text .pipe-desc { font-size: 0.82rem; color: var(--text-muted); margin-top: 2px; }
 
-        .pipeline-text .pipe-title {
-            font-weight: 600;
-            font-size: 0.92rem;
-            color: var(--text-primary);
-        }
-
-        .pipeline-text .pipe-desc {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-top: 2px;
-        }
-
-        .pipeline-arrow {
-            font-family: 'JetBrains Mono', monospace;
-            color: var(--text-muted);
-            font-size: 0.75rem;
-            padding-left: 56px;
-            height: 0;
-            overflow: visible;
-            position: relative;
-            top: -4px;
-        }
+        /* ─── PLATFORM ─── */
+        #platform { background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .platform-systems { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-bottom: 48px; }
+        .platform-system { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; position: relative; overflow: hidden; transition: all 0.3s; }
+        .platform-system:hover { border-color: var(--border-bright); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+        .platform-system::before { content: ''; position: absolute; top: -1px; left: -1px; right: -1px; height: 3px; border-radius: var(--radius) var(--radius) 0 0; }
+        .platform-system:nth-child(1)::before { background: var(--accent); }
+        .platform-system:nth-child(2)::before { background: var(--accent-green); }
+        .platform-system:nth-child(3)::before { background: var(--accent-orange); }
+        .ps-label { font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; font-weight: 500; letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 6px; }
+        .platform-system:nth-child(1) .ps-label { color: var(--accent-bright); }
+        .platform-system:nth-child(2) .ps-label { color: var(--accent-green); }
+        .platform-system:nth-child(3) .ps-label { color: var(--accent-orange); }
+        .ps-name { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 12px; }
+        .ps-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 20px; }
+        .ps-caps { font-size: 0.82rem; color: var(--text-muted); line-height: 1.7; }
+        .platform-backbone { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 32px 40px; display: flex; align-items: center; gap: 24px; }
+        .backbone-icon { width: 48px; height: 48px; background: linear-gradient(135deg, var(--accent-glow), rgba(129,140,248,0.08)); border: 1px solid var(--border-bright); border-radius: 12px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; font-weight: 500; color: var(--accent-bright); letter-spacing: 0.05em; }
+        .backbone-text { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; }
+        .backbone-text strong { color: var(--text-primary); }
 
         /* ─── PRODUCTS ─── */
-        .products-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-        }
+        .products-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+        .products-grid > .product-card:last-child:nth-child(odd) { grid-column: 1 / -1; }
+        .product-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; transition: all 0.3s; position: relative; overflow: hidden; }
+        .product-card:hover { border-color: var(--border-bright); transform: translateY(-3px); box-shadow: 0 12px 40px rgba(0,0,0,0.3); }
+        .product-card.featured { border-color: var(--accent); background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59,130,246,0.04) 100%); }
+        .product-card.featured::before { content: 'FLAGSHIP'; position: absolute; top: 16px; right: 16px; font-family: 'JetBrains Mono', monospace; font-size: 0.6rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent-bright); background: var(--accent-glow); border: 1px solid rgba(59,130,246,0.25); padding: 4px 10px; border-radius: 6px; }
+        .product-icon { width: 48px; height: 48px; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-size: 0.65rem; font-family: 'JetBrains Mono', monospace; font-weight: 500; letter-spacing: 0.05em; margin-bottom: 20px; }
+        .product-card:nth-child(1) .product-icon { background: rgba(59,130,246,0.12); color: var(--accent-bright); }
+        .product-card:nth-child(2) .product-icon { background: rgba(16,185,129,0.12); color: var(--accent-green); }
+        .product-card:nth-child(3) .product-icon { background: rgba(245,158,11,0.12); color: var(--accent-orange); }
+        .product-card:nth-child(4) .product-icon { background: rgba(129,140,248,0.12); color: #a78bfa; }
+        .product-name { font-family: 'Outfit', sans-serif; font-size: 1.25rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 4px; }
+        .product-tagline { font-size: 0.85rem; font-weight: 500; color: var(--accent-bright); margin-bottom: 14px; }
+        .product-desc { font-size: 0.9rem; color: var(--text-secondary); margin-bottom: 0; line-height: 1.6; }
 
-        .products-grid > .product-card:last-child:nth-child(odd) {
-            grid-column: 1 / -1;
-        }
+        /* System header */
+        .system-header { display: flex; align-items: center; gap: 14px; margin-bottom: 20px; }
+        .system-badge { border-radius: 10px; padding: 10px 18px; font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; letter-spacing: 0.04em; }
+        .system-header-desc { color: var(--text-secondary); font-size: 0.9rem; }
 
-        .product-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 36px;
-            transition: all 0.3s;
-            position: relative;
-            overflow: hidden;
-        }
+        /* ─── TECHNOLOGY ─── */
+        #technology { background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .tech-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 16px; }
+        .tech-card { padding: 28px 24px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color 0.3s; text-align: center; }
+        .tech-card:hover { border-color: var(--border-bright); }
+        .tech-abbr { font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent-bright); margin-bottom: 12px; }
+        .tech-name { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 0.95rem; margin-bottom: 10px; }
+        .tech-desc { font-size: 0.82rem; color: var(--text-muted); line-height: 1.55; }
 
-        .product-card:hover {
-            border-color: var(--border-bright);
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.3);
-        }
-
-        .product-card.featured {
-            border-color: var(--accent);
-            background: linear-gradient(135deg, var(--bg-card) 0%, rgba(59,130,246,0.04) 100%);
-        }
-
-        .product-card.featured::before {
-            content: 'MOST POPULAR';
-            position: absolute;
-            top: 16px; right: 16px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.6rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            color: var(--accent-bright);
-            background: var(--accent-glow);
-            border: 1px solid rgba(59,130,246,0.25);
-            padding: 4px 10px;
-            border-radius: 6px;
-        }
-
-        .product-icon {
-            width: 48px; height: 48px;
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.3rem;
-            margin-bottom: 20px;
-        }
-
-        .product-card:nth-child(1) .product-icon { background: rgba(59,130,246,0.12); }
-        .product-card:nth-child(2) .product-icon { background: rgba(16,185,129,0.12); }
-        .product-card:nth-child(3) .product-icon { background: rgba(245,158,11,0.12); }
-        .product-card:nth-child(4) .product-icon { background: rgba(129,140,248,0.12); }
-
-        .product-name {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.25rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 4px;
-        }
-
-        .product-tagline {
-            font-size: 0.85rem;
-            font-weight: 500;
-            color: var(--accent-bright);
-            margin-bottom: 14px;
-        }
-
-        .product-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-bottom: 20px;
-            line-height: 1.6;
-        }
-
-        .product-features {
-            list-style: none;
-        }
-
-        .product-features li {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            padding: 5px 0;
-            padding-left: 18px;
-            position: relative;
-        }
-
-        .product-features li::before {
-            content: '→';
-            position: absolute;
-            left: 0;
-            color: var(--accent);
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-        }
-
-        /* ─── DIFFERENTIATORS ─── */
-        #why {
-            background: var(--bg-surface);
-            border-top: 1px solid var(--border);
-            border-bottom: 1px solid var(--border);
-        }
-
-        .diff-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
-
-        .diff-card {
-            padding: 32px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            transition: border-color 0.3s;
-        }
-
+        /* ─── WHY ─── */
+        #why { background: var(--bg-surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+        .diff-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+        .diff-card { padding: 32px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); transition: border-color 0.3s; }
         .diff-card:hover { border-color: var(--border-bright); }
+        .diff-icon { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; font-weight: 500; letter-spacing: 0.1em; color: var(--accent-bright); background: var(--accent-glow); width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; margin-bottom: 18px; }
+        .diff-title { font-family: 'Outfit', sans-serif; font-weight: 600; font-size: 1.05rem; margin-bottom: 10px; }
+        .diff-text { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
 
-        .diff-icon {
-            font-size: 1.6rem;
-            margin-bottom: 18px;
-        }
+        /* OTC Banner */
+        .otc-banner { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 48px; display: flex; align-items: center; gap: 40px; margin-top: 80px; }
+        .otc-icon { width: 72px; height: 72px; background: linear-gradient(135deg, var(--accent-glow), rgba(129,140,248,0.08)); border: 1px solid var(--border-bright); border-radius: 16px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; font-family: 'JetBrains Mono', monospace; font-size: 0.65rem; font-weight: 500; color: var(--accent-bright); letter-spacing: 0.05em; }
+        .otc-text h3 { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.2rem; margin-bottom: 6px; }
+        .otc-text p { font-size: 0.92rem; color: var(--text-secondary); line-height: 1.6; }
+        .otc-text .otc-tag { display: inline-block; margin-top: 12px; font-family: 'JetBrains Mono', monospace; font-size: 0.72rem; color: var(--text-muted); background: var(--bg-deep); border: 1px solid var(--border); padding: 4px 12px; border-radius: 6px; }
 
-        .diff-title {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 600;
-            font-size: 1.05rem;
-            margin-bottom: 10px;
-        }
-
-        .diff-text {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
-
-        /* ─── OTC BANNER ─── */
-        .otc-banner {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 48px;
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-top: 80px;
-        }
-
-        .otc-icon {
-            width: 72px; height: 72px;
-            background: linear-gradient(135deg, var(--accent-glow), rgba(129,140,248,0.08));
-            border: 1px solid var(--border-bright);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 1.8rem;
-            flex-shrink: 0;
-        }
-
-        .otc-text h3 {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.2rem;
-            margin-bottom: 6px;
-        }
-
-        .otc-text p {
-            font-size: 0.92rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .otc-text .otc-tag {
-            display: inline-block;
-            margin-top: 12px;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.72rem;
-            color: var(--text-muted);
-            background: var(--bg-deep);
-            border: 1px solid var(--border);
-            padding: 4px 12px;
-            border-radius: 6px;
-        }
+        /* ─── IMPACT ─── */
+        .impact-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .impact-card { padding: 32px 28px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); text-align: center; transition: border-color 0.3s; }
+        .impact-card:hover { border-color: var(--border-bright); }
+        .impact-value { font-family: 'Outfit', sans-serif; font-size: 2rem; font-weight: 700; letter-spacing: -0.03em; color: var(--text-primary); margin-bottom: 6px; }
+        .impact-label { font-size: 0.85rem; color: var(--text-muted); line-height: 1.45; }
 
         /* ─── WORKFLOW ─── */
-        .workflow-steps {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 24px;
-            counter-reset: step;
-        }
-
-        .workflow-step {
-            position: relative;
-            padding: 36px;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            counter-increment: step;
-        }
-
-        .workflow-step::before {
-            content: counter(step, decimal-leading-zero);
-            font-family: 'Outfit', sans-serif;
-            font-size: 3rem;
-            font-weight: 800;
-            color: rgba(59,130,246,0.1);
-            position: absolute;
-            top: 16px; right: 24px;
-        }
-
-        .step-title {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 8px;
-        }
-
-        .step-time {
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.7rem;
-            color: var(--accent-bright);
-            background: var(--accent-glow);
-            padding: 3px 10px;
-            border-radius: 6px;
-            display: inline-block;
-            margin-bottom: 14px;
-        }
-
-        .step-desc {
-            font-size: 0.88rem;
-            color: var(--text-secondary);
-            line-height: 1.65;
-        }
+        .workflow-steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; counter-reset: step; }
+        .workflow-step { position: relative; padding: 36px; background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); counter-increment: step; }
+        .workflow-step::before { content: counter(step, decimal-leading-zero); font-family: 'Outfit', sans-serif; font-size: 3rem; font-weight: 800; color: rgba(59,130,246,0.1); position: absolute; top: 16px; right: 24px; }
+        .step-title { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; margin-bottom: 8px; }
+        .step-time { font-family: 'JetBrains Mono', monospace; font-size: 0.7rem; color: var(--accent-bright); background: var(--accent-glow); padding: 3px 10px; border-radius: 6px; display: inline-block; margin-bottom: 14px; }
+        .step-desc { font-size: 0.88rem; color: var(--text-secondary); line-height: 1.65; }
 
         /* ─── CAREERS ─── */
-        .careers-grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 24px;
-        }
-
-        .career-card {
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: var(--radius);
-            padding: 36px;
-            position: relative;
-            transition: border-color 0.3s;
-        }
-
+        .careers-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+        .career-card { background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 36px; position: relative; transition: border-color 0.3s; }
         .career-card:hover { border-color: var(--border-bright); }
-
-        .career-badge {
-            display: inline-block;
-            font-family: 'JetBrains Mono', monospace;
-            font-size: 0.62rem;
-            font-weight: 500;
-            letter-spacing: 0.1em;
-            text-transform: uppercase;
-            color: var(--accent-green);
-            background: rgba(16,185,129,0.1);
-            border: 1px solid rgba(16,185,129,0.2);
-            padding: 4px 10px;
-            border-radius: 6px;
-            margin-bottom: 16px;
-        }
-
-        .career-title {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: -0.02em;
-            margin-bottom: 6px;
-        }
-
-        .career-location {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            margin-bottom: 16px;
-        }
-
-        .career-desc {
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            line-height: 1.6;
-            margin-bottom: 18px;
-        }
-
-        .career-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 6px;
-            margin-bottom: 24px;
-        }
-
-        .career-tag {
-            font-size: 0.72rem;
-            font-weight: 500;
-            color: var(--accent-bright);
-            background: var(--accent-glow);
-            border: 1px solid rgba(59,130,246,0.15);
-            padding: 4px 10px;
-            border-radius: 6px;
-        }
-
-        .career-details {
-            border-top: 1px solid var(--border);
-            padding-top: 20px;
-            margin-bottom: 24px;
-        }
-
-        .career-detail-section {
-            margin-bottom: 16px;
-        }
-
+        .career-badge { display: inline-block; font-family: 'JetBrains Mono', monospace; font-size: 0.62rem; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--accent-green); background: rgba(16,185,129,0.1); border: 1px solid rgba(16,185,129,0.2); padding: 4px 10px; border-radius: 6px; margin-bottom: 16px; }
+        .career-title { font-family: 'Outfit', sans-serif; font-size: 1.2rem; font-weight: 700; letter-spacing: -0.02em; margin-bottom: 6px; }
+        .career-location { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 16px; }
+        .career-desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.6; margin-bottom: 18px; }
+        .career-tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 24px; }
+        .career-tag { font-size: 0.72rem; font-weight: 500; color: var(--accent-bright); background: var(--accent-glow); border: 1px solid rgba(59,130,246,0.15); padding: 4px 10px; border-radius: 6px; }
+        .career-details { border-top: 1px solid var(--border); padding-top: 20px; margin-bottom: 24px; }
+        .career-detail-section { margin-bottom: 16px; }
         .career-detail-section:last-child { margin-bottom: 0; }
-
-        .career-detail-section h4 {
-            font-family: 'Outfit', sans-serif;
-            font-size: 0.85rem;
-            font-weight: 600;
-            color: var(--text-primary);
-            margin-bottom: 6px;
-        }
-
-        .career-detail-section p {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-        }
-
-        .career-footer {
-            display: flex;
-            align-items: center;
-            padding-top: 20px;
-            border-top: 1px solid var(--border);
-        }
-
-        .career-salary {
-            font-family: 'Outfit', sans-serif;
-            font-size: 1.05rem;
-            font-weight: 600;
-            color: var(--text-primary);
-        }
-
-        .career-note {
-            text-align: center;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
-            margin-top: 40px;
-            line-height: 1.7;
-        }
-
-        @media (max-width: 900px) {
-            .careers-grid { grid-template-columns: 1fr; }
-        }
+        .career-detail-section h4 { font-family: 'Outfit', sans-serif; font-size: 0.85rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+        .career-detail-section p { font-size: 0.82rem; color: var(--text-muted); line-height: 1.6; }
+        .career-footer { display: flex; align-items: center; padding-top: 20px; border-top: 1px solid var(--border); }
+        .career-note { text-align: center; font-size: 0.9rem; color: var(--text-secondary); margin-top: 40px; line-height: 1.7; }
 
         /* ─── CTA ─── */
-        .cta-section {
-            text-align: center;
-            padding: 120px 48px;
-        }
-
-        .cta-section .section-title {
-            max-width: 650px;
-            margin: 0 auto 16px;
-        }
-
-        .cta-section .section-desc {
-            max-width: 520px;
-            margin: 0 auto 40px;
-            text-align: center;
-        }
+        .cta-section { text-align: center; padding: 120px 48px; }
+        .cta-section .section-title { max-width: 650px; margin: 0 auto 16px; }
+        .cta-section .section-desc { max-width: 520px; margin: 0 auto 40px; text-align: center; }
 
         /* ─── FOOTER ─── */
-        footer {
-            border-top: 1px solid var(--border);
-            padding: 48px 48px 40px;
-            background: var(--bg-surface);
-        }
-
-        .footer-inner {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: flex-start;
-            gap: 40px;
-            flex-wrap: wrap;
-        }
-
-        .footer-brand .footer-logo {
-            font-family: 'Outfit', sans-serif;
-            font-weight: 700;
-            font-size: 1.1rem;
-            color: var(--text-primary);
-            margin-bottom: 8px;
-        }
-
-        .footer-brand p {
-            font-size: 0.82rem;
-            color: var(--text-muted);
-            max-width: 300px;
-            line-height: 1.6;
-        }
-
-        .footer-col h4 {
-            font-size: 0.78rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.08em;
-            color: var(--text-secondary);
-            margin-bottom: 14px;
-        }
-
-        .footer-col a {
-            display: block;
-            font-size: 0.85rem;
-            color: var(--text-muted);
-            text-decoration: none;
-            padding: 4px 0;
-            transition: color 0.2s;
-        }
-
+        footer { border-top: 1px solid var(--border); padding: 48px 48px 40px; background: var(--bg-surface); }
+        .footer-inner { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: flex-start; gap: 40px; flex-wrap: wrap; }
+        .footer-brand .footer-logo { font-family: 'Outfit', sans-serif; font-weight: 700; font-size: 1.1rem; color: var(--text-primary); margin-bottom: 8px; }
+        .footer-brand p { font-size: 0.82rem; color: var(--text-muted); max-width: 300px; line-height: 1.6; }
+        .footer-col h4 { font-size: 0.78rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--text-secondary); margin-bottom: 14px; }
+        .footer-col a { display: block; font-size: 0.85rem; color: var(--text-muted); text-decoration: none; padding: 4px 0; transition: color 0.2s; }
         .footer-col a:hover { color: var(--text-primary); }
-
-        .footer-bottom {
-            max-width: 1200px;
-            margin: 36px auto 0;
-            padding-top: 24px;
-            border-top: 1px solid var(--border);
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 0.78rem;
-            color: var(--text-muted);
-        }
-
-        .footer-bottom a {
-            color: var(--text-muted);
-            text-decoration: none;
-        }
-
+        .footer-bottom { max-width: 1200px; margin: 36px auto 0; padding-top: 24px; border-top: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; font-size: 0.78rem; color: var(--text-muted); }
+        .footer-bottom a { color: var(--text-muted); text-decoration: none; }
         .footer-bottom a:hover { color: var(--text-secondary); }
 
         /* ─── MOBILE ─── */
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            color: var(--text-secondary);
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
+        .mobile-menu-btn { display: none; background: none; border: none; color: var(--text-secondary); font-size: 1.5rem; cursor: pointer; }
         @media (max-width: 900px) {
             nav { padding: 0 24px; }
             .nav-links { display: none; }
@@ -1051,444 +431,459 @@
             .hero { padding: 120px 24px 80px; }
             section { padding: 72px 24px; }
             .hero-stats { gap: 32px; flex-wrap: wrap; }
+            .problem-grid { grid-template-columns: 1fr; gap: 0; }
             .about-grid { grid-template-columns: 1fr; gap: 40px; }
+            .platform-systems { grid-template-columns: 1fr; }
             .products-grid { grid-template-columns: 1fr; }
+            .tech-grid { grid-template-columns: repeat(2, 1fr); }
             .diff-grid { grid-template-columns: 1fr; }
+            .impact-grid { grid-template-columns: repeat(2, 1fr); }
             .workflow-steps { grid-template-columns: 1fr; }
+            .careers-grid { grid-template-columns: 1fr; }
             .otc-banner { flex-direction: column; padding: 32px; gap: 24px; }
             .footer-inner { flex-direction: column; }
             .footer-bottom { flex-direction: column; gap: 8px; text-align: center; }
             .cta-section { padding: 80px 24px; }
         }
-
-        /* ─── GSAP SCROLL ANIMATIONS ─── */
-        .reveal {
-            opacity: 0;
-            transform: translateY(30px);
+        @media (max-width: 500px) {
+            .tech-grid { grid-template-columns: 1fr; }
+            .impact-grid { grid-template-columns: 1fr; }
         }
 
-        .reveal.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .reveal { opacity: 0; transform: translateY(30px); }
     </style>
 </head>
 <body>
 
-<!-- ─── NAV ─── -->
+<!-- NAV -->
 <nav>
-    <a href="#" class="nav-logo">
-        <span class="logo-mark">AI</span>
-        AIMAILABS
-    </a>
+    <a href="#" class="nav-logo"><span class="logo-mark">AI</span> AIMAILABS</a>
     <ul class="nav-links">
-        <li><a href="#about">About</a></li>
+        <li><a href="#problem">Problem</a></li>
+        <li><a href="#platform">Platform</a></li>
         <li><a href="#products">Infrastructure</a></li>
-        <li><a href="#why">Why Us</a></li>
+        <li><a href="#technology">Technology</a></li>
         <li><a href="#careers">Careers</a></li>
-        <li><a href="#start">Get Started</a></li>
-        <li><a href="#contact" class="nav-cta">Let's Connect</a></li>
+        <li><a href="#contact" class="nav-cta">Request Demo</a></li>
     </ul>
-    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">☰</button>
+    <button class="mobile-menu-btn" onclick="document.querySelector('.nav-links').classList.toggle('show')" aria-label="Menu">&#9776;</button>
 </nav>
 
-<!-- ─── HERO ─── -->
+<!-- ═══ 1. HERO ═══ -->
 <section class="hero">
     <div class="hero-grid-bg"></div>
     <div class="hero-glow"></div>
     <div class="hero-glow-2"></div>
     <div class="hero-content">
-        <div class="hero-badge">
-            <span class="dot"></span>
-            Presenting at OTC Asia 2026
-        </div>
-        <h1>
-            AI Infrastructure for<br>
-            <span class="gradient-text">Offshore Asset Integrity.</span>
-        </h1>
+        <div class="hero-badge"><span class="dot"></span> Presenting at OTC Asia 2026</div>
+        <h1>AI Infrastructure for<br><span class="gradient-text">Offshore Asset Integrity.</span></h1>
         <p class="hero-desc">
-            AIMAILABS builds the AI systems that offshore operators run their
-            asset integrity programs on — from field inspection to engineering
-            assessment to maintenance planning. Purpose-built for the structural lifecycle.
+            AIMAILABS builds AI systems that offshore operators run their inspection
+            and integrity programs on &mdash; from field inspection to engineering
+            assessment and maintenance planning.<br><br>
+            Our platform combines computer vision, knowledge graphs, graph neural networks,
+            and multimodal AI to transform inspection data into explainable engineering decisions.
+            Purpose-built for remote offshore environments, with fully offline operation
+            and human-in-the-loop validation.
         </p>
         <div class="hero-actions">
-            <a href="#contact" class="btn-primary">Let's Connect ↗</a>
-            <a href="#products" class="btn-ghost">Explore the Stack</a>
+            <a href="#contact" class="btn-primary">Request a Demo &nearr;</a>
+            <a href="#platform" class="btn-ghost">Explore the Platform</a>
         </div>
-
         <div class="hero-stats">
-            <div class="hero-stat">
-                <div class="value">40–80%</div>
-                <div class="label">Faster Reporting</div>
+            <div class="hero-stat"><div class="value">40&ndash;80%</div><div class="label">Faster Reporting</div></div>
+            <div class="hero-stat"><div class="value">100%</div><div class="label">Offline Operation</div></div>
+            <div class="hero-stat"><div class="value">Zero</div><div class="label">Subjectivity in Severity</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 2. INDUSTRY PROBLEM ═══ -->
+<section id="problem">
+    <div class="section-inner">
+        <div class="problem-grid">
+            <div>
+                <div class="section-label reveal">The Problem</div>
+                <h2 class="section-title reveal">Offshore Integrity Still Runs<br>on Disconnected Workflows</h2>
+                <p class="section-desc reveal">
+                    The offshore structural integrity lifecycle &mdash; inspection, engineering assessment,
+                    and maintenance &mdash; still depends on manual workflows, fragmented tooling, and
+                    subjective engineering judgment applied inconsistently across assets and teams.
+                </p>
+                <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.7;" class="reveal">
+                    Inspection findings live in PDF reports. Engineering assessments exist in spreadsheets.
+                    Maintenance scopes are built from memory and institutional knowledge.
+                    None of these systems share context, and none of them learn.
+                </p>
             </div>
-            <div class="hero-stat">
-                <div class="value">100%</div>
-                <div class="label">Offline Operation</div>
-            </div>
-            <div class="hero-stat">
-                <div class="value">Zero</div>
-                <div class="label">Subjectivity in Severity</div>
+            <div>
+                <div class="problem-card reveal">
+                    <div class="problem-number">01</div>
+                    <div class="problem-heading">Manual Defect Assessment</div>
+                    <p class="problem-text">Inspectors photograph defects and classify severity based on experience. Two inspectors assessing the same finding may reach different conclusions. Reports take hours or days to compile, often only after returning to shore.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="problem-number">02</div>
+                    <div class="problem-heading">Disconnected Engineering Analysis</div>
+                    <p class="problem-text">Inspection data flows into separate engineering systems &mdash; if it flows at all. Assessments against standards happen in isolation, with no traceability from the original finding to the engineering conclusion.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="problem-number">03</div>
+                    <div class="problem-heading">Reactive Maintenance Planning</div>
+                    <p class="problem-text">Maintenance scopes are built manually after campaigns complete. Work scopes are assembled from scratch without structured linkage to the findings they address. Critical repairs compete with routine work for the same execution window.</p>
+                </div>
+                <div class="problem-card reveal">
+                    <div class="problem-number">04</div>
+                    <div class="problem-heading">No Shared Intelligence Layer</div>
+                    <p class="problem-text">Inspection, engineering, and maintenance teams operate on different tools with different data formats. No unified system connects a photographed defect to a standards-based assessment to a repair work order &mdash; with full traceability.</p>
+                </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ─── ABOUT ─── -->
+<!-- ═══ 3. WHAT AIMAILABS BUILDS ═══ -->
 <section id="about">
     <div class="section-inner">
         <div class="about-grid">
             <div class="reveal">
                 <div class="section-label">What We Build</div>
-                <h2 class="section-title">The AI Infrastructure Stack<br>for Structural Integrity</h2>
+                <h2 class="section-title">The Intelligence Infrastructure<br>for Structural Integrity</h2>
                 <p class="section-desc" style="margin-bottom:24px">
-                    AIMAILABS builds purpose-built AI infrastructure for the full asset integrity
-                    lifecycle in oil &amp; gas — from inspection in the field, to engineering
-                    assessment in the office, to maintenance planning on the desk.
+                    AIMAILABS develops AI infrastructure that connects inspection, engineering assessment,
+                    and maintenance planning into a single operational intelligence system.
+                </p>
+                <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.7; margin-bottom:20px;">
+                    Instead of fragmented reports, spreadsheets, and disconnected tools, our platform
+                    converts inspection data into structured engineering knowledge.
                 </p>
                 <p style="font-size:0.92rem; color:var(--text-secondary); line-height:1.7;">
-                    Three systems. One shared intelligence backbone. Each targets a different
-                    team, a different workflow, and a different problem — but all grounded in
-                    the same principle: AI recommends, engineers decide, every output is auditable.
+                    Three systems operate on the same intelligence backbone.
+                    AI accelerates the workflow. Engineers remain in full control of every decision.
                 </p>
             </div>
             <div class="about-visual reveal">
                 <div class="pipeline-step">
-                    <div class="pipeline-icon">👁</div>
-                    <div class="pipeline-text">
-                        <div class="pipe-title">Detect</div>
-                        <div class="pipe-desc">AI identifies visible defects from inspection photos</div>
-                    </div>
+                    <div class="pipeline-icon">CV</div>
+                    <div class="pipeline-text"><div class="pipe-title">Detect</div><div class="pipe-desc">Computer vision identifies structural anomalies from inspection images</div></div>
                 </div>
                 <div class="pipeline-step">
-                    <div class="pipeline-icon">📐</div>
-                    <div class="pipeline-text">
-                        <div class="pipe-title">Assess</div>
-                        <div class="pipe-desc">Engineering analysis, trending and predictive assessment</div>
-                    </div>
+                    <div class="pipeline-icon">KG</div>
+                    <div class="pipeline-text"><div class="pipe-title">Assess</div><div class="pipe-desc">Knowledge graph reasoning engine evaluates findings against standards</div></div>
                 </div>
                 <div class="pipeline-step">
-                    <div class="pipeline-icon">📋</div>
-                    <div class="pipeline-text">
-                        <div class="pipe-title">Scope</div>
-                        <div class="pipe-desc">AI-generated work scope, repair methods and resource plan</div>
-                    </div>
+                    <div class="pipeline-icon">NLP</div>
+                    <div class="pipeline-text"><div class="pipe-title">Scope</div><div class="pipe-desc">Natural language models generate repair scopes and work packs</div></div>
                 </div>
                 <div class="pipeline-step">
-                    <div class="pipeline-icon">✓</div>
-                    <div class="pipeline-text">
-                        <div class="pipe-title">Execute</div>
-                        <div class="pipe-desc">SAP Work Order created, engineer validated, fully traceable</div>
-                    </div>
+                    <div class="pipeline-icon">GNN</div>
+                    <div class="pipeline-text"><div class="pipe-title">Predict</div><div class="pipe-desc">Graph neural networks model structural relationships and degradation</div></div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ─── PRODUCTS ─── -->
+<!-- ═══ 4. PLATFORM OVERVIEW ═══ -->
+<section id="platform">
+    <div class="section-inner">
+        <div class="section-label reveal">Platform Architecture</div>
+        <h2 class="section-title reveal">Three Systems. One Intelligence Backbone.</h2>
+        <p class="section-desc reveal">Each system targets a different team, a different workflow, and a different operational problem &mdash; all grounded in the same AI reasoning infrastructure.</p>
+        <div class="platform-systems">
+            <div class="platform-system reveal">
+                <div class="ps-label">Inspect</div>
+                <div class="ps-name">INSPECTA</div>
+                <p class="ps-desc">AI inspection infrastructure. Detects structural anomalies from inspection images and converts them into structured, standards-assessed findings. Operates across mobile devices, cloud dashboards, and camera systems.</p>
+                <p class="ps-caps">Computer vision defect detection &mdash; multimodal image analysis &mdash; real-time severity assessment &mdash; offline-first architecture &mdash; audit-ready report generation</p>
+            </div>
+            <div class="platform-system reveal">
+                <div class="ps-label">Assess</div>
+                <div class="ps-name">COREVA</div>
+                <p class="ps-desc">Engineering reasoning engine. Evaluates how defects affect structural components using knowledge graph reasoning and graph neural networks aligned to international standards.</p>
+                <p class="ps-caps">Integrity evaluation &mdash; degradation trending &mdash; fitness-for-service screening &mdash; predictive inspection planning &mdash; structural fatigue tracking</p>
+            </div>
+            <div class="platform-system reveal">
+                <div class="ps-label">Maintain</div>
+                <div class="ps-name">MAINTENA</div>
+                <p class="ps-desc">Maintenance planning and execution. Transforms engineering findings into actionable repair work scopes, digital work packs, and execution tracking workflows &mdash; closing the loop from defect to verified repair.</p>
+                <p class="ps-caps">AI-generated work scopes &mdash; digital work pack assembly &mdash; repair execution tracking &mdash; post-repair verification &mdash; management of change</p>
+            </div>
+        </div>
+        <div class="platform-backbone reveal">
+            <div class="backbone-icon">AI</div>
+            <p class="backbone-text"><strong>Shared intelligence backbone.</strong> All three systems operate on the same AI reasoning layer &mdash; computer vision, knowledge graphs, graph neural networks, NLP, and multimodal AI &mdash; ensuring that every finding, assessment, and repair action shares context and maintains full traceability.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 5. INSPECTA ═══ -->
 <section id="products">
     <div class="section-inner">
-        <div class="section-label reveal">Our Infrastructure</div>
-        <h2 class="section-title reveal">Three Systems. One Lifecycle.</h2>
-        <p class="section-desc reveal">Inspect it. Assess it. Fix it. — Three purpose-built systems covering every stage of the offshore structural integrity lifecycle.</p>
+        <div class="section-label reveal">Product Infrastructure</div>
+        <h2 class="section-title reveal">Inspect It. Assess It. Fix It.</h2>
+        <p class="section-desc reveal">Three purpose-built systems covering every stage of the offshore structural integrity lifecycle.</p>
 
-        <!-- ── INSPECTA ── -->
         <div style="margin-bottom: 56px;">
-            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px;" class="reveal">
-                <div style="background: rgba(59,130,246,0.12); border:1px solid rgba(59,130,246,0.25); border-radius:10px; padding:10px 18px; font-family:'Outfit',sans-serif; font-weight:700; font-size:1.1rem; color:#60a5fa; letter-spacing:0.04em;">INSPECTA</div>
-                <div style="color:var(--text-secondary); font-size:0.9rem;">"Find It" — AI Inspection Infrastructure for Offshore Structural Integrity</div>
+            <div class="system-header reveal">
+                <div class="system-badge" style="background: rgba(59,130,246,0.12); border:1px solid rgba(59,130,246,0.25); color:#60a5fa;">INSPECTA</div>
+                <div class="system-header-desc">AI Inspection Infrastructure &mdash; Detect and assess structural anomalies at the point of inspection</div>
             </div>
             <div class="products-grid">
                 <div class="product-card featured reveal">
-                    <div class="product-icon">📱</div>
+                    <div class="product-icon">EDG</div>
                     <div class="product-name">INSPECTA Edge</div>
-                    <div class="product-tagline">AI In Your Inspector's Hands</div>
-                    <p class="product-desc">
-                        Fully offline mobile app on an Ex-rated device. Photograph a defect — AI detects it,
-                        assesses severity against your standards, and generates a PDF report before you climb down.
-                    </p>
+                    <div class="product-tagline">Offline Mobile Inspection Intelligence</div>
+                    <p class="product-desc">Fully offline mobile application deployed on Ex-rated devices. Inspectors photograph a defect &mdash; the system detects it, assesses severity against engineering standards, and generates an audit-ready report before the inspector leaves the location. No connectivity required.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">☁️</div>
+                    <div class="product-icon">CLD</div>
                     <div class="product-name">INSPECTA Cloud</div>
-                    <div class="product-tagline">Real-Time Command Centre</div>
-                    <p class="product-desc">
-                        Web dashboard where findings from every inspector and camera flow in real-time.
-                        KPI cards, severity breakdowns, and approval workflows — all in one screen.
-                    </p>
+                    <div class="product-tagline">Centralised Inspection Command</div>
+                    <p class="product-desc">Web-based dashboard where findings from every inspector and camera system converge in real-time. Severity breakdowns, KPI tracking, and approval workflows &mdash; providing complete campaign visibility for onshore engineering teams.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">📷</div>
+                    <div class="product-icon">VIS</div>
                     <div class="product-name">INSPECTA Vision</div>
-                    <div class="product-tagline">AI Eyes That Never Blink</div>
-                    <p class="product-desc">
-                        Camera systems detecting structural defects in real-time — from portable
-                        campaign kits, to permanent installations, to autonomous robotic platforms.
-                    </p>
+                    <div class="product-tagline">Automated Visual Monitoring</div>
+                    <p class="product-desc">Camera systems performing continuous structural defect detection. Deployable as portable campaign kits, permanent installations, or autonomous robotic platforms &mdash; extending inspection coverage beyond human access.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">🖥️</div>
+                    <div class="product-icon">COR</div>
                     <div class="product-name">INSPECTA Core</div>
-                    <div class="product-tagline">The Engineering Desktop Hub</div>
-                    <p class="product-desc">
-                        Desktop engineering workstation. Knowledge Graph assessment engine,
-                        inspection workspace, planning workspace, and SAP Work Order integration
-                        — built for the lead structural engineer.
-                    </p>
+                    <div class="product-tagline">Engineering Desktop Workstation</div>
+                    <p class="product-desc">Desktop engineering environment integrating the knowledge graph assessment engine, inspection workspace, planning workspace, and enterprise system integration. Built for the lead structural engineer's daily workflow.</p>
                 </div>
             </div>
         </div>
 
-        <!-- ── COREVA ── -->
+        <!-- ═══ 6. COREVA ═══ -->
         <div style="margin-bottom: 56px;">
-            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px;" class="reveal">
-                <div style="background: rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.25); border-radius:10px; padding:10px 18px; font-family:'Outfit',sans-serif; font-weight:700; font-size:1.1rem; color:#34d399; letter-spacing:0.04em;">COREVA</div>
-                <div style="color:var(--text-secondary); font-size:0.9rem;">"Assess It" — AI Engineering Assessment & Predictive Analytics</div>
+            <div class="system-header reveal">
+                <div class="system-badge" style="background: rgba(16,185,129,0.12); border:1px solid rgba(16,185,129,0.25); color:#34d399;">COREVA</div>
+                <div class="system-header-desc">Engineering Reasoning Engine &mdash; Standards-aligned assessment and predictive integrity analytics</div>
             </div>
             <div class="products-grid">
                 <div class="product-card featured reveal">
-                    <div class="product-icon">📊</div>
+                    <div class="product-icon">RPT</div>
                     <div class="product-name">COREVA Reports</div>
-                    <div class="product-tagline">AI-Generated Analysis Reports</div>
-                    <p class="product-desc">
-                        Structured engineering analysis reports generated from inspection findings.
-                        Standards-referenced, audit-ready, and traceable from defect photo to conclusion.
-                    </p>
+                    <div class="product-tagline">Structured Engineering Analysis</div>
+                    <p class="product-desc">Engineering analysis reports generated from inspection findings. Standards-referenced, fully traceable from the original defect photograph to the engineering conclusion. Audit-ready documentation produced in minutes, not weeks.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">⚡</div>
+                    <div class="product-icon">ANO</div>
                     <div class="product-name">COREVA Anode</div>
-                    <div class="product-tagline">Anode Depletion Trending</div>
-                    <p class="product-desc">
-                        Track cathodic protection anode consumption across your asset portfolio.
-                        AI-driven depletion curves, remaining life estimates, and replacement scheduling.
-                    </p>
+                    <div class="product-tagline">Cathodic Protection Trending</div>
+                    <p class="product-desc">Track anode consumption across the asset portfolio. AI-driven depletion curves, remaining life estimates, and replacement scheduling &mdash; turning cathodic protection management into a data-driven operation.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">🔮</div>
+                    <div class="product-icon">PRD</div>
                     <div class="product-name">COREVA Predict</div>
-                    <div class="product-tagline">Predictive Integrity Analytics</div>
-                    <p class="product-desc">
-                        Risk-based inspection planning powered by degradation trending and
-                        historical findings data. Predict where the next critical defect appears
-                        before it becomes a hazard.
-                    </p>
+                    <div class="product-tagline">Predictive Inspection Planning</div>
+                    <p class="product-desc">Risk-based inspection planning powered by degradation trending and historical findings data. Identifies where the next critical defect is likely to develop before it reaches an actionable threshold.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">🛡️</div>
+                    <div class="product-icon">FFS</div>
                     <div class="product-name">COREVA Fitness</div>
-                    <div class="product-tagline">Fitness-for-Service Assessment</div>
-                    <p class="product-desc">
-                        When a defect exceeds inspection criteria, determine if you can still operate.
-                        AI-assisted FFS screening with full calculation traceability — accept, repair,
-                        or monitor, with documented engineering justification.
-                    </p>
+                    <div class="product-tagline">Fitness-for-Service Screening</div>
+                    <p class="product-desc">When a defect exceeds inspection criteria, determine whether continued operation is justified. AI-assisted FFS screening with full calculation traceability &mdash; accept, repair, or monitor, with documented engineering basis.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">📏</div>
+                    <div class="product-icon">THK</div>
                     <div class="product-name">COREVA Thickness</div>
-                    <div class="product-tagline">Wall Thickness Trending</div>
-                    <p class="product-desc">
-                        UT wall thickness management across your CML network. Historical trending,
-                        short-term and long-term corrosion rates, remaining life calculations, and
-                        next inspection date scheduling.
-                    </p>
+                    <div class="product-tagline">Wall Thickness Management</div>
+                    <p class="product-desc">UT wall thickness management across the CML network. Historical trending, short-term and long-term corrosion rates, remaining life calculations, and next inspection date scheduling &mdash; systematically applied.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">🔁</div>
+                    <div class="product-icon">FTG</div>
                     <div class="product-name">COREVA Fatigue</div>
                     <div class="product-tagline">Structural Fatigue Life Tracking</div>
-                    <p class="product-desc">
-                        Cumulative fatigue damage tracking against S-N curves and joint classification
-                        per design codes. Remaining fatigue life estimates per member and joint —
-                        critical for aging jackets and topsides.
-                    </p>
+                    <p class="product-desc">Cumulative fatigue damage tracking against S-N curves and joint classification per design codes. Remaining fatigue life estimates per member and joint &mdash; critical for ageing jacket structures and topsides.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">⚖️</div>
+                    <div class="product-icon">WGT</div>
                     <div class="product-name">COREVA Weight</div>
                     <div class="product-tagline">Topsides Weight Management</div>
-                    <p class="product-desc">
-                        Track cumulative weight changes and centre-of-gravity drift from structural
-                        modifications and equipment changes. Flag weight budget exceedances and link
-                        back to structural capacity assessments.
-                    </p>
+                    <p class="product-desc">Track cumulative weight changes and centre-of-gravity drift from structural modifications and equipment changes. Flag weight budget exceedances and link back to structural capacity assessments.</p>
                 </div>
             </div>
         </div>
 
-        <!-- ── MAINTENA ── -->
+        <!-- ═══ 7. MAINTENA ═══ -->
         <div>
-            <div style="display:flex; align-items:center; gap:14px; margin-bottom:20px;" class="reveal">
-                <div style="background: rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.25); border-radius:10px; padding:10px 18px; font-family:'Outfit',sans-serif; font-weight:700; font-size:1.1rem; color:#fbbf24; letter-spacing:0.04em;">MAINTENA</div>
-                <div style="color:var(--text-secondary); font-size:0.9rem;">"Fix It" — AI Maintenance Planning for Offshore Structural Repair</div>
+            <div class="system-header reveal">
+                <div class="system-badge" style="background: rgba(245,158,11,0.12); border:1px solid rgba(245,158,11,0.25); color:#fbbf24;">MAINTENA</div>
+                <div class="system-header-desc">Maintenance Intelligence &mdash; From engineering findings to verified repair, with full traceability</div>
             </div>
             <div class="products-grid">
                 <div class="product-card featured reveal">
-                    <div class="product-icon">🔧</div>
+                    <div class="product-icon">SCP</div>
                     <div class="product-name">MAINTENA Scoper</div>
-                    <div class="product-tagline">From Finding to Work Scope</div>
-                    <p class="product-desc">
-                        AI-powered work scope generator. Turns approved inspection findings into
-                        a consolidated, prioritised scope of work — complete with repair methods,
-                        resource plan, man-hours, and critical path sequence.
-                    </p>
+                    <div class="product-tagline">AI-Generated Work Scopes</div>
+                    <p class="product-desc">Transforms approved inspection findings into consolidated, prioritised scopes of work &mdash; complete with repair methods, resource plans, man-hour estimates, and critical path sequencing. From finding to work scope without manual reprocessing.</p>
                 </div>
                 <div class="product-card reveal" style="opacity:0.6;">
-                    <div class="product-icon">📅</div>
+                    <div class="product-icon">PLN</div>
                     <div class="product-name">MAINTENA Planner</div>
                     <div class="product-tagline">Coming Soon</div>
-                    <p class="product-desc">
-                        Maintenance scheduling and work order lifecycle management.
-                        From scope approval to execution tracking — integrated with SAP PM.
-                    </p>
+                    <p class="product-desc">Maintenance scheduling and work order lifecycle management. From scope approval to execution tracking &mdash; integrated with enterprise maintenance management systems.</p>
                 </div>
                 <div class="product-card reveal" style="opacity:0.6;">
-                    <div class="product-icon">💰</div>
+                    <div class="product-icon">CST</div>
                     <div class="product-name">MAINTENA Cost</div>
                     <div class="product-tagline">Coming Soon</div>
-                    <p class="product-desc">
-                        Cost estimation and budget planning for structural repair campaigns.
-                        Resource-based costing with contract-confidential unit price management.
-                    </p>
+                    <p class="product-desc">Cost estimation and budget planning for structural repair campaigns. Resource-based costing with contract-confidential unit price management.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">📦</div>
+                    <div class="product-icon">PKS</div>
                     <div class="product-name">MAINTENA Packs</div>
                     <div class="product-tagline">Digital Work Pack Generator</div>
-                    <p class="product-desc">
-                        Auto-generates complete offshore work packs from approved scopes — method
-                        statements, risk assessments, material lists, quality plans, ITP, and permit
-                        requirements bundled as a single downloadable package.
-                    </p>
+                    <p class="product-desc">Auto-generates complete offshore work packs from approved scopes &mdash; method statements, risk assessments, material lists, quality plans, and permit requirements bundled as a single downloadable package.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">📍</div>
+                    <div class="product-icon">TRK</div>
                     <div class="product-name">MAINTENA Track</div>
                     <div class="product-tagline">Repair Execution Tracker</div>
-                    <p class="product-desc">
-                        Real-time progress tracking of work scopes offshore. Which items are complete,
-                        in-progress, deferred, or rejected — with photo evidence linkage back to
-                        INSPECTA findings. Live campaign visibility for onshore teams.
-                    </p>
+                    <p class="product-desc">Real-time progress tracking of work scopes offshore. Which items are complete, in-progress, deferred, or rejected &mdash; with photo evidence linkage back to INSPECTA findings. Live campaign visibility for onshore teams.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">✅</div>
+                    <div class="product-icon">QAV</div>
                     <div class="product-name">MAINTENA QA</div>
                     <div class="product-tagline">Post-Repair Verification</div>
-                    <p class="product-desc">
-                        Capture completion evidence — photos, NDT results, coating records — run
-                        against acceptance criteria, and close the loop back to the original finding.
-                        Full lifecycle traceability from defect to verified repair.
-                    </p>
+                    <p class="product-desc">Capture completion evidence &mdash; photos, NDT results, coating records &mdash; validate against acceptance criteria, and close the loop back to the original finding. Full lifecycle traceability from defect detection to verified repair.</p>
                 </div>
                 <div class="product-card reveal">
-                    <div class="product-icon">🔀</div>
+                    <div class="product-icon">MoC</div>
                     <div class="product-name">MAINTENA MoC</div>
                     <div class="product-tagline">Management of Change</div>
-                    <p class="product-desc">
-                        Manage the MoC process for structural modifications that deviate from
-                        like-for-like repair. Engineering review, weight impact, risk assessment,
-                        and approval workflow — linked to COREVA Weight and the original finding.
-                    </p>
+                    <p class="product-desc">Manage the MoC process for structural modifications that deviate from like-for-like repair. Engineering review, weight impact, risk assessment, and approval workflow &mdash; linked to COREVA Weight and the original finding.</p>
                 </div>
             </div>
         </div>
-
     </div>
 </section>
 
-<!-- ─── WHY ─── -->
+<!-- ═══ 8. TECHNOLOGY ARCHITECTURE ═══ -->
+<section id="technology">
+    <div class="section-inner">
+        <div class="section-label reveal">Technology Architecture</div>
+        <h2 class="section-title reveal">Five AI Disciplines. One Reasoning System.</h2>
+        <p class="section-desc reveal">AIMAILABS integrates multiple AI technologies into a unified reasoning architecture purpose-built for safety-critical engineering environments. Each technology addresses a specific layer of the integrity intelligence problem.</p>
+        <div class="tech-grid">
+            <div class="tech-card reveal">
+                <div class="tech-abbr">CV</div>
+                <div class="tech-name">Computer Vision</div>
+                <p class="tech-desc">Structural anomaly detection directly from inspection images. Identifies defect type, location, extent, and morphology.</p>
+            </div>
+            <div class="tech-card reveal">
+                <div class="tech-abbr">KG</div>
+                <div class="tech-name">Knowledge Graphs</div>
+                <p class="tech-desc">Engineering knowledge representation. Encodes standards, criteria, and structural relationships into a queryable reasoning system.</p>
+            </div>
+            <div class="tech-card reveal">
+                <div class="tech-abbr">GNN</div>
+                <div class="tech-name">Graph Neural Networks</div>
+                <p class="tech-desc">Structural relationship analysis. Models how defects propagate through connected components and affect system-level integrity.</p>
+            </div>
+            <div class="tech-card reveal">
+                <div class="tech-abbr">NLP</div>
+                <div class="tech-name">Natural Language Processing</div>
+                <p class="tech-desc">Technical report and work scope generation. Produces structured engineering documentation from assessment outputs.</p>
+            </div>
+            <div class="tech-card reveal">
+                <div class="tech-abbr">M-AI</div>
+                <div class="tech-name">Multimodal AI</div>
+                <p class="tech-desc">Combines inspection images, engineering rules, and asset data into a unified reasoning context for cross-domain assessment.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ═══ 9. WHY AIMAILABS ═══ -->
 <section id="why">
     <div class="section-inner">
         <div class="section-label reveal">Why AIMAILABS</div>
         <h2 class="section-title reveal">Infrastructure-Grade AI. Built for Offshore.</h2>
-        <p class="section-desc reveal">
-            Not another dashboard. Not another data layer. AIMAILABS infrastructure reasons
-            through findings, assesses against your standards, and gives engineers actionable,
-            traceable outputs across the full asset integrity lifecycle.
-        </p>
-
+        <p class="section-desc reveal">AIMAILABS is not another inspection dashboard. It is an AI reasoning infrastructure designed for safety-critical offshore environments &mdash; where every assessment must be traceable, every decision explainable, and every system capable of operating without connectivity.</p>
         <div class="diff-grid">
             <div class="diff-card reveal">
-                <div class="diff-icon">🔒</div>
-                <div class="diff-title">100% Offline-First</div>
-                <p class="diff-text">No cloud dependency, no satellite bandwidth required. AI runs entirely on-device. Your inspection data never leaves the platform.</p>
+                <div class="diff-icon">01</div>
+                <div class="diff-title">100% Offline-First Architecture</div>
+                <p class="diff-text">No cloud dependency. No satellite bandwidth required. AI runs entirely on-device. Inspection data never leaves the local system until explicitly synchronised.</p>
             </div>
             <div class="diff-card reveal">
-                <div class="diff-icon">🔍</div>
-                <div class="diff-title">Explainable AI</div>
-                <p class="diff-text">Every severity rating traces to a specific criteria clause. The engineer sees exactly why — and can override with documented justification.</p>
+                <div class="diff-icon">02</div>
+                <div class="diff-title">Explainable AI Assessments</div>
+                <p class="diff-text">Every severity rating traces to a specific standards clause. The engineer sees exactly why the system reached its conclusion &mdash; and can override with documented justification.</p>
             </div>
             <div class="diff-card reveal">
-                <div class="diff-icon">📋</div>
-                <div class="diff-title">Standards-Based Assessment</div>
-                <p class="diff-text">Inspection criteria applied consistently every time — as written in your standards. No guesswork, no subjective interpretation.</p>
+                <div class="diff-icon">03</div>
+                <div class="diff-title">Standards-Aligned Reasoning</div>
+                <p class="diff-text">Inspection criteria applied consistently across every asset, every campaign, every inspector. Assessment logic derived from engineering standards &mdash; not statistical approximation.</p>
             </div>
             <div class="diff-card reveal">
-                <div class="diff-icon">⚡</div>
-                <div class="diff-title">Photo to Report in Seconds</div>
-                <p class="diff-text">AI detects and assesses while the inspector is still on-site. Audit-ready reports generated instantly, not days later in the office.</p>
+                <div class="diff-icon">04</div>
+                <div class="diff-title">On-Site Intelligence</div>
+                <p class="diff-text">AI detects and assesses while the inspector is still on the structure. Audit-ready reports generated at the point of inspection &mdash; not days later in the office.</p>
             </div>
             <div class="diff-card reveal">
-                <div class="diff-icon">👤</div>
-                <div class="diff-title">Engineer Stays in Control</div>
-                <p class="diff-text">AI recommends. Engineer decides. Full audit trail of every assessment and override. Designed for regulatory compliance.</p>
+                <div class="diff-icon">05</div>
+                <div class="diff-title">Human-in-the-Loop Control</div>
+                <p class="diff-text">AI recommends. Engineers decide. Full audit trail of every assessment, every override, every engineering judgment. Designed for regulatory compliance and safety-critical operations.</p>
             </div>
             <div class="diff-card reveal">
-                <div class="diff-icon">🔄</div>
-                <div class="diff-title">One Stack, Every Deployment</div>
-                <p class="diff-text">From mobile device to web dashboard to camera systems — one unified AI infrastructure layer across your entire operation.</p>
+                <div class="diff-icon">06</div>
+                <div class="diff-title">Unified Deployment Architecture</div>
+                <p class="diff-text">From mobile device to web dashboard to camera system &mdash; one AI infrastructure layer operating consistently across every deployment surface and every operational context.</p>
             </div>
         </div>
-
-        <!-- OTC Banner -->
         <div class="otc-banner reveal">
-            <div class="otc-icon">📄</div>
+            <div class="otc-icon">OTC</div>
             <div class="otc-text">
                 <h3>Presenting at OTC Asia 2026</h3>
-                <p>
-                    Our AI-powered inspection methodology will be peer-reviewed and presented
-                    at the Offshore Technology Conference, validating our approach to
-                    safety-critical inspection workflows with human-in-the-loop control.
-                </p>
-                <span class="otc-tag">OTC Asia 2026 · Offshore Inspection Intelligence</span>
+                <p>Our AI-powered inspection methodology will be peer-reviewed and presented at the Offshore Technology Conference, validating our approach to safety-critical inspection workflows with human-in-the-loop control.</p>
+                <span class="otc-tag">OTC Asia 2026 &middot; Offshore Inspection Intelligence</span>
             </div>
         </div>
     </div>
 </section>
 
-<!-- ─── GET STARTED ─── -->
+<!-- ═══ 10. OPERATIONAL IMPACT ═══ -->
+<section id="impact">
+    <div class="section-inner">
+        <div class="section-label reveal">Operational Impact</div>
+        <h2 class="section-title reveal">Measurable Outcomes Across the Integrity Lifecycle</h2>
+        <p class="section-desc reveal">When inspection, assessment, and maintenance share the same intelligence layer, the operational impact compounds across the entire asset integrity program.</p>
+        <div class="impact-grid">
+            <div class="impact-card reveal"><div class="impact-value">40&ndash;80%</div><div class="impact-label">Reduction in inspection<br>reporting time</div></div>
+            <div class="impact-card reveal"><div class="impact-value">100%</div><div class="impact-label">Offline operation<br>in remote environments</div></div>
+            <div class="impact-card reveal"><div class="impact-value">0</div><div class="impact-label">Subjectivity in severity<br>assessment outputs</div></div>
+            <div class="impact-card reveal"><div class="impact-value">Full</div><div class="impact-label">Traceability from defect<br>to verified repair</div></div>
+        </div>
+    </div>
+</section>
+
+<!-- ─── DEPLOYMENT ─── -->
 <section id="start">
     <div class="section-inner">
-        <div class="section-label reveal">Get Started</div>
+        <div class="section-label reveal">Deployment</div>
         <h2 class="section-title reveal">From First Conversation to Live Infrastructure</h2>
         <p class="section-desc reveal">Three steps from discovery to field-validated deployment.</p>
-
         <div class="workflow-steps">
             <div class="workflow-step reveal">
                 <div class="step-title">Discovery &amp; Scoping</div>
-                <span class="step-time">1–2 weeks</span>
-                <p class="step-desc">
-                    We meet your team, understand your platforms, standards, and pain points.
-                    Identify the highest-value starting point where reporting delays cost you most.
-                </p>
+                <span class="step-time">1&ndash;2 weeks</span>
+                <p class="step-desc">We meet your team, understand your platforms, standards, and operational constraints. Identify the highest-value entry point where reporting delays and assessment inconsistency cost you most.</p>
             </div>
             <div class="workflow-step reveal">
                 <div class="step-title">Pilot Deployment</div>
-                <span class="step-time">2–4 weeks</span>
-                <p class="step-desc">
-                    Deploy INSPECTA for one real campaign. Real defects, real standards, real reports.
-                    Your engineers validate AI assessments against their own judgment.
-                </p>
+                <span class="step-time">2&ndash;4 weeks</span>
+                <p class="step-desc">Deploy INSPECTA for one real inspection campaign. Real defects, your standards, your report format. Your engineers validate AI assessments against their own engineering judgment.</p>
             </div>
             <div class="workflow-step reveal">
                 <div class="step-title">Scale Across Your Fleet</div>
                 <span class="step-time">Ongoing</span>
-                <p class="step-desc">
-                    Expand from one platform to your entire portfolio. Add COREVA, MAINTENA, and Vision
-                    as you grow. Per-asset licensing scales with your deployment.
-                </p>
+                <p class="step-desc">Expand from one platform to your entire portfolio. Add COREVA and MAINTENA as you extend coverage across the integrity lifecycle. Per-asset licensing scales with your deployment.</p>
             </div>
         </div>
     </div>
@@ -1499,22 +894,13 @@
     <div class="section-inner">
         <div class="section-label reveal">Join Us</div>
         <h2 class="section-title reveal">Build Real AI Infrastructure</h2>
-        <p class="section-desc reveal">
-            We're an early-stage company building AI infrastructure for offshore operators.
-            Looking for developers who want hands-on experience shipping production AI systems.
-            Direct mentorship, real impact.
-        </p>
-
+        <p class="section-desc reveal">We are an early-stage company building AI infrastructure for offshore operators. Looking for engineers who want hands-on experience shipping production AI systems for safety-critical environments. Direct mentorship, real impact.</p>
         <div class="careers-grid">
             <div class="career-card reveal">
                 <div class="career-badge">Open Role</div>
                 <h3 class="career-title">Junior AI Software Engineer</h3>
-                <p class="career-location">Kota Kinabalu, Sabah · Remote / Hybrid</p>
-                <p class="career-desc">
-                    Help develop computer vision models for structural inspection. Prepare datasets,
-                    train detection models, build AI pipelines, and collaborate directly with the founder
-                    on AI architecture and experimentation.
-                </p>
+                <p class="career-location">Kota Kinabalu, Sabah &middot; Remote / Hybrid</p>
+                <p class="career-desc">Help develop computer vision models for structural inspection. Prepare datasets, train detection models, build AI pipelines, and collaborate directly with the founder on AI architecture and experimentation.</p>
                 <div class="career-tags">
                     <span class="career-tag">Python</span>
                     <span class="career-tag">Computer Vision</span>
@@ -1522,38 +908,19 @@
                     <span class="career-tag">Object Detection</span>
                 </div>
                 <div class="career-details">
-                    <div class="career-detail-section">
-                        <h4>What you'll do</h4>
-                        <p>Develop CV models for inspection, manage image datasets and annotations,
-                           support model training and evaluation, build Python scripts for AI pipelines,
-                           and integrate AI models into the platform.</p>
-                    </div>
-                    <div class="career-detail-section">
-                        <h4>What we're looking for</h4>
-                        <p>Degree in CS, AI, Data Science or related field. Strong interest in AI and
-                           computer vision. Python experience. Familiarity with ML frameworks is a plus.
-                           Comfortable with AI coding tools.</p>
-                    </div>
-                    <div class="career-detail-section">
-                        <h4>What you'll gain</h4>
-                        <p>Hands-on experience building production AI infrastructure for offshore operations.
-                           Exposure to AI architecture, computer vision, and knowledge-based reasoning.
-                           Direct mentorship from an industry engineer and AI founder.</p>
-                    </div>
+                    <div class="career-detail-section"><h4>What you'll do</h4><p>Develop CV models for inspection, manage image datasets and annotations, support model training and evaluation, build Python scripts for AI pipelines, and integrate AI models into the platform.</p></div>
+                    <div class="career-detail-section"><h4>What we're looking for</h4><p>Degree in CS, AI, Data Science or related field. Strong interest in AI and computer vision. Python experience. Familiarity with ML frameworks is a plus. Comfortable with AI coding tools.</p></div>
+                    <div class="career-detail-section"><h4>What you'll gain</h4><p>Hands-on experience building production AI infrastructure for offshore operations. Exposure to AI architecture, computer vision, and knowledge-based reasoning. Direct mentorship from an industry engineer and AI founder.</p></div>
                 </div>
                 <div class="career-footer">
-                    <a href="mailto:careers@aimailabs.com?subject=Application%20–%20Junior%20AI%20Software%20Engineer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20interested%20in%20the%20Junior%20AI%20Software%20Engineer%20role." class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                    <a href="mailto:careers@aimailabs.com?subject=Application%20%E2%80%94%20Junior%20AI%20Software%20Engineer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20applying%20for%20the%20Junior%20AI%20Software%20Engineer%20role.%0A%0APlease%20find%20my%20CV%20attached.%0A%0AThanks" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
                 </div>
             </div>
-
             <div class="career-card reveal">
                 <div class="career-badge">Open Role</div>
                 <h3 class="career-title">Junior Full Stack Developer</h3>
-                <p class="career-location">Kota Kinabalu, Sabah · Remote / Hybrid</p>
-                <p class="career-desc">
-                    Build the application layer that connects AI models with real-world users.
-                    Develop interfaces, backend APIs, and mobile/desktop apps for our inspection platform.
-                </p>
+                <p class="career-location">Kota Kinabalu, Sabah &middot; Remote / Hybrid</p>
+                <p class="career-desc">Build the application layer that connects AI models with real-world users. Develop interfaces, backend APIs, and mobile/desktop apps for our inspection platform.</p>
                 <div class="career-tags">
                     <span class="career-tag">Python / JavaScript</span>
                     <span class="career-tag">REST APIs</span>
@@ -1561,323 +928,127 @@
                     <span class="career-tag">FastAPI / Node.js</span>
                 </div>
                 <div class="career-details">
-                    <div class="career-detail-section">
-                        <h4>What you'll do</h4>
-                        <p>Build and maintain the inspection application interface, develop backend APIs
-                           to integrate AI models and reporting, build mobile/desktop apps, implement
-                           AI-generated inspection reports, and improve application performance.</p>
-                    </div>
-                    <div class="career-detail-section">
-                        <h4>What we're looking for</h4>
-                        <p>Degree in CS, Software Engineering or related field. Experience with Python
-                           or JavaScript. Familiarity with REST APIs, frontend development, databases,
-                           and backend services. Docker experience is a plus.</p>
-                    </div>
-                    <div class="career-detail-section">
-                        <h4>What you'll gain</h4>
-                        <p>Experience building AI-powered infrastructure in a high-impact startup.
-                           Exposure to computer vision systems and production AI deployments.
-                           Direct collaboration with AI engineers and industry experts.</p>
-                    </div>
+                    <div class="career-detail-section"><h4>What you'll do</h4><p>Build and maintain the inspection application interface, develop backend APIs to integrate AI models and reporting, build mobile/desktop apps, implement AI-generated inspection reports, and improve application performance.</p></div>
+                    <div class="career-detail-section"><h4>What we're looking for</h4><p>Degree in CS, Software Engineering or related field. Experience with Python or JavaScript. Familiarity with REST APIs, frontend development, databases, and backend services. Docker experience is a plus.</p></div>
+                    <div class="career-detail-section"><h4>What you'll gain</h4><p>Experience building AI-powered infrastructure in a high-impact startup. Exposure to computer vision systems and production AI deployments. Direct collaboration with AI engineers and industry experts.</p></div>
                 </div>
                 <div class="career-footer">
-                    <a href="mailto:careers@aimailabs.com?subject=Application%20–%20Junior%20Full%20Stack%20Developer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20interested%20in%20the%20Junior%20Full%20Stack%20Developer%20role." class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
+                    <a href="mailto:careers@aimailabs.com?subject=Application%20%E2%80%94%20Junior%20Full%20Stack%20Developer&body=Hi%20AIMAILABS%2C%0A%0AI'm%20applying%20for%20the%20Junior%20Full%20Stack%20Developer%20role.%0A%0APlease%20find%20my%20CV%20attached.%0A%0AThanks" class="btn-primary" style="padding:10px 24px; font-size:0.85rem;">Apply Now</a>
                 </div>
             </div>
         </div>
-
-        <p class="career-note reveal">
-            Ideal for developers interested in AI startups and building production AI infrastructure.<br>
-            Send your CV and GitHub (if available) to <a href="mailto:careers@aimailabs.com" style="color:var(--accent-bright); text-decoration:none;">careers@aimailabs.com</a>
-        </p>
+        <p class="career-note reveal">Ideal for developers interested in AI startups and building production AI infrastructure.<br>Send your CV and GitHub (if available) to <a href="mailto:careers@aimailabs.com" style="color:var(--accent-bright); text-decoration:none;">careers@aimailabs.com</a></p>
     </div>
 </section>
 
-<!-- ─── CTA ─── -->
+<!-- ═══ 11. CLOSING CTA ═══ -->
 <section class="cta-section" id="contact">
     <div class="section-inner">
         <div class="section-label reveal">Let's Talk</div>
         <h2 class="section-title reveal">See the Infrastructure in Action</h2>
-        <p class="section-desc reveal">
-            We'll run a live demo on your defects, your standards, your report format.
-            No obligation. No data leaves your premises.
-        </p>
+        <p class="section-desc reveal">We run a live demonstration on your defects, your standards, your report format. No obligation. No data leaves your premises.</p>
         <div class="reveal">
-            <a href="mailto:sales@aimailabs.com?subject=Let's%20Connect%20–%20AIMAILABS" class="btn-primary" style="margin-right:12px;">
-                Let's Connect ↗
-            </a>
-            <a href="https://wa.me/60134553120?text=Hi%20AIMAILABS%2C%20I%27d%20like%20to%20know%20more%20about%20your%20AI%20infrastructure%20for%20asset%20integrity." class="btn-ghost" target="_blank" rel="noopener" style="border-color:#25d366; color:#25d366;">
-                WhatsApp Us
-            </a>
+            <a href="mailto:sales@aimailabs.com?subject=Demo%20Request%20%E2%80%94%20AIMAILABS&body=Hi%20AIMAILABS%2C%0A%0AI'd%20like%20to%20request%20a%20demo%20of%20your%20AI%20infrastructure%20for%20asset%20integrity.%0A%0AThanks" class="btn-primary" style="margin-right:12px;">Request a Demo &nearr;</a>
+            <a href="https://wa.me/60134553120?text=Hi%20AIMAILABS%2C%20I%27d%20like%20to%20know%20more%20about%20your%20AI%20infrastructure%20for%20asset%20integrity." class="btn-ghost" target="_blank" rel="noopener" style="border-color:#25d366; color:#25d366;">WhatsApp Us</a>
         </div>
-        <p style="margin-top:32px; font-size:0.85rem; color:var(--text-muted);" class="reveal">
-            general@aimailabs.com &nbsp;·&nbsp; Malaysia &nbsp;·&nbsp; Southeast Asia
-        </p>
+        <p style="margin-top:32px; font-size:0.85rem; color:var(--text-muted);" class="reveal">general@aimailabs.com &nbsp;&middot;&nbsp; Malaysia &nbsp;&middot;&nbsp; Southeast Asia</p>
     </div>
 </section>
 
-<!-- ─── FOOTER ─── -->
+<!-- FOOTER -->
 <footer>
     <div class="footer-inner">
         <div class="footer-brand">
             <div class="footer-logo">AIMAILABS SDN BHD</div>
-            <p>AI infrastructure for offshore asset integrity management. Purpose-built systems for the full structural lifecycle.</p>
+            <p>Engineering AI infrastructure for offshore asset integrity. Purpose-built systems for the full structural lifecycle.</p>
         </div>
         <div class="footer-col">
             <h4>INSPECTA</h4>
-            <a href="#products">INSPECTA Edge</a>
-            <a href="#products">INSPECTA Cloud</a>
-            <a href="#products">INSPECTA Vision</a>
-            <a href="#products">INSPECTA Core</a>
+            <a href="#products">INSPECTA Edge</a><a href="#products">INSPECTA Cloud</a><a href="#products">INSPECTA Vision</a><a href="#products">INSPECTA Core</a>
         </div>
         <div class="footer-col">
             <h4>COREVA</h4>
-            <a href="#products">COREVA Reports</a>
-            <a href="#products">COREVA Anode</a>
-            <a href="#products">COREVA Predict</a>
-            <a href="#products">COREVA Fitness</a>
-            <a href="#products">COREVA Thickness</a>
-            <a href="#products">COREVA Fatigue</a>
-            <a href="#products">COREVA Weight</a>
+            <a href="#products">COREVA Reports</a><a href="#products">COREVA Anode</a><a href="#products">COREVA Predict</a><a href="#products">COREVA Fitness</a><a href="#products">COREVA Thickness</a><a href="#products">COREVA Fatigue</a><a href="#products">COREVA Weight</a>
         </div>
         <div class="footer-col">
             <h4>MAINTENA</h4>
-            <a href="#products">MAINTENA Scoper</a>
-            <a href="#products">MAINTENA Planner</a>
-            <a href="#products">MAINTENA Cost</a>
-            <a href="#products">MAINTENA Packs</a>
-            <a href="#products">MAINTENA Track</a>
-            <a href="#products">MAINTENA QA</a>
-            <a href="#products">MAINTENA MoC</a>
+            <a href="#products">MAINTENA Scoper</a><a href="#products">MAINTENA Planner</a><a href="#products">MAINTENA Cost</a><a href="#products">MAINTENA Packs</a><a href="#products">MAINTENA Track</a><a href="#products">MAINTENA QA</a><a href="#products">MAINTENA MoC</a>
         </div>
         <div class="footer-col">
             <h4>Company</h4>
-            <a href="#about">About</a>
-            <a href="#why">Why Us</a>
-            <a href="#careers">Careers</a>
-            <a href="#start">Get Started</a>
-            <a href="#contact">Contact</a>
+            <a href="#about">About</a><a href="#technology">Technology</a><a href="#why">Why Us</a><a href="#careers">Careers</a><a href="#contact">Contact</a>
         </div>
         <div class="footer-col">
             <h4>Connect</h4>
-            <a href="mailto:general@aimailabs.com">general@aimailabs.com</a>
-            <a href="https://wa.me/60134553120">WhatsApp</a>
-            <a href="https://www.aimailabs.com" target="_blank">www.aimailabs.com</a>
+            <a href="mailto:general@aimailabs.com">general@aimailabs.com</a><a href="https://wa.me/60134553120">WhatsApp</a><a href="https://www.aimailabs.com" target="_blank">www.aimailabs.com</a>
         </div>
     </div>
     <div class="footer-bottom">
-        <span>© 2026 AIMAILABS Sdn Bhd. All rights reserved.</span>
-        <span>Malaysia · Southeast Asia</span>
+        <span>&copy; 2026 AIMAILABS Sdn Bhd. All rights reserved.</span>
+        <span>Malaysia &middot; Southeast Asia</span>
     </div>
 </footer>
 
-<!-- ─── WHATSAPP CHAT WIDGET ─── -->
-<div class="wa-widget" id="waWidget">
-    <button class="wa-toggle" id="waToggle" aria-label="Chat on WhatsApp" onclick="var p=document.getElementById('waPanel'),t=this;if(p.classList.contains('open')){p.classList.remove('open');t.classList.remove('active')}else{p.classList.add('open');t.classList.add('active','seen')}">
+<!-- WHATSAPP WIDGET -->
+<div class="wa-widget" id="waWidget" style="position:fixed;bottom:24px;right:24px;z-index:999;font-family:'DM Sans',sans-serif">
+    <button class="wa-toggle" id="waToggle" aria-label="Chat on WhatsApp" style="width:56px;height:56px;border-radius:50%;background:#25d366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 20px rgba(37,211,102,0.35);transition:all .3s;position:relative">
         <svg class="wa-icon-chat" viewBox="0 0 32 32" width="26" height="26" fill="white"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.738 3.052 9.372L1.056 31.2l6.012-1.97A15.908 15.908 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.314 22.598c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.944.324-5.652-1.214-4.746-1.968-7.8-6.79-8.034-7.104-.226-.314-1.9-2.532-1.9-4.83s1.2-3.426 1.628-3.894c.39-.426.924-.616 1.234-.616.15 0 .284.008.406.014.428.018.642.042.924.716.354.84 1.218 2.97 1.324 3.186.108.218.216.514.066.814-.142.306-.268.442-.486.694-.218.252-.424.446-.642.718-.2.236-.424.49-.178.942.246.446 1.094 1.8 2.348 2.916 1.616 1.438 2.978 1.886 3.402 2.094.314.156.69.126.944-.142.322-.34.72-.904 1.124-1.46.288-.396.65-.446.994-.298.35.142 2.216 1.046 2.596 1.236.38.19.634.286.728.446.09.16.09.924-.3 2.024z"/></svg>
-        <svg class="wa-icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        <svg class="wa-icon-close" viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="white" stroke-width="2.5" stroke-linecap="round" style="display:none"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
     </button>
-
-    <div class="wa-panel" id="waPanel">
-        <div class="wa-header">
-            <div class="wa-header-info">
-                <div class="wa-avatar"><span>AI</span><span class="wa-online"></span></div>
-                <div>
-                    <div class="wa-header-name">AIMAILABS</div>
-                    <div class="wa-header-status">Typically replies within minutes</div>
+    <div class="wa-panel" id="waPanel" style="position:absolute;bottom:72px;right:0;width:360px;background:#0d1629;border:1px solid #1a2744;border-radius:16px;overflow:hidden;opacity:0;visibility:hidden;transform:translateY(12px) scale(0.95);transition:all .3s cubic-bezier(.4,0,.2,1);box-shadow:0 20px 60px rgba(0,0,0,0.5)">
+        <div style="background:#111d35;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1a2744">
+            <div style="display:flex;align-items:center;gap:12px">
+                <div style="width:40px;height:40px;background:linear-gradient(135deg,#3b82f6,#818cf8);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem;font-weight:700;color:#fff;position:relative">AI<span style="position:absolute;bottom:1px;right:1px;width:10px;height:10px;background:#25d366;border:2px solid #111d35;border-radius:50%"></span></div>
+                <div><div style="font-weight:600;font-size:.9rem;color:#e8edf5">AIMAILABS</div><div style="font-size:.72rem;color:#576a8a">Typically replies within minutes</div></div>
+            </div>
+            <button id="waClose" aria-label="Close chat" style="background:none;border:none;color:#576a8a;cursor:pointer;padding:4px"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg></button>
+        </div>
+        <div id="waBody" style="padding:20px;min-height:200px;max-height:320px;overflow-y:auto;background:#0a1122">
+            <div style="text-align:center;margin-bottom:16px"><span style="font-size:.68rem;color:#576a8a;background:#111d35;padding:3px 12px;border-radius:6px">Today</span></div>
+            <div style="margin-bottom:10px;display:flex;justify-content:flex-start;opacity:0;transform:translateY(8px);animation:waMsgIn .4s ease forwards;animation-delay:0.3s">
+                <div style="max-width:85%;padding:10px 14px;border-radius:12px 12px 12px 4px;font-size:.85rem;line-height:1.5;background:#111d35;color:#e8edf5">
+                    <p><strong>Hello!</strong></p><p>Welcome to AIMAILABS. How can we help you today?</p><span style="font-size:.65rem;color:#576a8a;display:block;text-align:right;margin-top:4px">Now</span>
                 </div>
             </div>
-            <button class="wa-close-btn" id="waClose" aria-label="Close chat" onclick="document.getElementById('waPanel').classList.remove('open');document.getElementById('waToggle').classList.remove('active')">
-                <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-            </button>
         </div>
-
-        <div class="wa-body" id="waBody">
-            <div class="wa-date-divider"><span>Today</span></div>
-            <div class="wa-msg wa-msg-in wa-msg-anim" style="animation-delay:0.3s">
-                <div class="wa-msg-bubble">
-                    <p><strong>Hello!</strong> &#128075;</p>
-                    <p>Welcome to AIMAILABS. How can we help you today?</p>
-                    <span class="wa-msg-time">AIMAILABS Team</span>
-                </div>
-            </div>
-            <div class="wa-quick-replies" id="waQuickReplies">
-                <button class="wa-quick-btn" data-msg="I'd like a demo of INSPECTA">&#127919; Let's Connect</button>
-                <button class="wa-quick-btn" data-msg="I'd like to know about INSPECTA pricing">&#128176; Pricing Info</button>
-                <button class="wa-quick-btn" data-msg="I have a technical question about INSPECTA">&#128295; Technical Question</button>
-                <button class="wa-quick-btn" data-msg="I'd like to discuss a partnership opportunity">&#129309; Partnership</button>
-            </div>
+        <div id="waQuick" style="padding:12px 20px;border-top:1px solid #1a2744;display:flex;flex-wrap:wrap;gap:6px">
+            <button class="wa-quick-btn" data-msg="I'd like to request a demo of INSPECTA" style="font-size:.78rem;padding:6px 14px;background:#111d35;border:1px solid #1a2744;border-radius:100px;color:#8a99b4;cursor:pointer;transition:all .2s;font-family:inherit">Request a Demo</button>
+            <button class="wa-quick-btn" data-msg="I'd like to discuss a pilot deployment for our platform" style="font-size:.78rem;padding:6px 14px;background:#111d35;border:1px solid #1a2744;border-radius:100px;color:#8a99b4;cursor:pointer;transition:all .2s;font-family:inherit">Discuss a Pilot</button>
+            <button class="wa-quick-btn" data-msg="I'm interested in career opportunities at AIMAILABS" style="font-size:.78rem;padding:6px 14px;background:#111d35;border:1px solid #1a2744;border-radius:100px;color:#8a99b4;cursor:pointer;transition:all .2s;font-family:inherit">Career Enquiry</button>
         </div>
-
-        <div class="wa-footer">
-            <div class="wa-input-wrap">
-                <input type="text" class="wa-input" id="waInput" placeholder="Type a message..." maxlength="500" autocomplete="off">
-                <button class="wa-send-btn" id="waSend" aria-label="Send via WhatsApp">
-                    <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
-                </button>
-            </div>
-            <div class="wa-footer-note">
-                <svg viewBox="0 0 32 32" width="12" height="12" fill="#25d366"><path d="M16.004 0h-.008C7.174 0 0 7.176 0 16.004c0 3.5 1.132 6.738 3.052 9.372L1.056 31.2l6.012-1.97A15.908 15.908 0 0016.004 32C24.826 32 32 24.826 32 16.004 32 7.176 24.826 0 16.004 0zm9.314 22.598c-.39 1.1-1.932 2.014-3.164 2.28-.844.18-1.944.324-5.652-1.214-4.746-1.968-7.8-6.79-8.034-7.104-.226-.314-1.9-2.532-1.9-4.83s1.2-3.426 1.628-3.894c.39-.426.924-.616 1.234-.616.15 0 .284.008.406.014.428.018.642.042.924.716.354.84 1.218 2.97 1.324 3.186.108.218.216.514.066.814-.142.306-.268.442-.486.694-.218.252-.424.446-.642.718-.2.236-.424.49-.178.942.246.446 1.094 1.8 2.348 2.916 1.616 1.438 2.978 1.886 3.402 2.094.314.156.69.126.944-.142.322-.34.72-.904 1.124-1.46.288-.396.65-.446.994-.298.35.142 2.216 1.046 2.596 1.236.38.19.634.286.728.446.09.16.09.924-.3 2.024z"/></svg>
-                Continues on WhatsApp
-            </div>
+        <div style="display:flex;gap:8px;padding:12px 16px;border-top:1px solid #1a2744;background:#0d1629">
+            <input type="text" id="waInput" placeholder="Type a message..." autocomplete="off" style="flex:1;background:#111d35;border:1px solid #1a2744;border-radius:100px;padding:10px 16px;color:#e8edf5;font-size:.85rem;font-family:inherit;outline:none">
+            <button id="waSend" aria-label="Send" style="width:38px;height:38px;border-radius:50%;background:#25d366;border:none;cursor:pointer;display:flex;align-items:center;justify-content:center"><svg viewBox="0 0 24 24" width="18" height="18" fill="white"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg></button>
         </div>
     </div>
 </div>
-
 <style>
-    .wa-widget { position:fixed; bottom:28px; right:28px; z-index:9000; font-family:'DM Sans',sans-serif; }
-
-    .wa-toggle {
-        width:60px; height:60px; border-radius:50%; background:#25d366; border:none; cursor:pointer;
-        display:flex; align-items:center; justify-content:center; position:relative; z-index:2;
-        box-shadow:0 4px 20px rgba(37,211,102,0.35),0 2px 8px rgba(0,0,0,0.3);
-        transition:transform 0.25s,box-shadow 0.25s,background 0.25s;
-        animation:wa-entrance 0.6s 1s ease both;
-    }
-    .wa-toggle:hover { transform:scale(1.08); box-shadow:0 6px 28px rgba(37,211,102,0.5),0 4px 12px rgba(0,0,0,0.3); }
-    .wa-toggle.active { background:#1a1f36; }
-    .wa-icon-close { display:none; }
-    .wa-toggle.active .wa-icon-chat { display:none; }
-    .wa-toggle.active .wa-icon-close { display:block; }
-
-    .wa-toggle::before {
-        content:''; position:absolute; inset:-4px; border-radius:50%;
-        border:2px solid rgba(37,211,102,0.4); animation:wa-pulse 2.5s ease-in-out infinite;
-    }
-    .wa-toggle.active::before { animation:none; opacity:0; }
-
-    .wa-toggle::after {
-        content:'1'; position:absolute; top:-2px; right:-2px; width:20px; height:20px;
-        background:#ef4444; color:white; font-size:0.65rem; font-weight:700; border-radius:50%;
-        display:flex; align-items:center; justify-content:center; border:2px solid var(--bg-deep);
-        transition:opacity 0.2s,transform 0.2s;
-    }
-    .wa-toggle.active::after, .wa-toggle.seen::after { opacity:0; transform:scale(0); }
-
-    @keyframes wa-pulse { 0%,100%{transform:scale(1);opacity:0.6} 50%{transform:scale(1.18);opacity:0} }
-    @keyframes wa-entrance { from{opacity:0;transform:scale(0.5) translateY(20px)} to{opacity:1;transform:scale(1) translateY(0)} }
-
-    .wa-panel {
-        position:absolute; bottom:76px; right:0; width:370px; max-height:520px;
-        background:#0b1220; border:1px solid var(--border); border-radius:16px;
-        overflow:hidden; display:flex; flex-direction:column;
-        box-shadow:0 16px 60px rgba(0,0,0,0.5),0 0 0 1px rgba(255,255,255,0.03);
-        opacity:0; transform:translateY(16px) scale(0.95); pointer-events:none;
-        transition:opacity 0.3s ease,transform 0.3s ease;
-    }
-    .wa-panel.open { opacity:1; transform:translateY(0) scale(1); pointer-events:all; }
-
-    .wa-header {
-        background:linear-gradient(135deg,#075e54 0%,#128c7e 100%);
-        padding:18px 20px; display:flex; align-items:center; justify-content:space-between;
-    }
-    .wa-header-info { display:flex; align-items:center; gap:12px; }
-    .wa-avatar {
-        width:42px; height:42px; border-radius:50%; background:linear-gradient(135deg,var(--accent),#818cf8);
-        display:flex; align-items:center; justify-content:center; font-size:0.75rem; font-weight:800;
-        color:white; position:relative; flex-shrink:0;
-    }
-    .wa-online {
-        position:absolute; bottom:0; right:0; width:11px; height:11px;
-        background:#25d366; border-radius:50%; border:2px solid #075e54;
-    }
-    .wa-header-name { font-weight:600; font-size:0.95rem; color:white; }
-    .wa-header-status { font-size:0.72rem; color:rgba(255,255,255,0.7); margin-top:1px; }
-    .wa-close-btn {
-        background:none; border:none; color:rgba(255,255,255,0.7); cursor:pointer;
-        padding:4px; border-radius:6px; transition:color 0.2s,background 0.2s;
-    }
-    .wa-close-btn:hover { color:white; background:rgba(255,255,255,0.1); }
-
-    .wa-body {
-        flex:1; padding:20px 16px; overflow-y:auto; min-height:260px;
-        background-color:#06090f;
-        background-image:radial-gradient(circle at 20% 50%,rgba(59,130,246,0.03) 0%,transparent 50%),
-        radial-gradient(circle at 80% 20%,rgba(129,140,248,0.02) 0%,transparent 50%);
-    }
-    .wa-date-divider { text-align:center; margin-bottom:16px; }
-    .wa-date-divider span {
-        font-size:0.68rem; color:var(--text-muted); background:rgba(255,255,255,0.04);
-        padding:3px 14px; border-radius:8px;
-    }
-
-    .wa-msg { display:flex; margin-bottom:10px; }
-    .wa-msg-in { justify-content:flex-start; }
-    .wa-msg-out { justify-content:flex-end; }
-    .wa-msg-bubble { max-width:82%; padding:10px 14px; border-radius:12px; font-size:0.86rem; line-height:1.5; }
-    .wa-msg-in .wa-msg-bubble {
-        background:var(--bg-card); border:1px solid var(--border);
-        border-top-left-radius:4px; color:var(--text-primary);
-    }
-    .wa-msg-out .wa-msg-bubble { background:#005c4b; border-top-right-radius:4px; color:#e8f5e9; }
-    .wa-msg-bubble p { margin:0 0 4px; }
-    .wa-msg-bubble p:last-of-type { margin-bottom:2px; }
-    .wa-msg-bubble strong { color:white; }
-    .wa-msg-time { display:block; font-size:0.62rem; color:rgba(255,255,255,0.35); margin-top:4px; text-align:right; }
-    .wa-msg-anim { animation:wa-msg-in 0.4s ease both; }
-    @keyframes wa-msg-in { from{opacity:0;transform:translateY(8px)} to{opacity:1;transform:translateY(0)} }
-
-    .wa-quick-replies { display:flex; flex-wrap:wrap; gap:8px; margin-top:14px; }
-    .wa-quick-btn {
-        background:var(--bg-card); border:1px solid var(--border-bright); color:var(--text-primary);
-        font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500;
-        padding:8px 14px; border-radius:20px; cursor:pointer; transition:all 0.2s; white-space:nowrap;
-    }
-    .wa-quick-btn:hover { background:var(--bg-elevated); border-color:var(--accent); color:var(--accent-bright); }
-
-    .wa-footer { padding:12px 14px 10px; background:#0b1220; border-top:1px solid var(--border); }
-    .wa-input-wrap {
-        display:flex; align-items:center; gap:8px; background:var(--bg-card);
-        border:1px solid var(--border); border-radius:24px; padding:4px 6px 4px 18px;
-        transition:border-color 0.2s;
-    }
-    .wa-input-wrap:focus-within { border-color:var(--border-bright); }
-    .wa-input {
-        flex:1; background:none; border:none; outline:none; color:var(--text-primary);
-        font-family:'DM Sans',sans-serif; font-size:0.88rem; padding:10px 0;
-    }
-    .wa-input::placeholder { color:var(--text-muted); }
-    .wa-send-btn {
-        width:38px; height:38px; border-radius:50%; background:#25d366; border:none;
-        color:white; cursor:pointer; display:flex; align-items:center; justify-content:center;
-        flex-shrink:0; transition:background 0.2s,transform 0.15s;
-    }
-    .wa-send-btn:hover { background:#22c35e; transform:scale(1.06); }
-    .wa-footer-note {
-        display:flex; align-items:center; justify-content:center; gap:5px;
-        font-size:0.65rem; color:var(--text-muted); margin-top:8px; padding-bottom:2px;
-    }
-
-    @media (max-width:900px) {
-        .wa-widget { bottom:16px; right:16px; }
-        .wa-toggle { width:54px; height:54px; }
-        .wa-panel { width:calc(100vw - 32px); right:-8px; bottom:68px; max-height:70vh; }
-    }
+@keyframes waMsgIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.wa-panel.open{opacity:1!important;visibility:visible!important;transform:translateY(0) scale(1)!important}
+.wa-toggle:hover{transform:scale(1.08)}
+.wa-toggle.active .wa-icon-chat{display:none!important}
+.wa-toggle.active .wa-icon-close{display:block!important}
+.wa-quick-btn:hover{border-color:#3b82f6!important;color:#60a5fa!important;background:rgba(59,130,246,.08)!important}
+@media(max-width:480px){.wa-panel{width:calc(100vw - 32px)!important;right:-8px!important}}
 </style>
 
 <script>
-// ─── WHATSAPP CHAT WIDGET ───
 (function(){
-    var WA='60134553120',tgl=document.getElementById('waToggle'),pnl=document.getElementById('waPanel'),
-        cls=document.getElementById('waClose'),inp=document.getElementById('waInput'),
-        snd=document.getElementById('waSend'),bdy=document.getElementById('waBody'),
-        qr=document.getElementById('waQuickReplies'),isOpen=false;
-
-    function show(){isOpen=true;pnl.classList.add('open');tgl.classList.add('active','seen');setTimeout(function(){inp.focus()},350)}
-    function hide(){isOpen=false;pnl.classList.remove('open');tgl.classList.remove('active')}
-
+    var WA='60134553120',isOpen=false;
+    var tgl=document.getElementById('waToggle'),pnl=document.getElementById('waPanel'),cls=document.getElementById('waClose'),bdy=document.getElementById('waBody'),inp=document.getElementById('waInput'),snd=document.getElementById('waSend'),qr=document.getElementById('waQuick');
+    function show(){pnl.classList.add('open');tgl.classList.add('active','seen');isOpen=true}
+    function hide(){pnl.classList.remove('open');tgl.classList.remove('active');isOpen=false}
     function send(msg){
-        var m=document.createElement('div');m.className='wa-msg wa-msg-out wa-msg-anim';
-        m.innerHTML='<div class="wa-msg-bubble"><p>'+msg+'</p><span class="wa-msg-time">Sending via WhatsApp...</span></div>';
-        qr.style.display='none';bdy.appendChild(m);bdy.scrollTop=bdy.scrollHeight;
+        var m=document.createElement('div');m.style.cssText='margin-bottom:10px;display:flex;justify-content:flex-end;opacity:0;transform:translateY(8px);animation:waMsgIn .4s ease forwards';
+        m.innerHTML='<div style="max-width:85%;padding:10px 14px;border-radius:12px 12px 4px 12px;font-size:.85rem;line-height:1.5;background:#1a4a2e;color:#e8edf5"><p>'+msg+'</p><span style="font-size:.65rem;color:#576a8a;display:block;text-align:right;margin-top:4px">Now</span></div>';
+        bdy.appendChild(m);bdy.scrollTop=bdy.scrollHeight;
         setTimeout(function(){
-            var r=document.createElement('div');r.className='wa-msg wa-msg-in wa-msg-anim';
-            r.innerHTML='<div class="wa-msg-bubble"><p>Opening WhatsApp... &#128172;</p><span class="wa-msg-time">You\'ll continue the conversation there</span></div>';
+            var r=document.createElement('div');r.style.cssText='margin-bottom:10px;display:flex;justify-content:flex-start;opacity:0;transform:translateY(8px);animation:waMsgIn .4s ease forwards';
+            r.innerHTML='<div style="max-width:85%;padding:10px 14px;border-radius:12px 12px 12px 4px;font-size:.85rem;line-height:1.5;background:#111d35;color:#e8edf5"><p>Opening WhatsApp...</p><span style="font-size:.65rem;color:#576a8a;display:block;text-align:right;margin-top:4px">You\'ll continue the conversation there</span></div>';
             bdy.appendChild(r);bdy.scrollTop=bdy.scrollHeight;
         },500);
         setTimeout(function(){window.open('https://wa.me/'+WA+'?text='+encodeURIComponent(msg),'_blank')},1000);
     }
-
     tgl.addEventListener('click',function(){isOpen?hide():show()});
     cls.addEventListener('click',hide);
     snd.addEventListener('click',function(){var v=inp.value.trim();if(v){send(v);inp.value=''}});
@@ -1886,232 +1057,50 @@
     document.addEventListener('click',function(e){if(isOpen&&!document.getElementById('waWidget').contains(e.target))hide()});
 })();
 
-// ─── NAV SHRINK ───
-let lastScroll = 0;
-window.addEventListener('scroll', () => {
-    const nav = document.querySelector('nav');
-    const current = window.scrollY;
-    nav.style.background = current > 80 ? 'rgba(4, 8, 15, 0.97)' : 'rgba(4, 8, 15, 0.8)';
-    lastScroll = current;
-});
+window.addEventListener('scroll',function(){var n=document.querySelector('nav');n.style.background=window.scrollY>80?'rgba(4,8,15,0.97)':'rgba(4,8,15,0.8)'});
 </script>
 
-<!-- ─── GSAP ANIMATIONS ─── -->
+<!-- GSAP ANIMATIONS -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    // Wait for GSAP to load
-    if (typeof gsap === 'undefined') {
-        // Fallback: basic IntersectionObserver if GSAP fails to load
-        const obs = new IntersectionObserver((entries) => {
-            entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; e.target.style.transition='opacity 0.6s ease, transform 0.6s ease'; }});
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal,.hero-badge,.hero h1,.hero-desc,.hero-actions,.hero-stats').forEach(el => obs.observe(el));
+document.addEventListener('DOMContentLoaded',function(){
+    if(typeof gsap==='undefined'){
+        var obs=new IntersectionObserver(function(entries){entries.forEach(function(e){if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';e.target.style.transition='opacity 0.6s ease, transform 0.6s ease'}})},{threshold:0.1});
+        document.querySelectorAll('.reveal,.hero-badge,.hero h1,.hero-desc,.hero-actions,.hero-stats').forEach(function(el){obs.observe(el)});
         return;
     }
-
     gsap.registerPlugin(ScrollTrigger);
 
-    // ─── HERO ENTRANCE ───
-    // Staggered reveal on page load
-    const heroTL = gsap.timeline({ defaults: { ease: 'power3.out' }});
-    heroTL
-        .to('.hero-badge', { opacity: 1, y: 0, duration: 0.7 })
-        .to('.hero h1', { opacity: 1, y: 0, duration: 0.8 }, '-=0.4')
-        .to('.hero-desc', { opacity: 1, y: 0, duration: 0.7 }, '-=0.5')
-        .to('.hero-actions', { opacity: 1, y: 0, duration: 0.6 }, '-=0.4')
-        .to('.hero-stats', { opacity: 1, y: 0, duration: 0.7 }, '-=0.3');
+    var heroTL=gsap.timeline({defaults:{ease:'power3.out'}});
+    heroTL.to('.hero-badge',{opacity:1,y:0,duration:0.7}).to('.hero h1',{opacity:1,y:0,duration:0.8},'-=0.4').to('.hero-desc',{opacity:1,y:0,duration:0.7},'-=0.5').to('.hero-actions',{opacity:1,y:0,duration:0.6},'-=0.4').to('.hero-stats',{opacity:1,y:0,duration:0.7},'-=0.3');
 
-    // ─── ANIMATED STAT COUNTERS ───
-    document.querySelectorAll('.hero-stat .value').forEach(function(el) {
-        var text = el.textContent.trim();
-        // Parse "40–80%" style
-        if (text.indexOf('–') !== -1) {
-            var parts = text.split('–');
-            var end = parseInt(parts[1]);
-            var start = parseInt(parts[0]);
-            var suffix = parts[1].replace(/[0-9]/g, '');
-            var counter = { lo: 0, hi: 0 };
-            gsap.to(counter, {
-                lo: start, hi: end, duration: 2, delay: 1, ease: 'power2.out',
-                onUpdate: function() {
-                    el.textContent = Math.round(counter.lo) + '–' + Math.round(counter.hi) + suffix;
-                }
-            });
-        } else if (text.indexOf('%') !== -1) {
-            var num = parseInt(text);
-            var obj = { val: 0 };
-            gsap.to(obj, {
-                val: num, duration: 1.8, delay: 1, ease: 'power2.out',
-                onUpdate: function() { el.textContent = Math.round(obj.val) + '%'; }
-            });
-        }
-        // "Zero" stays as-is
+    document.querySelectorAll('.hero-stat .value').forEach(function(el){
+        var text=el.textContent.trim();
+        if(text.indexOf('\u2013')!==-1){var parts=text.split('\u2013');var end=parseInt(parts[1]);var start=parseInt(parts[0]);var suffix=parts[1].replace(/[0-9]/g,'');var counter={lo:0,hi:0};gsap.to(counter,{lo:start,hi:end,duration:2,delay:1,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(counter.lo)+'\u2013'+Math.round(counter.hi)+suffix}})}
+        else if(text.indexOf('%')!==-1){var num=parseInt(text);var obj={val:0};gsap.to(obj,{val:num,duration:1.8,delay:1,ease:'power2.out',onUpdate:function(){el.textContent=Math.round(obj.val)+'%'}})}
     });
 
-    // ─── SECTION REVEALS ───
-    // Batch all .reveal elements with stagger per section
-    ScrollTrigger.batch('.reveal', {
-        onEnter: function(batch) {
-            gsap.to(batch, {
-                opacity: 1, y: 0,
-                duration: 0.7,
-                ease: 'power2.out',
-                stagger: 0.12,
-                overwrite: true
-            });
-        },
-        start: 'top 88%'
-    });
+    ScrollTrigger.batch('.reveal',{onEnter:function(batch){gsap.to(batch,{opacity:1,y:0,duration:0.7,ease:'power2.out',stagger:0.12,overwrite:true})},start:'top 88%'});
 
-    // ─── PIPELINE STEPS ───
-    gsap.utils.toArray('.pipeline-step').forEach(function(step, i) {
-        gsap.from(step, {
-            scrollTrigger: {
-                trigger: step,
-                start: 'top 85%'
-            },
-            opacity: 0,
-            x: -30,
-            duration: 0.6,
-            delay: i * 0.15,
-            ease: 'power2.out'
-        });
-    });
+    gsap.utils.toArray('.pipeline-step').forEach(function(step,i){gsap.from(step,{scrollTrigger:{trigger:step,start:'top 85%'},opacity:0,x:-30,duration:0.6,delay:i*0.15,ease:'power2.out'})});
 
-    // ─── PRODUCT CARDS ───
-    document.querySelectorAll('.products-grid').forEach(function(grid) {
-        gsap.utils.toArray(grid.querySelectorAll('.product-card')).forEach(function(card, i) {
-            gsap.from(card, {
-                scrollTrigger: {
-                    trigger: card,
-                    start: 'top 90%'
-                },
-                opacity: 0,
-                y: 40,
-                scale: 0.97,
-                duration: 0.6,
-                delay: i * 0.08,
-                ease: 'power2.out'
-            });
-        });
-    });
+    document.querySelectorAll('.products-grid').forEach(function(grid){gsap.utils.toArray(grid.querySelectorAll('.product-card')).forEach(function(card,i){gsap.from(card,{scrollTrigger:{trigger:card,start:'top 90%'},opacity:0,y:40,scale:0.97,duration:0.6,delay:i*0.08,ease:'power2.out'})})});
 
-    // ─── DIFF CARDS ───
-    gsap.utils.toArray('.diff-card').forEach(function(card, i) {
-        gsap.from(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 88%'
-            },
-            opacity: 0,
-            y: 30,
-            duration: 0.6,
-            delay: i * 0.1,
-            ease: 'power2.out'
-        });
-    });
+    gsap.utils.toArray('.platform-system').forEach(function(card,i){gsap.from(card,{scrollTrigger:{trigger:card,start:'top 88%'},opacity:0,y:40,scale:0.97,duration:0.6,delay:i*0.1,ease:'power2.out'})});
+    gsap.utils.toArray('.tech-card').forEach(function(card,i){gsap.from(card,{scrollTrigger:{trigger:card,start:'top 88%'},opacity:0,y:30,duration:0.5,delay:i*0.08,ease:'power2.out'})});
+    gsap.utils.toArray('.diff-card').forEach(function(card,i){gsap.from(card,{scrollTrigger:{trigger:card,start:'top 88%'},opacity:0,y:30,duration:0.6,delay:i*0.1,ease:'power2.out'})});
+    gsap.utils.toArray('.impact-card').forEach(function(card,i){gsap.from(card,{scrollTrigger:{trigger:card,start:'top 88%'},opacity:0,y:30,scale:0.97,duration:0.6,delay:i*0.1,ease:'power2.out'})});
+    gsap.utils.toArray('.workflow-step').forEach(function(step,i){gsap.from(step,{scrollTrigger:{trigger:step,start:'top 85%'},opacity:0,y:40,scale:0.95,duration:0.7,delay:i*0.2,ease:'back.out(1.2)'})});
 
-    // ─── WORKFLOW STEPS ───
-    gsap.utils.toArray('.workflow-step').forEach(function(step, i) {
-        gsap.from(step, {
-            scrollTrigger: {
-                trigger: step,
-                start: 'top 85%'
-            },
-            opacity: 0,
-            y: 40,
-            scale: 0.95,
-            duration: 0.7,
-            delay: i * 0.2,
-            ease: 'back.out(1.2)'
-        });
-    });
+    gsap.from('.otc-banner',{scrollTrigger:{trigger:'.otc-banner',start:'top 85%'},opacity:0,y:30,scale:0.98,duration:0.8,ease:'power2.out'});
+    gsap.utils.toArray('.career-card').forEach(function(card,i){gsap.from(card,{scrollTrigger:{trigger:card,start:'top 85%'},opacity:0,y:40,duration:0.7,delay:i*0.15,ease:'power2.out'})});
 
-    // ─── OTC BANNER ───
-    gsap.from('.otc-banner', {
-        scrollTrigger: {
-            trigger: '.otc-banner',
-            start: 'top 85%'
-        },
-        opacity: 0,
-        y: 30,
-        scale: 0.98,
-        duration: 0.8,
-        ease: 'power2.out'
-    });
+    gsap.from('.cta-section .section-label',{scrollTrigger:{trigger:'.cta-section',start:'top 80%'},opacity:0,y:20,duration:0.6});
+    gsap.from('.cta-section .section-title',{scrollTrigger:{trigger:'.cta-section',start:'top 80%'},opacity:0,y:30,duration:0.7,delay:0.1});
+    gsap.from('.cta-section .section-desc',{scrollTrigger:{trigger:'.cta-section',start:'top 80%'},opacity:0,y:20,duration:0.6,delay:0.2});
 
-    // ─── CAREER CARDS ───
-    gsap.utils.toArray('.career-card').forEach(function(card, i) {
-        gsap.from(card, {
-            scrollTrigger: {
-                trigger: card,
-                start: 'top 85%'
-            },
-            opacity: 0,
-            y: 40,
-            duration: 0.7,
-            delay: i * 0.15,
-            ease: 'power2.out'
-        });
-    });
-
-    // ─── CTA SECTION ───
-    gsap.from('.cta-section .section-label', {
-        scrollTrigger: { trigger: '.cta-section', start: 'top 80%' },
-        opacity: 0, y: 20, duration: 0.6
-    });
-    gsap.from('.cta-section .section-title', {
-        scrollTrigger: { trigger: '.cta-section', start: 'top 80%' },
-        opacity: 0, y: 30, duration: 0.7, delay: 0.1
-    });
-    gsap.from('.cta-section .section-desc', {
-        scrollTrigger: { trigger: '.cta-section', start: 'top 80%' },
-        opacity: 0, y: 20, duration: 0.6, delay: 0.2
-    });
-
-    // ─── SECTION HEADING PARALLAX ───
-    gsap.utils.toArray('section:not(.hero):not(.cta-section)').forEach(function(section) {
-        var title = section.querySelector('.section-title');
-        if (title) {
-            gsap.from(title, {
-                scrollTrigger: {
-                    trigger: section,
-                    start: 'top 80%',
-                    end: 'top 20%',
-                    scrub: 0.5
-                },
-                y: 15,
-                opacity: 0.7
-            });
-        }
-    });
-
-    // ─── HERO PARALLAX ON SCROLL ───
-    gsap.to('.hero-content', {
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true
-        },
-        y: -80,
-        opacity: 0.3,
-        ease: 'none'
-    });
-
-    // ─── GRID BACKGROUND PARALLAX ───
-    gsap.to('.hero-grid-bg', {
-        scrollTrigger: {
-            trigger: '.hero',
-            start: 'top top',
-            end: 'bottom top',
-            scrub: true
-        },
-        y: 60,
-        ease: 'none'
-    });
-
+    gsap.utils.toArray('section:not(.hero):not(.cta-section)').forEach(function(section){var title=section.querySelector('.section-title');if(title){gsap.to(title,{scrollTrigger:{trigger:section,start:'top bottom',end:'bottom top',scrub:0.5},y:-15,ease:'none'})}});
 });
 </script>
+
 </body>
 </html>
